@@ -1,0 +1,1654 @@
+{
+  "pages": {
+    "historia": {
+      "badge": "O firmie",
+      "title": "Historia",
+      "lead": "Od października 2009 roku — pierwszego w Polsce portalu z ofertami od deweloperów — do grupy ośmiu projektów technologicznych dla rynku nieruchomości.",
+      "blocks": [
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "17 lat",
+              "label": "na rynku nieruchomości"
+            },
+            {
+              "value": "240+",
+              "label": "osób w firmie (2025)"
+            },
+            {
+              "value": "100 mln zł",
+              "label": "przychodu w 2025 roku"
+            },
+            {
+              "value": "8",
+              "label": "flagowych projektów"
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Kamienie milowe",
+          "items": [
+            {
+              "year": "2009",
+              "title": "Rusza RynekPierwotny.pl",
+              "text": "W październiku startuje pierwszy w Polsce portal z ofertami od deweloperów, z nowym modelem prezentacji opartym o listy inwestycji."
+            },
+            {
+              "year": "2010",
+              "title": "Wrocław, Trójmiasto, Kraków",
+              "text": "Rozszerzenie działalności na kolejne miasta, współpraca ze 100 deweloperami i pierwsze wirtualne spacery. Firma zatrudnia 6 osób."
+            },
+            {
+              "year": "2013",
+              "title": "Największy portal deweloperski",
+              "text": "Ponad 45 000 ofert w 1000 inwestycji, wdrożenie Panelu Dewelopera i Wirtualnego Doradcy."
+            },
+            {
+              "year": "2019",
+              "title": "Start GetHome.pl",
+              "text": "Portal z ofertami z rynku wtórnego, gala 10-lecia serwisu i rekord 500 000 odwiedzających miesięcznie. 63 osoby w zespole."
+            },
+            {
+              "year": "2021",
+              "title": "BIG DATA i milion użytkowników",
+              "text": "Powstaje pierwsza ogólnopolska platforma do samodzielnej analizy rynku mieszkaniowego. Diamenty Forbesa, 100 osób na pokładzie."
+            },
+            {
+              "year": "2023",
+              "title": "Platforma Mieszkaniowa i Akademia RE",
+              "text": "Zakup 75% udziałów w Platformie Mieszkaniowej, rebranding Akademii Dewelopera w Akademię Real Estate, nagroda Super Pracodawca 2023."
+            },
+            {
+              "year": "2024",
+              "title": "Rekordowy rok i nowy zarząd",
+              "text": "Przychód 70 mln zł, start Contact Center, Konfigurator mieszkań, konferencja „Miasta i Deweloperzy” w Łodzi. Do zarządu dołączają Jerzy Michalski i Piotr Wetmański."
+            },
+            {
+              "year": "2025",
+              "title": "EstiCRM, voxDeveloper, GetHome Finance",
+              "text": "Przejęcie 100% udziałów w EstiCRM i strategicznego pakietu w voxDeveloper CRM, nowa spółka GetHome Finance, partnerstwo z JLL, strategia M360 i pełna jawność cen na RynekPierwotny.pl."
+            }
+          ]
+        },
+        {
+          "type": "textimage",
+          "title": "Jak rośliśmy",
+          "slotId": "pg-historia",
+          "slotLabel": "Archiwalne zdjęcie zespołu",
+          "slotSrc": "./assets/office-meeting-dextarstudio.jpg",
+          "paras": [
+            "6 osób w 2010 roku, 30 w 2015, 100 w 2021, ponad 240 w 2025. Po drodze kilka przeprowadzek — do 520 m² przy ul. J.S. Bacha, potem do ul. Adama Naruszewicza 27 na Mokotowie — i konsolidacja spółek pod wspólnym parasolem Property Group.",
+            "Od maja 2026 roku biuro mieści się pod nowym adresem: ul. Rodziny Hiszpańskich 8. To już kolejna przeprowadzka w historii firmy — tym razem do przestrzeni dopasowanej do skali całej grupy kapitałowej.",
+            "Zmieniały się marki, adresy i technologie, ale kierunek został ten sam: porządkować rynek nieruchomości danymi i narzędziami, z których korzystają zarówno kupujący, jak i profesjonaliści."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Historia adresów",
+          "items": [
+            {
+              "icon": "building",
+              "title": "ul. J.S. Bacha 26A, Mokotów",
+              "meta": "520 m² — biuro w okresie szybkiego wzrostu zespołu",
+              "action": "Zobacz na mapie",
+              "href": "https://www.google.com/maps/search/?api=1&query=ul.+J.S.+Bacha+26A+Warszawa"
+            },
+            {
+              "icon": "building",
+              "title": "ul. Adama Naruszewicza 27, Mokotów",
+              "meta": "Wieloletnia siedziba spółki",
+              "action": "Zobacz na mapie",
+              "href": "https://www.google.com/maps/search/?api=1&query=ul.+Adama+Naruszewicza+27+Warszawa"
+            },
+            {
+              "icon": "building",
+              "title": "ul. Rodziny Hiszpańskich 8",
+              "meta": "Obecna siedziba — od maja 2026",
+              "action": "Otwórz mapę biura",
+              "to": "biuro"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Chcesz uzupełnić historię?",
+      "footerText": "Masz zdjęcia lub materiały z początków firmy? Prześlij je do zespołu komunikacji.",
+      "footerCta": "Prześlij materiały",
+      "footerHref": "mailto:brand@rynekpierwotny.pl"
+    },
+    "spolki": {
+      "badge": "O firmie",
+      "title": "Spółki grupy",
+      "lead": "Ekosystem ośmiu marek i platform technologicznych, który obsługuje cały rynek nieruchomości — od wyszukiwania i finansowania po dane i CRM dla profesjonalistów. Pełne profile z kanałami social media są w sekcji Social Media.",
+      "blocks": [
+        {
+          "type": "brands",
+          "title": "Spółki i projekty Property Group"
+        }
+      ],
+      "footerTitle": "Brakuje spółki na liście?",
+      "footerText": "Zgłoś ją do zespołu marketingu — uzupełnimy opis i dane.",
+      "footerCta": "Zgłoś zmianę"
+    },
+    "biuro": {
+      "badge": "O firmie",
+      "title": "Biuro",
+      "lead": "Property Group Sp. z o.o., ul. Rodziny Hiszpańskich 8, 02-685 Warszawa. Orientujemy się po ulicach — plan piętra znajdziesz w sekcji Mapa biura.",
+      "blocks": [
+        {
+          "type": "fields",
+          "title": "Dane biura",
+          "slotId": "pg-biuro",
+          "slotLabel": "Zdjęcie recepcji",
+          "items": [
+            {
+              "label": "Adres",
+              "value": "Property Group Sp. z o.o.\nul. Rodziny Hiszpańskich 8\n02-685 Warszawa"
+            },
+            {
+              "label": "NIP",
+              "value": "521 353 80 80"
+            },
+            {
+              "label": "Centrala",
+              "value": "+48 (22) 825 60 71\ndni robocze, 9:00–17:00"
+            }
+          ]
+        },
+        {
+          "type": "gmap",
+          "title": "Jak do nas trafić",
+          "addr": "ul. Rodziny Hiszpańskich 8, 02-685 Warszawa",
+          "embed": "https://maps.google.com/maps?q=ul.%20Rodziny%20Hiszpa%C5%84skich%208%2C%2002-685%20Warszawa&z=16&hl=pl&output=embed",
+          "mapsHref": "https://www.google.com/maps/search/?api=1&query=ul.+Rodziny+Hiszpa%C5%84skich+8%2C+02-685+Warszawa",
+          "routeHref": "https://www.google.com/maps/dir/?api=1&destination=ul.+Rodziny+Hiszpa%C5%84skich+8%2C+02-685+Warszawa"
+        },
+        {
+          "type": "officemap",
+          "title": "Plan piętra",
+          "note": "Aktualizacja: lipiec 2026 · zmiany zgłaszaj do administracji"
+        },
+        {
+          "type": "people",
+          "title": "Zespół biura",
+          "items": [
+            {
+              "name": "Katarzyna Saniewska",
+              "role": "Head of Office"
+            },
+            {
+              "name": "Aleksandra Just",
+              "role": "Specjalista ds. Administracji"
+            },
+            {
+              "name": "Maja Jaworska",
+              "role": "Asystentka Biura"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Praktyczne informacje",
+          "items": [
+            {
+              "icon": "door",
+              "title": "Recepcja i karty gości",
+              "meta": "Przy wejściu głównym · zgłoś gościa przed wizytą",
+              "action": "Zgłoś gościa",
+              "href": "mailto:a.just@rynekpierwotny.pl?cc=m.jaworska@rynekpierwotny.pl&subject=Zg%C5%82oszenie%20go%C5%9Bcia"
+            },
+            {
+              "icon": "dumbbell",
+              "title": "Szatnie dla rowerzystów",
+              "meta": "ul. Rowerowa · prysznice i stojaki, wejście od parkingu",
+              "action": "Zobacz na mapie biura",
+              "mapQuery": "Szatnie dla rowerzystów"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Coś nie działa w biurze?",
+      "footerText": "Zgłoszenia dotyczące sprzętu, klimatyzacji i sal zakładaj w Helpdesku: helpdesk.propertygroup.pl",
+      "footerCta": "Otwórz Helpdesk",
+      "footerHref": "https://helpdesk.propertygroup.pl/"
+    },
+    "schemat": {
+      "badge": "O firmie",
+      "title": "Zarząd",
+      "lead": "Skład Zarządu Property Group.",
+      "blocks": [
+        {
+          "type": "people",
+          "title": "Zarząd",
+          "items": [
+            {
+              "name": "Grzegorz Kurowski",
+              "role": "Prezes Zarządu"
+            },
+            {
+              "name": "Paweł Moszczyński",
+              "role": "Wiceprezes Zarządu"
+            },
+            {
+              "name": "Piotr Wetmański",
+              "role": "Dyrektor Generalny"
+            },
+            {
+              "name": "Jerzy Michalski",
+              "role": "Członek Zarządu ds. Marketingu i Sprzedaży (PG, ESTI, Platforma Mieszkaniowa)"
+            },
+            {
+              "name": "Maciej Fijałkowski",
+              "role": "Członek Zarządu, CFO"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Struktura się zmieniła?",
+      "footerText": "Zmiany w strukturze i nowe zespoły zgłaszaj do HR — schemat i katalog aktualizujemy razem.",
+      "footerCta": "Zgłoś zmianę"
+    },
+    "struktura": {
+      "badge": "O firmie",
+      "title": "Struktura",
+      "lead": "Dwa piony: Dyrektora Generalnego oraz Sprzedaży i Marketingu. Poniżej departamenty z osobą kierującą i liczbą osób — klik prowadzi do katalogu pracowników z filtrem na dany dział.",
+      "blocks": [
+        {
+          "type": "depts"
+        }
+      ],
+      "footerTitle": "Struktura się zmieniła?",
+      "footerText": "Zmiany w strukturze i nowe zespoły zgłaszaj do HR — schemat i katalog aktualizujemy razem.",
+      "footerCta": "Zgłoś zmianę"
+    },
+    "misja": {
+      "badge": "O firmie",
+      "title": "Misja i wartości",
+      "lead": "Misja i sześć wartości, którymi kierujemy się w codziennej pracy — z klientami, partnerami i między zespołami.",
+      "blocks": [
+        {
+          "type": "quote",
+          "title": "Nasza misja",
+          "intro": "Wierzymy, że znalezienie swojego miejsca na ziemi jest podstawą szczęśliwego życia. Od 16 lat z sukcesami łączymy ludzi z ich wymarzonymi mieszkaniami. Nasza misja brzmi:",
+          "quote": "Dzięki technologii, danym i doświadczeniu rynkowemu, tworzymy przyjazny dla użytkowników ekosystem rozwiązań, by tworzyć rynek nieruchomości jutra.",
+          "by": "Grzegorz Kurowski i Paweł Moszczyński — założyciele Property Group",
+          "people": [
+            {
+              "name": "Grzegorz Kurowski",
+              "role": "Prezes Zarządu, współzałożyciel"
+            },
+            {
+              "name": "Paweł Moszczyński",
+              "role": "Wiceprezes Zarządu, współzałożyciel"
+            }
+          ]
+        },
+        {
+          "type": "values",
+          "title": "Nasze wartości",
+          "items": [
+            {
+              "icon": "spark",
+              "title": "Sprawczość",
+              "desc": "Jako biznes istniejemy na rynkach i obszarach, gdzie wierzymy, że możemy coś zmienić. Tak postrzegamy każdego pracownika i każdy zespół – nieustannie rozwijających swoje patrzenie na to jak można wpływać na najbliższą rzeczywistość."
+            },
+            {
+              "icon": "heart",
+              "title": "Relacje",
+              "desc": "Fundament naszego rozwoju opiera się na długotrwałych i bliskich relacjach z naszymi klientami i partnerami. Nasza pozycja na rynku jest funkcją tego jak dobrze umiemy ich słuchać i tworzyć wspólne rozwiązania."
+            },
+            {
+              "icon": "share",
+              "title": "Autentyczność",
+              "desc": "Wszystko co robimy jest oparte na dialogu – z rynkiem, z naszymi klientami, pomiędzy zespołami. Wierzymy więc w jego prostotę, efektywność i szczerość – tylko tak możemy wspólnie osiągnąć zamierzony cel."
+            },
+            {
+              "icon": "compass",
+              "title": "Fascynacja",
+              "desc": "By zmieniać, nie możemy bać się testować odważnych hipotez i eksperymentować. Ta odwaga, kreatywność i ciekawość nowego wyklucza niedoskonałość i kompromisy, a krytyczne myślenie pozwala nam nie zgubić jasnego kierunku."
+            },
+            {
+              "icon": "trophy",
+              "title": "Jakość",
+              "desc": "Nasz model biznesowy jest oparty o naszą autentyczną ciekawość co będzie jutro. Ta intelektualna przygoda w połączeniu z obsesją na punkcie doskonałości doświadczeń klienta zarówno tego indywidualnego jak i biznesowego, po prostu sprawia nam radość. A różnorodność szczerych poglądów i postaw, podejść i doświadczeń stymulują nasz rozwój."
+            },
+            {
+              "icon": "users",
+              "title": "Zespół",
+              "desc": "Operujemy na bardzo konkurencyjnych rynkach – by wygrać, wierzymy, że musimy być najlepszym zespołem. Osiągniemy to tylko wtedy, gdy będziemy miejscem, które przyciąga najlepszy talent i tylko wtedy, jeśli będziemy tworzyć najlepsze środowisko umożliwiające współpracę."
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Wartości w praktyce",
+      "footerText": "Masz przykład sytuacji, w której wartości pomogły w decyzji? Zespół komunikacji zbiera je do wewnętrznych materiałów.",
+      "footerCta": "Zgłoś przykład"
+    },
+    "bigdata": {
+      "badge": "Wiedza o rynku",
+      "title": "Dane rynkowe — BIG DATA",
+      "lead": "BIG DATA RynekPierwotny.pl to pierwsza ogólnopolska platforma do monitoringu i samodzielnej analizy rynku mieszkaniowego — produkt grupy adresowany do deweloperów, analityków, pracowni badawczych, producentów materiałów budowlanych i mediów. Co miesiąc publikujemy zagregowane dane z 90% monitorowanych nowych inwestycji w Polsce. Poniżej: co zawiera platforma i do kogo zgłosić się po dane.",
+      "blocks": [
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "150 000",
+              "label": "ofert mieszkaniowych w bieżącym monitoringu"
+            },
+            {
+              "value": "1000+",
+              "label": "deweloperów, których inwestycje monitorujemy"
+            },
+            {
+              "value": "90%",
+              "label": "monitorowanych nowych inwestycji mieszkaniowych w Polsce"
+            },
+            {
+              "value": "17",
+              "label": "miast z danymi o cenach mieszkań"
+            }
+          ]
+        },
+        {
+          "type": "people",
+          "title": "Kontakt",
+          "items": [
+            {
+              "name": "Jan Dziekoński",
+              "role": "Główny Ekonomista, szef zespołu Research — komentarze kwartalne i analizy rynku",
+              "href": "https://bigdata.rynekpierwotny.pl/newshub/informacje-rynkowe/"
+            },
+            {
+              "name": "Aleksandra Boratyńska",
+              "role": "Doradca klienta BIG DATA · a.boratynska@rynekpierwotny.pl · +48 532 758 886",
+              "href": "mailto:a.boratynska@rynekpierwotny.pl"
+            }
+          ]
+        },
+        {
+          "type": "banner",
+          "slotId": "pg-bigdata-team",
+          "slotLabel": "Zdjęcie zespołu BIG DATA",
+          "slotSrc": "./assets/office-team-silverkblack.jpg",
+          "caption": "Siedmioosobowy zespół BIG DATA — analitycy i deweloperzy danych, którzy każdego dnia aktualizują monitoring rynku mieszkaniowego."
+        },
+        {
+          "type": "list",
+          "title": "Ostatnie publikacje ekspertów",
+          "note": "Link otwiera pełny artykuł na bigdata.rynekpierwotny.pl",
+          "hasMedia": true,
+          "slotId": "pg-bigdata-press",
+          "items": [
+            {
+              "icon": "news",
+              "title": "Obniżki stóp procentowych? Singlom i rodzinom wciąż pod górkę na rynku mieszkaniowym",
+              "meta": "22.12.2025 · Raporty i analizy",
+              "action": "Czytaj",
+              "href": "https://bigdata.rynekpierwotny.pl/newshub/aktualnosci-bigdata/obnizki-stop-procentowych-singlom-i-rodzinom-wciaz-pod-gorke-na-rynku-mieszkaniowym-40399/"
+            },
+            {
+              "icon": "news",
+              "title": "Listopad na rynku najmu: mniej ofert, ale w większości miast czynsze niższe niż rok temu",
+              "meta": "18.12.2025 · Raporty i analizy",
+              "action": "Czytaj",
+              "href": "https://bigdata.rynekpierwotny.pl/newshub/aktualnosci-bigdata/listopad-na-rynku-najmu-mniej-ofert-ale-w-wiekszosci-miast-czynsze-nizsze-niz-rok-temu-40286/"
+            },
+            {
+              "icon": "chart",
+              "title": "Nowa era rynku nieruchomości — Rok 2026: Perspektywy i scenariusze",
+              "meta": "16.12.2025 · Raporty i analizy",
+              "action": "Czytaj",
+              "href": "https://bigdata.rynekpierwotny.pl/newshub/informacje-rynkowe/nowa-era-rynku-nieruchomosci-rok-2026-perspektywy-i-scenariusze-40186/"
+            },
+            {
+              "icon": "news",
+              "title": "Będą kolejki po refinansowanie? Obniżka raty np. o 30% mocno kusi",
+              "meta": "15.12.2025 · Raporty i analizy",
+              "action": "Czytaj",
+              "href": "https://bigdata.rynekpierwotny.pl/newshub/aktualnosci-bigdata/beda-kolejki-po-refinansowanie-obnizka-raty-np-o-30-mocno-kusi-40149/"
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "title": "Co znajdziesz na platformie",
+          "varied": true,
+          "items": [
+            {
+              "icon": "chart",
+              "title": "Średnia cena za m²",
+              "desc": "Zagregowane średnie ceny mieszkań dla 17 największych miast w Polsce, z porównaniem między rynkami.",
+              "meta": "Ceny",
+              "href": "https://bigdata.rynekpierwotny.pl/ceny/mieszkania/warszawa/ceny/",
+              "ribbon": "Najczęściej sprawdzane"
+            },
+            {
+              "icon": "building",
+              "title": "Liczba dostępnych nieruchomości",
+              "desc": "Suma aktualnych ofert na RynekPierwotny.pl na koniec miesiąca — realna wielkość oferty w danym mieście.",
+              "meta": "Oferta",
+              "href": "https://bigdata.rynekpierwotny.pl/ceny/mieszkania/warszawa/oferta/"
+            },
+            {
+              "icon": "users",
+              "title": "Popyt na mieszkania i domy",
+              "desc": "Zainteresowanie nowymi nieruchomościami liczone jako iloraz sprzedanych i dostępnych ofert.",
+              "meta": "Popyt",
+              "href": "https://bigdata.rynekpierwotny.pl/ceny/mieszkania/warszawa/popyt/"
+            },
+            {
+              "icon": "trophy",
+              "title": "Sprzedane mieszkania i domy",
+              "desc": "Podział na liczbę pokoi, cenę, powierzchnię i etap realizacji inwestycji.",
+              "meta": "Sprzedaż",
+              "href": "https://bigdata.rynekpierwotny.pl/ceny/mieszkania/warszawa/sprzedane/"
+            },
+            {
+              "icon": "spark",
+              "title": "Wprowadzone do sprzedaży",
+              "desc": "Uzupełnianie oferty przez 97% deweloperów realizujących inwestycje w Polsce — co trafiło na rynek i w jakim przedziale cenowym.",
+              "meta": "Nowa podaż",
+              "href": "https://bigdata.rynekpierwotny.pl/ceny/mieszkania/warszawa/nowe/"
+            },
+            {
+              "icon": "files",
+              "title": "Dashboardy i raporty miast",
+              "desc": "Wyselekcjonowane dane o cenach i ofercie w wybranym mieście — gotowe do prezentacji.",
+              "meta": "Analizy",
+              "href": "https://bigdata.rynekpierwotny.pl/ceny/mieszkania/fltr/"
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "title": "Produkty BIG DATA",
+          "dark": true,
+          "note": "Pełna oferta dla klientów — warto znać, zanim wejdziesz w rozmowę handlową",
+          "items": [
+            {
+              "icon": "eye",
+              "title": "Monitoring Konkurencji i alerty",
+              "desc": "Porównanie inwestycji z konkurencją: zainteresowanie, ceny, tempo sprzedaży.",
+              "meta": "Monitoring",
+              "href": "https://bigdata.rynekpierwotny.pl/monitoring/"
+            },
+            {
+              "icon": "files",
+              "title": "Raporty dedykowane",
+              "desc": "Klient wybiera dane, my składamy raport dla dowolnego miasta lub aglomeracji.",
+              "meta": "Raport",
+              "href": "https://skomponuj-raport.bigdata.rynekpierwotny.pl/"
+            },
+            {
+              "icon": "chart",
+              "title": "Raport kwartalny",
+              "desc": "„Aktualna sytuacja na największych rynkach mieszkaniowych w Polsce” — co kwartał.",
+              "meta": "Cykliczne",
+              "href": "https://raport.bigdata.rynekpierwotny.pl/"
+            },
+            {
+              "icon": "book",
+              "title": "Surowe dane",
+              "desc": "Szczegółowe dane dla analityków, bez oprawy graficznej i komentarza.",
+              "meta": "Dane",
+              "href": "https://skomponuj-raport.bigdata.rynekpierwotny.pl/"
+            },
+            {
+              "icon": "news",
+              "title": "BIG DATA Insight",
+              "desc": "Cotygodniowy przegląd najważniejszych wiadomości z rynku mieszkaniowego.",
+              "meta": "Newsletter",
+              "href": "https://bigdata.rynekpierwotny.pl/newshub/"
+            },
+            {
+              "icon": "help",
+              "title": "Cennik i FAQ",
+              "desc": "Warunki dostępu do platformy i odpowiedzi na najczęstsze pytania klientów.",
+              "meta": "Cennik",
+              "href": "https://bigdata.rynekpierwotny.pl/cennik/"
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "title": "Skąd biorą się dane",
+          "quote": "Każdego dnia dedykowane aplikacje oraz siedmioosobowy zespół dokonują setek aktualizacji ofert. Analizujemy przy tym zachowania miliona użytkowników poszukujących mieszkania — dzięki temu widzimy nie tylko podaż, ale i zmieniające się preferencje zakupowe.",
+          "by": "Zespół BIG DATA · 15 lat doświadczenia w analizie rynku"
+        },
+        {
+          "type": "cards",
+          "title": "Wyróżnienia",
+          "dark": true,
+          "items": [
+            {
+              "icon": "trophy",
+              "title": "Digital Excellence Awards 2022",
+              "desc": "Wyróżnienie w kategorii „Digital Capabilities”.",
+              "meta": "Nagroda",
+              "href": "https://bigdata.rynekpierwotny.pl/biuro-prasowe/",
+              "ribbon": "Wyróżnienie"
+            },
+            {
+              "icon": "share",
+              "title": "Partnerstwo z JLL",
+              "desc": "Wspólna analityka rynku mieszkaniowego z JLL Residential Poland — od 2025 roku.",
+              "meta": "Partnerstwo",
+              "to": "aktualnosci",
+              "ribbon": "Wyróżnienie"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Potrzebujesz danych do prezentacji lub oferty?",
+      "footerText": "Po konkretne dane, raport lub wycenę dostępu napisz do Aleksandry Boratyńskiej (Sprzedaż BIG DATA). Zasady dostępu dla pracowników grupy — do potwierdzenia z zespołem Research.",
+      "footerCta": "Otwórz platformę BIG DATA",
+      "footerHref": "https://bigdata.rynekpierwotny.pl/"
+    },
+    "aktualnosci": {
+      "badge": "Komunikacja",
+      "title": "Aktualności",
+      "lead": "Ogłoszenia HR, wyniki i zmiany produktowe — publikowane przez zespół komunikacji.",
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Kim jesteśmy",
+          "paras": [
+            "Dział Marki i Komunikacji (DMiK) odpowiada za komunikację zewnętrzną (PR, media, social media, marketing) i wewnętrzną (ogłoszenia, aktualności) wszystkich marek Property Group. Każdy materiał wychodzący na zewnątrz firmy wymaga naszej akceptacji przed publikacją — zasady i kontakty są w Komunikacji wewnętrznej."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Zgłaszasz materiał do akceptacji?",
+          "items": [
+            {
+              "icon": "shield",
+              "title": "Zasady obiegu i akceptacji materiałów",
+              "meta": "DMiK-001/2026 · pełna polityka i kontakty",
+              "action": "Zobacz",
+              "to": "komwew"
+            },
+            {
+              "icon": "spark",
+              "title": "Brand Approval Tool",
+              "meta": "Zgłoszenie materiału do DMiK",
+              "action": "Otwórz BAT",
+              "href": "https://property.youtrack.cloud/form/c1ebe45f-4f70-4e11-b00c-1cc23556611b"
+            }
+          ]
+        },
+        {
+          "type": "posts",
+          "title": "Najnowsze"
+        },
+        {
+          "type": "list",
+          "title": "Archiwum",
+          "items": [
+            {
+              "icon": "news",
+              "title": "Podsumowanie Q2 2026",
+              "meta": "30 czerwca · Zarząd",
+              "action": "Czytaj"
+            },
+            {
+              "icon": "news",
+              "title": "Nowa polityka podróży służbowych",
+              "meta": "17 czerwca · Finanse",
+              "action": "Czytaj"
+            },
+            {
+              "icon": "news",
+              "title": "Wyniki badania satysfakcji pracowników",
+              "meta": "2 czerwca · HR",
+              "action": "Czytaj"
+            },
+            {
+              "icon": "news",
+              "title": "GetHome.pl z nową identyfikacją wizualną",
+              "meta": "21 maja · Marketing",
+              "action": "Czytaj"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Masz temat na ogłoszenie?",
+      "footerText": "Publikacją zajmuje się zespół komunikacji — zgłoszenia przyjmujemy do środy.",
+      "footerCta": "Zgłoś temat"
+    },
+    "kalendarz": {
+      "badge": "Komunikacja",
+      "title": "Kalendarz",
+      "lead": "Kalendarz działań firmowych, a pod spodem podgląd Twojego prywatnego kalendarza Outlook.",
+      "blocks": [
+        {
+          "type": "calgrid",
+          "title": "Kalendarz działań firmowych"
+        },
+        {
+          "type": "cards",
+          "title": "Spotkania cykliczne",
+          "note": "Do uzupełnienia razem z zespołem komunikacji",
+          "items": [
+            {
+              "icon": "users",
+              "title": "Town Hall",
+              "desc": "Spotkanie całej firmy — podsumowanie kierunku i wyników.",
+              "meta": "Cała firma"
+            }
+          ]
+        },
+        {
+          "type": "outlook",
+          "title": "Twój kalendarz",
+          "note": "Techniczne: możliwe do zrobienia w SharePoint przez Microsoft Graph (uprawnienie Calendars.Read) — komponent Graph Toolkit „mgt-agenda” pokazuje najbliższe wydarzenia zalogowanej osoby bez budowania własnego backendu. Ten prototyp działa bez logowania, więc miejsce niżej jest podglądem integracji, nie prawdziwymi danymi."
+        }
+      ],
+      "footerTitle": "Organizujesz wydarzenie?",
+      "footerText": "Dodanie wpisu do kalendarza firmowego zgłaszasz zespołowi komunikacji.",
+      "footerCta": "Zgłoś wydarzenie"
+    },
+    "social": {
+      "badge": "Komunikacja",
+      "title": "Social Media",
+      "lead": "Oficjalne profile marek grupy. Zanim opublikujesz coś w imieniu firmy, sprawdź zasady komunikacji zewnętrznej.",
+      "blocks": [
+        {
+          "type": "video",
+          "videoTitle": "Misja Mieszkanie",
+          "videoNote": "kanał YouTube prowadzony przez Arka Słodkowskiego",
+          "videoHref": "https://www.youtube.com/@MisjaMieszkanie",
+          "videos": [
+            {
+              "id": "_Qf0ppNGxKU",
+              "title": "Myślisz o kupnie nowego mieszkania od dewelopera?",
+              "date": "26.05.2025"
+            },
+            {
+              "id": "7j4J8uVCUM4",
+              "title": "Więcej mieszkań, mniej klientów — podsumowanie Q3 na rynku nieruchomości",
+              "date": "28.11.2024"
+            },
+            {
+              "id": "6leORM7866o",
+              "title": "Mieszkanie w Polsce czy w Hiszpanii? | Michał Cal cz. 2",
+              "date": "24.11.2024"
+            },
+            {
+              "id": "dBQfqk6Hno8",
+              "title": "Jak odnieść sukces w nieruchomościach | Michał Cal",
+              "date": "21.11.2024"
+            }
+          ]
+        },
+        {
+          "type": "brands",
+          "title": "Nasze projekty"
+        },
+        {
+          "type": "list",
+          "title": "Zanim opublikujesz",
+          "items": [
+            {
+              "icon": "shield",
+              "title": "Zasady obiegu i akceptacji materiałów komunikacyjnych",
+              "meta": "DMiK-001/2026 · każdy materiał zewnętrzny wymaga akceptacji DMiK przed publikacją",
+              "action": "Otwórz",
+              "to": "komwew"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Brakuje profilu na liście?",
+      "footerText": "Zgłoś go do zespołu marketingu — uzupełnimy adres i status weryfikacji.",
+      "footerCta": "Zgłoś profil",
+      "footerHref": "mailto:brand@rynekpierwotny.pl"
+    },
+    "oferty": {
+      "badge": "Dla pracownika",
+      "title": "Oferty pracy",
+      "lead": "Dziesięć otwartych rekrutacji w grupie. Znasz kogoś, kto pasuje? Za polecenie sprawdzonej osoby wypłacamy bonus w ramach programu rekomendacji — zasady i kwotę potwierdza HR. Każda pozycja otwiera pełne ogłoszenie na propertygroup.pl.",
+      "blocks": [
+        {
+          "type": "list",
+          "title": "Otwarte rekrutacje",
+          "note": "Źródło: propertygroup.pl/category/rekrutacje — stan na 16 września 2026",
+          "items": [
+            {
+              "icon": "spark",
+              "title": "Video Content Creator / Montażysta",
+              "meta": "Nagrania i montaż wideo — social media, wizytówki inwestycji, employer branding",
+              "action": "Zobacz ofertę",
+              "href": "https://propertygroup.pl/rekrutacje/video-content-creator-montazysta/"
+            },
+            {
+              "icon": "laptop",
+              "title": "Front-end Engineer (React, Next.js)",
+              "meta": "Nowy front produktowy — rynek wtórny i digital advisory",
+              "action": "Zobacz ofertę",
+              "href": "https://propertygroup.pl/rekrutacje/front-end-engineer-react-next-js/"
+            },
+            {
+              "icon": "chart",
+              "title": "Product Builder",
+              "meta": "Budowa nowych produktów wokół rynku wtórnego",
+              "action": "Zobacz ofertę",
+              "href": "https://propertygroup.pl/rekrutacje/product-builder/"
+            },
+            {
+              "icon": "chart",
+              "title": "Product Manager",
+              "meta": "Dział Produktu · transformacja ESTI CRM (legacy → nowoczesny stack, AI)",
+              "action": "Zobacz ofertę",
+              "href": "https://propertygroup.pl/rekrutacje/product-manager/"
+            },
+            {
+              "icon": "files",
+              "title": "Samodzielna Księgowa / Samodzielny Księgowy",
+              "meta": "Dział Finanse · min. 4 lata doświadczenia",
+              "action": "Zobacz ofertę",
+              "href": "https://propertygroup.pl/rekrutacje/samodzielna-ksiegowa-samodzielny-ksiegowy/"
+            },
+            {
+              "icon": "users",
+              "title": "Doradca Klienta / Doradczyni Klienta",
+              "meta": "Dział Sprzedaży · RynekPierwotny.pl lub ESTI CRM",
+              "action": "Zobacz ofertę",
+              "href": "https://propertygroup.pl/rekrutacje/doradca-klienta-doradczyni-klienta-2/"
+            },
+            {
+              "icon": "files",
+              "title": "Compliance Manager (K/M)",
+              "meta": "Dział Finanse · wykształcenie prawnicze, min. 3 lata doświadczenia, RODO/AML",
+              "action": "Zobacz ofertę",
+              "href": "https://propertygroup.pl/rekrutacje/compliance-manager/"
+            },
+            {
+              "icon": "help",
+              "title": "Specjalista / Specjalistka Contact Center",
+              "meta": "Dział Contact Center · min. 1 rok doświadczenia",
+              "action": "Zobacz ofertę",
+              "href": "https://propertygroup.pl/rekrutacje/specjalista-specjalistka-contact-center/"
+            },
+            {
+              "icon": "spark",
+              "title": "Specjalista / Specjalistka ds. marketingu",
+              "meta": "Dział E-commerce · SEM, mailing, performance, marketing automation",
+              "action": "Zobacz ofertę",
+              "href": "https://propertygroup.pl/rekrutacje/specjalista-specjalistka-ds-marketingu/"
+            },
+            {
+              "icon": "heart",
+              "title": "Ekspert / Ekspertka ds. Kredytów Hipotecznych",
+              "meta": "Pośrednictwo Finansowe · min. 3 lata w sektorze bankowym",
+              "action": "Zobacz ofertę",
+              "href": "https://propertygroup.pl/rekrutacje/specjalista-agent-ds-kredytow-hipotecznych/"
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "title": "Co oferujemy kandydatom",
+          "note": "Ta sama lista, którą widzą osoby z zewnątrz — warto ją znać, polecając znajomych",
+          "items": [
+            {
+              "icon": "stethoscope",
+              "title": "System benefitów",
+              "desc": "Prywatna opieka medyczna LUX MED, ubezpieczenie na życie Unum, karta MultiSport i szkolenia.",
+              "meta": "Benefity",
+              "to": "benefity"
+            },
+            {
+              "icon": "trophy",
+              "title": "Nagrody roczne i jubileuszowe",
+              "desc": "Konkurencyjne wynagrodzenie, premie oraz nagrody za staż w grupie.",
+              "meta": "Wynagrodzenie"
+            },
+            {
+              "icon": "calendar",
+              "title": "Skrócone piątki",
+              "desc": "Krótszy piątek, żeby weekend zaczynał się wcześniej.",
+              "meta": "Czas pracy"
+            },
+            {
+              "icon": "door",
+              "title": "Praca hybrydowa i elastyczne godziny",
+              "desc": "Część stanowisk z pracą zdalną do 6 dni w miesiącu, godziny startu w oknie 7:30–9:30.",
+              "meta": "Organizacja pracy"
+            },
+            {
+              "icon": "plus",
+              "title": "Program rekomendacji",
+              "desc": "Polecasz sprawdzoną osobę i dostajesz bonus po jej zatrudnieniu.",
+              "meta": "Polecenia"
+            },
+            {
+              "icon": "compass",
+              "title": "Biuro przy ul. Rodziny Hiszpańskich 8",
+              "desc": "Zaopatrzona kuchnia, świeże owoce, chillout room i strefa rozrywki. Klik otwiera lokalizację w Google Maps.",
+              "meta": "Biuro",
+              "href": "https://www.google.com/maps/search/?api=1&query=ul.+Rodziny+Hiszpa%C5%84skich+8%2C+02-685+Warszawa"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Chcesz polecić kogoś na jedną z tych rekrutacji?",
+      "footerText": "Prześlij kontakt do HR albo skorzystaj z formularza rekrutacyjnego przy konkretnym ogłoszeniu. Wszystkie oferty prowadzi dział HR.",
+      "footerCta": "Zobacz wszystkie rekrutacje",
+      "footerHref": "https://propertygroup.pl/pracuj-z-nami/#oferty-pracy"
+    },
+    "grafika": {
+      "badge": "Brand i komunikacja",
+      "title": "Materiały graficzne",
+      "lead": "Logotypy, szablony i zasoby marek grupy. Materiał przeznaczony do dystrybucji zewnętrznej wymaga akceptacji Departamentu Marki i Komunikacji (DMiK) przed publikacją — zasady poniżej.",
+      "blocks": [
+        {
+          "type": "list",
+          "title": "Szukasz logotypu, szablonu lub grafiki?",
+          "items": [
+            {
+              "icon": "share",
+              "title": "Kanał „Brand i materiały” na Teams",
+              "meta": "Aktualne logotypy, szablony i grafiki — pytaj zespół kreatywny",
+              "action": "Otwórz Teams",
+              "href": "https://teams.microsoft.com/l/chat/19:0fed083616f145bbb6930cd6ca45b27f@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Potrzebujesz materiału na zewnątrz?",
+      "footerText": "Zlecenie i samodzielny materiał do akceptacji zgłaszasz w tym samym miejscu — Brand Approval Tool. DMiK odpowiada do 3 dni roboczych.",
+      "footerCta": "Otwórz Brand Approval Tool",
+      "footerHref": "https://property.youtrack.cloud/form/c1ebe45f-4f70-4e11-b00c-1cc23556611b"
+    },
+    "hr": {
+      "badge": "HR",
+      "title": "Dokumenty i kontakt HR",
+      "lead": "Zaświadczenia, umowy i wnioski. Większość spraw załatwisz elektronicznie — bez wizyty w biurze HR.",
+      "blocks": [
+        {
+          "type": "enova",
+          "key": "enova",
+          "title": "Portal pracownika enova",
+          "note": "Urlopy, praca zdalna i wnioski HR — wybierz portal swojej spółki i zaloguj się kontem domenowym.",
+          "items": [
+            {
+              "title": "Property Group",
+              "href": "http://192.168.5.103:81/Login/PROPERTY_GROUP"
+            },
+            {
+              "title": "ESTI CRM",
+              "href": "http://192.168.5.103:81/Login/EstiCRM"
+            },
+            {
+              "title": "Platforma Mieszkaniowa",
+              "href": "http://192.168.5.103:81/Login/Platforma_Mieszkaniowa"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Najczęstsze sprawy",
+          "items": [
+            {
+              "icon": "files",
+              "title": "Zaświadczenie o zatrudnieniu",
+              "meta": "Generowane automatycznie · do 24 h",
+              "action": "Otwórz enova",
+              "href": "http://192.168.5.103:81/Login/PROPERTY_GROUP"
+            },
+            {
+              "icon": "files",
+              "title": "Zmiana danych osobowych",
+              "meta": "Adres, konto bankowe, dane kontaktowe",
+              "action": "Otwórz enova",
+              "href": "http://192.168.5.103:81/Login/PROPERTY_GROUP"
+            },
+            {
+              "icon": "files",
+              "title": "Umowa i aneksy",
+              "meta": "Napisz do Head of HR",
+              "action": "Napisz e-mail",
+              "href": "mailto:m.siwiec@rynekpierwotny.pl?subject=Umowa%20i%20aneksy%20%E2%80%94%20pytanie%20z%20intranetu"
+            },
+            {
+              "icon": "shield",
+              "title": "Zgłoszenie naruszenia",
+              "meta": "Kanał poufny — zgłoszenia trafiają do rzecznika etyki",
+              "action": "Napisz do HR",
+              "href": "mailto:m.siwiec@rynekpierwotny.pl?subject=Zg%C5%82oszenie%20naruszenia%20%E2%80%94%20poufne"
+            }
+          ]
+        },
+        {
+          "type": "people",
+          "title": "Zespół HR",
+          "note": "Odpowiadamy zwykle w 1 dzień roboczy",
+          "items": [
+            {
+              "name": "Małgorzata Siwiec",
+              "role": "Dyrektor HR"
+            },
+            {
+              "name": "Karolina Paziewska",
+              "role": "HR Specialist · benefity, umowy"
+            },
+            {
+              "name": "Filip Kościółek",
+              "role": "HR Specialist"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Sprawa nie z tej listy?",
+      "footerText": "Napisz na hr@propertygroup.pl albo zarezerwuj 15 minut w kalendarzu HR.",
+      "footerCta": "Napisz do HR"
+    },
+    "komwew": {
+      "badge": "Baza procedur",
+      "title": "Polityka komunikacji zewnętrznej",
+      "lead": "Zasady obiegu i akceptacji materiałów komunikacyjnych (DMiK-001/2026) — obowiązują wszystkich pracowników od 3 czerwca 2026. Dotyczy materiałów kierowanych na zewnątrz firmy; newsy o produktach i wynikach są w Aktualnościach.",
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Żelazna zasada",
+          "paras": [
+            "Każdy materiał i tekst — niezależnie od tego, kto go tworzy — musi zostać zaakceptowany przez Dział Marki i Komunikacji (DMiK) przed publikacją. Dotyczy to wszystkich kanałów: prasy, social mediów, e-maili, SMS, landing page’ów, webinarów i produktów, a także masowych komunikatów do wszystkich pracowników. Zasady obejmują wszystkie marki Property Group.",
+            "Materiały do użytku wyłącznie wewnętrznego (instrukcje, regulaminy wewnętrzne, prezentacje na spotkania wewnętrzne) nie wymagają akceptacji DMiK — chyba że mogą zostać upublicznione lub przesłane podmiotom zewnętrznym."
+          ]
+        },
+        {
+          "type": "cards",
+          "title": "Zgłoś materiał do DMiK — jedno miejsce, dwie ścieżki",
+          "items": [
+            {
+              "icon": "spark",
+              "title": "Brand Approval Tool",
+              "desc": "Zlecasz materiał do stworzenia: wypełniasz brief (cel, odbiorcy, kanał, termin) → DMiK potwierdza w 1 dzień i tworzy materiał → akceptujesz merytorycznie (maks. 3 rundy uwag). Masz gotowy materiał: wysyłasz go z opisem min. 5 dni roboczych przed publikacją (10 dni dla kampanii złożonych) → DMiK wraca do 3 dni z akceptacją lub uwagami. W obu przypadkach publikujesz TYLKO po pisemnej akceptacji.",
+              "meta": "Jeden formularz",
+              "action": "Otwórz Brand Approval Tool",
+              "href": "https://property.youtrack.cloud/form/c1ebe45f-4f70-4e11-b00c-1cc23556611b"
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "title": "Tryb pilny i wyjątki",
+          "dark": true,
+          "items": [
+            {
+              "icon": "help",
+              "title": "Publikacja pilna",
+              "desc": "Zgłoś do DMiK z min. 24h wyprzedzeniem i wyjaśnij, dlaczego to pilne — tryb pilny to wyjątek, nie reguła. Akceptacja jest nadal wymagana, tryb pilny tylko przyspiesza proces.",
+              "meta": "Wyjątek"
+            },
+            {
+              "icon": "shield",
+              "title": "Dziennikarz pyta Cię bezpośrednio",
+              "desc": "Nie komentuj, nie potwierdzaj, nie odsyłaj kolegów, nie pisz na własną rękę — „bez komentarza” to też komentarz. Podziękuj, powiedz że przekażesz pytanie, i natychmiast skontaktuj się z Head of PR: Arkadiusz Słodkowski.",
+              "meta": "Media"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Do kogo się zgłaszać",
+          "items": [
+            {
+              "icon": "files",
+              "title": "Łukasz Stefański — Brand Manager (grafika i teksty)",
+              "meta": "l.stefanski@rynekpierwotny.pl",
+              "action": "Napisz",
+              "href": "mailto:l.stefanski@rynekpierwotny.pl"
+            },
+            {
+              "icon": "files",
+              "title": "Arkadiusz Durka — Brand Manager",
+              "meta": "a.durka@rynekpierwotny.pl",
+              "action": "Napisz",
+              "href": "mailto:a.durka@rynekpierwotny.pl"
+            },
+            {
+              "icon": "share",
+              "title": "Arkadiusz Słodkowski — Head of PR (teksty i wypowiedzi)",
+              "meta": "a.slodkowski@rynekpierwotny.pl",
+              "action": "Napisz",
+              "href": "mailto:a.slodkowski@rynekpierwotny.pl"
+            },
+            {
+              "icon": "chart",
+              "title": "Marek Wielgo — ekspert rynku (wypowiedzi)",
+              "meta": "m.wielgo@rynekpierwotny.pl",
+              "action": "Napisz",
+              "href": "mailto:m.wielgo@rynekpierwotny.pl"
+            },
+            {
+              "icon": "compass",
+              "title": "Kuba Pozowski — Grafik Team Lead",
+              "meta": "k.pozowski@rynekpierwotny.pl",
+              "action": "Napisz",
+              "href": "mailto:k.pozowski@rynekpierwotny.pl"
+            },
+            {
+              "icon": "chart",
+              "title": "Jan Dziekoński — dane, teksty o rynku",
+              "meta": "j.dziekonski@rynekpierwotny.pl",
+              "action": "Napisz",
+              "href": "mailto:j.dziekonski@rynekpierwotny.pl"
+            },
+            {
+              "icon": "help",
+              "title": "Pytania ogólne o politykę",
+              "meta": "Michał Gołota, Dyrektor Marki i Komunikacji · m.golota@rynekpierwotny.pl",
+              "action": "Napisz",
+              "href": "mailto:m.golota@rynekpierwotny.pl"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Dokumenty i instrukcje",
+          "items": [
+            {
+              "icon": "files",
+              "title": "Zasady obiegu i akceptacji materiałów komunikacyjnych (DMiK-001/2026)",
+              "meta": "Pełny dokument polityki — Strefa Marki na Teams",
+              "action": "Otwórz Teams",
+              "href": "https://teams.microsoft.com/l/chat/19:0fed083616f145bbb6930cd6ca45b27f@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"
+            },
+            {
+              "icon": "files",
+              "title": "Rejestr materiałów wymagających akceptacji",
+              "meta": "DMiK · pełny wykaz materiałów objętych polityką, wg działu i kanału",
+              "action": "Otwórz Teams",
+              "href": "https://teams.microsoft.com/l/chat/19:0fed083616f145bbb6930cd6ca45b27f@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"
+            },
+            {
+              "icon": "files",
+              "title": "Brief komunikacyjny (formularz)",
+              "meta": "Wzór dostępny w Strefie Marki na Teams",
+              "action": "Otwórz Teams",
+              "href": "https://teams.microsoft.com/l/chat/19:0fed083616f145bbb6930cd6ca45b27f@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Masz temat na komunikat?",
+      "footerText": "Publikacją zajmuje się zespół komunikacji — zgłoszenia przyjmujemy przez Brand Approval Tool.",
+      "footerCta": "Otwórz Brand Approval Tool",
+      "footerHref": "https://property.youtrack.cloud/form/c1ebe45f-4f70-4e11-b00c-1cc23556611b"
+    },
+    "kluby": {
+      "badge": "Komunikacja",
+      "title": "Kluby zainteresowań",
+      "lead": "Nieformalne grupy pracowników — dołączasz przez kanał na Teams. Prowadzone oddolnie, bez budżetu i formalnej opieki HR.",
+      "blocks": [
+        {
+          "type": "list",
+          "title": "Aktywne kluby",
+          "items": [
+            {
+              "icon": "compass",
+              "title": "Wspinacze PG",
+              "meta": "Wyjścia na ściankę co dwa tygodnie, raz w roku wyjazd w skałki",
+              "action": "Dołącz na Teams",
+              "href": "https://teams.microsoft.com/l/channel/19%3Aa326265a6c2c405a918d66417f28806b%40thread.skype/%F0%9F%A7%97%20Wspinacze%20Property%20Group?groupId=ec7893cf-d437-4ff1-b1db-2b1125eeff03&tenantId=554e9ed4-9dd6-41a4-ba87-554edf2d039b"
+            },
+            {
+              "icon": "trophy",
+              "title": "Piłka nożna — orlik",
+              "meta": "Granie w czwartki po pracy, orlik przy ul. Cybernetyki",
+              "action": "Dołącz na Teams",
+              "href": "https://teams.microsoft.com/l/chat/19:9b053997ac8c406ebf40f7382c61af33@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"
+            },
+            {
+              "icon": "compass",
+              "title": "Sauniarze w Property Group",
+              "meta": "Wspólne wyjścia do sauny",
+              "action": "Dołącz na Teams",
+              "href": "https://teams.microsoft.com/l/channel/19%3Aec2fd957fa53497c85513ef2d85097ee%40thread.skype/%F0%9F%A7%96%20Sauniarze%20w%20Property%20Group?groupId=ec7893cf-d437-4ff1-b1db-2b1125eeff03&tenantId=554e9ed4-9dd6-41a4-ba87-554edf2d039b"
+            }
+          ]
+        }
+      ]
+    },
+    "wiki": {
+      "badge": "Wsparcie",
+      "title": "Baza wiedzy",
+      "lead": "Samoobsługowy onboarding i odpowiedzi na częste pytania — bez angażowania menadżera. Zapytaj poniżej, zanim napiszesz do kogokolwiek.",
+      "blocks": [
+        {
+          "type": "kbsearch",
+          "title": "Zadaj pytanie",
+          "kbFollowupNote": "Żaden artykuł nie pomógł? Sprawdź sekcję „Onboarding” niżej albo napisz do zespołu, który prowadzi ten temat.",
+          "kbNoMatchNote": "Nie znaleźliśmy artykułu na ten temat. Sprawdź sekcję „Onboarding” niżej albo zgłoś, że go tu brakuje."
+        },
+        {
+          "type": "copilot",
+          "title": "Zapytaj Copilota o ludzi, role i dokumenty",
+          "intro": "Docelowo odpytasz Copilota wprost o strukturę firmy, kto czym się zajmuje i gdzie są dokumenty — korzystając z tej samej bazy, co wyszukiwarka. Wymaga integracji z Microsoft 365 Copilot. Poniżej podgląd na przykładach.",
+          "prompts": [
+            {
+              "q": "Kto zajmuje się brandem?",
+              "a": "Marką i komunikacją kieruje Michał Gołota, dyrektor marki i komunikacji marketingowej. Materiały do akceptacji zgłaszasz przez Brand Approval Tool."
+            },
+            {
+              "q": "Jaka jest rola Jana Dziekońskiego?",
+              "a": "Jan Dziekoński to Główny Ekonomista i szef zespołu Research w BIG DATA RynekPierwotny.pl — komentarze kwartalne i analizy rynku."
+            },
+            {
+              "q": "Jakie dokumenty dotyczą ochrony danych osobowych?",
+              "a": "W Baza wiedzy → RODO i ochrona danych osobowych: Polityka ochrony danych osobowych, Procedura zarządzania incydentami, Procedura realizacji praw podmiotów danych i umowa powierzenia przetwarzania."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Onboarding — od czego zacząć",
+          "items": [
+            {
+              "icon": "building",
+              "title": "Struktura organizacji i przełożeni",
+              "meta": "Kto raportuje do kogo, piony i działy",
+              "action": "Otwórz strukturę",
+              "to": "struktura"
+            },
+            {
+              "icon": "badge",
+              "title": "Benefity i jak z nich skorzystać",
+              "meta": "Pakiet medyczny, MultiSport i inne",
+              "action": "Otwórz benefity",
+              "to": "benefity"
+            },
+            {
+              "icon": "compass",
+              "title": "Mapa biura",
+              "meta": "Sale, strefy zespołów, gdzie co jest",
+              "action": "Otwórz mapę",
+              "to": "biuro"
+            },
+            {
+              "icon": "files",
+              "title": "Dokumenty prawne i korporacyjne",
+              "meta": "NDA, pełnomocnictwa, dane rejestrowe spółek",
+              "action": "Otwórz dokumenty",
+              "to": "prawne"
+            },
+            {
+              "icon": "laptop",
+              "title": "Sprzęt, konto i pierwsze logowanie",
+              "meta": "VPN, hasła, dostępy",
+              "action": "Otwórz Pomoc techniczną",
+              "to": "pomoc"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "RODO i ochrona danych osobowych",
+          "note": "Pełna lista dokumentów jest na osobnej stronie: Ochrona danych osobowych",
+          "items": [
+            {
+              "icon": "shield",
+              "title": "Regulamin pełnienia funkcji IOD",
+              "meta": "Inspektor Ochrony Danych · wersja FINAL",
+              "action": "Otwórz PDF",
+              "href": "https://rynekpierwotny.sharepoint.com/:b:/r/sites/RP/Shared%20Documents/Regulamin%20pe%C5%82nienia%20funkcji%20IOD_FINAL.pdf?d=w287a5dc4c16247e7b8df9b9a9b915d00&csf=1&web=1&e=8xfriB"
+            },
+            {
+              "icon": "shield",
+              "title": "Polityka ochrony danych osobowych",
+              "meta": "Polityka RODO · aktualizacja 02.12.2025",
+              "action": "Otwórz PDF",
+              "href": "https://rynekpierwotny.sharepoint.com/:b:/r/sites/RP/Shared%20Documents/Polityka%20ochrony%20danych%20osobowych_02122025.pdf?d=wc1c1db8b73e14eafa9fc6919c842a634&csf=1&web=1&e=zFr0hM"
+            },
+            {
+              "icon": "shield",
+              "title": "Wszystkie dokumenty RODO",
+              "meta": "Pełna lista: umowy, procedury, klauzule",
+              "action": "Otwórz stronę",
+              "to": "rodo"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Czegoś tu nie znalazłeś?",
+      "footerText": "Napisz do zespołu komunikacji — dopiszemy artykuł do bazy wiedzy.",
+      "footerCta": "Zgłoś temat",
+      "footerHref": "mailto:brand@rynekpierwotny.pl"
+    },
+    "rodo": {
+      "badge": "Wsparcie",
+      "title": "Ochrona danych osobowych",
+      "lead": "Polityki, procedury i wzory dokumentów RODO obowiązujące w Property Group. W razie naruszenia lub wątpliwości — zgłoś sprawę do Inspektora Ochrony Danych od razu.",
+      "blocks": [
+        {
+          "type": "list",
+          "title": "Dokumenty",
+          "items": [
+            {
+              "icon": "shield",
+              "title": "Umowa powierzenia przetwarzania danych — wzór",
+              "meta": "Wzór umowy · aktualizacja 16.10.2025",
+              "action": "Otwórz DOCX",
+              "href": "https://rynekpierwotny.sharepoint.com/:w:/r/sites/RP/Shared%20Documents/Umowa%20powierzenia%20przetwarzania_wzor_16102025.docx?d=w1a7419e028c84e5dba50baa7c4756343&csf=1&web=1&e=s88I3y"
+            },
+            {
+              "icon": "shield",
+              "title": "Regulamin pełnienia funkcji IOD",
+              "meta": "Inspektor Ochrony Danych · wersja FINAL",
+              "action": "Otwórz PDF",
+              "href": "https://rynekpierwotny.sharepoint.com/:b:/r/sites/RP/Shared%20Documents/Regulamin%20pe%C5%82nienia%20funkcji%20IOD_FINAL.pdf?d=w287a5dc4c16247e7b8df9b9a9b915d00&csf=1&web=1&e=8xfriB"
+            },
+            {
+              "icon": "shield",
+              "title": "Polityka ochrony danych osobowych",
+              "meta": "Polityka RODO · aktualizacja 02.12.2025",
+              "action": "Otwórz PDF",
+              "href": "https://rynekpierwotny.sharepoint.com/:b:/r/sites/RP/Shared%20Documents/Polityka%20ochrony%20danych%20osobowych_02122025.pdf?d=wc1c1db8b73e14eafa9fc6919c842a634&csf=1&web=1&e=zFr0hM"
+            },
+            {
+              "icon": "shield",
+              "title": "Procedura realizacji praw podmiotów danych",
+              "meta": "RODO · wersja FINAL",
+              "action": "Otwórz PDF",
+              "href": "https://rynekpierwotny.sharepoint.com/:b:/r/sites/RP/Shared%20Documents/Procedura_realizacji_praw_podmiotow_danych_FINAL.pdf?d=w671b0204f93a4128882226d4ffdadd42&csf=1&web=1&e=hNQIpu"
+            },
+            {
+              "icon": "shield",
+              "title": "Procedura zarządzania incydentami",
+              "meta": "RODO · naruszenia ochrony danych · wersja FINAL",
+              "action": "Otwórz PDF",
+              "href": "https://rynekpierwotny.sharepoint.com/:b:/r/sites/RP/Shared%20Documents/Procedura%20zarzadzania%20incydentami_FINAL.pdf?d=wfefd37d183a743a680667a05943902e8&csf=1&web=1&e=bVfeKb"
+            },
+            {
+              "icon": "shield",
+              "title": "Klauzula informacyjna dla kontrahentów (pracownicy i reprezentanci) — Platforma Mieszkaniowa",
+              "meta": "RODO · klauzula informacyjna",
+              "action": "Otwórz DOCX",
+              "href": "https://rynekpierwotny.sharepoint.com/:w:/r/sites/RP/Shared%20Documents/klauzula%20informacyjna%20kontrahenci%20(pracownicy%20i%20reprezentanci)_Platforma.docx?d=w62063a010bf54db3b17e8d5842a93ca7&csf=1&web=1&e=cR4BB4"
+            },
+            {
+              "icon": "shield",
+              "title": "Klauzula informacyjna dla kontrahentów (pracownicy i reprezentanci)",
+              "meta": "RODO · klauzula informacyjna · do weryfikacji, czy to duplikat wersji Platforma",
+              "action": "Otwórz DOCX",
+              "href": "https://rynekpierwotny.sharepoint.com/:w:/r/sites/RP/Shared%20Documents/klauzula%20informacyjna%20kontrahenci%20(pracownicy%20i%20reprezentanci)%20(1).docx?d=wad474582522841a9bc21dc3aa908c319&csf=1&web=1&e=BZ1lQD"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Podejrzewasz naruszenie danych?",
+      "footerText": "Zgłoś to od razu do Inspektora Ochrony Danych — zgodnie z Procedurą zarządzania incydentami.",
+      "footerCta": "Otwórz procedurę",
+      "footerHref": "https://rynekpierwotny.sharepoint.com/:b:/r/sites/RP/Shared%20Documents/Procedura%20zarzadzania%20incydentami_FINAL.pdf?d=wfefd37d183a743a680667a05943902e8&csf=1&web=1&e=bVfeKb"
+    },
+    "pomoc": {
+      "badge": "Wsparcie",
+      "title": "Pomoc techniczna i linki",
+      "lead": "Zgłoszenia sprzętowe i systemowe, plus portale i narzędzia, po które sięgasz najczęściej. Krytyczne awarie zgłaszaj telefonicznie — wew. 199, całodobowo.",
+      "blocks": [
+        {
+          "type": "kbsearch",
+          "title": "Zanim założysz zgłoszenie"
+        },
+        {
+          "type": "list",
+          "title": "Sprawy IT — jeden portal",
+          "note": "Sprzęt, oprogramowanie, dostępy, VPN i konta — wszystko zgłaszasz w tym samym miejscu: Helpdesk. Kategorie poniżej pokazują tylko czego się spodziewać (SLA), nie osobne miejsca zgłoszeń.",
+          "items": [
+            {
+              "icon": "laptop",
+              "title": "Problem ze sprzętem",
+              "meta": "Laptop, monitor, dokowanie, akcesoria · sprzęt zastępczy w recepcji · SLA 1 dzień",
+              "action": "Otwórz Helpdesk",
+              "href": "https://helpdesk.propertygroup.pl/#/login"
+            },
+            {
+              "icon": "shield",
+              "title": "Dostęp i hasła",
+              "meta": "Reset hasła, MFA, dostęp do systemów i katalogów · SLA 2 h",
+              "action": "Otwórz Helpdesk",
+              "href": "https://helpdesk.propertygroup.pl/#/login"
+            },
+            {
+              "icon": "share",
+              "title": "VPN i sieć",
+              "meta": "Połączenie zdalne, Wi-Fi w biurze, problemy z Teams · SLA 4 h",
+              "action": "Otwórz Helpdesk",
+              "href": "https://helpdesk.propertygroup.pl/#/login"
+            },
+            {
+              "icon": "files",
+              "title": "Nowe oprogramowanie",
+              "meta": "Wniosek o licencję lub instalację narzędzia spoza standardu · SLA 5 dni",
+              "action": "Otwórz Helpdesk",
+              "href": "https://helpdesk.propertygroup.pl/#/login"
+            },
+            {
+              "icon": "users",
+              "title": "Konto nowego pracownika",
+              "meta": "Zgłaszane przez lidera zespołu na 3 dni przed startem · SLA 3 dni",
+              "action": "Otwórz Helpdesk",
+              "href": "https://helpdesk.propertygroup.pl/#/login"
+            },
+            {
+              "icon": "help",
+              "title": "Coś innego",
+              "meta": "Opisz problem własnymi słowami w zgłoszeniu — trafi do właściwego zespołu",
+              "action": "Otwórz Helpdesk",
+              "href": "https://helpdesk.propertygroup.pl/#/login"
+            }
+          ]
+        },
+        {
+          "type": "enova",
+          "key": "enova",
+          "title": "Portal pracownika enova",
+          "note": "Urlopy, praca zdalna i wnioski HR — wybierz portal swojej spółki i zaloguj się kontem domenowym.",
+          "items": [
+            {
+              "title": "Property Group",
+              "href": "http://192.168.5.103:81/Login/PROPERTY_GROUP"
+            },
+            {
+              "title": "ESTI CRM",
+              "href": "http://192.168.5.103:81/Login/EstiCRM"
+            },
+            {
+              "title": "Platforma Mieszkaniowa",
+              "href": "http://192.168.5.103:81/Login/Platforma_Mieszkaniowa"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Przydatne linki",
+          "items": [
+            {
+              "icon": "spark",
+              "title": "Brand Approval Tool",
+              "meta": "Akceptacja materiałów komunikacyjnych przez DMiK",
+              "action": "Otwórz",
+              "href": "https://property.youtrack.cloud/form/c1ebe45f-4f70-4e11-b00c-1cc23556611b"
+            },
+            {
+              "icon": "files",
+              "title": "Drukowanie w biurze",
+              "meta": "YSoft — jak drukować, kod dostępu, ustawienia",
+              "action": "Otwórz",
+              "href": "https://pg.eu.ysoft.cloud/"
+            },
+            {
+              "icon": "compass",
+              "title": "Mapa biura",
+              "meta": "Sale, strefy zespołów i udogodnienia",
+              "action": "Otwórz mapę",
+              "to": "biuro"
+            },
+            {
+              "icon": "chart",
+              "title": "BIG DATA RynekPierwotny.pl",
+              "meta": "Monitoring i analiza rynku mieszkaniowego",
+              "action": "Otwórz",
+              "href": "https://bigdata.rynekpierwotny.pl/"
+            },
+            {
+              "icon": "calendar",
+              "title": "Kalendarz",
+              "meta": "Wydarzenia firmowe i Twój kalendarz Outlook",
+              "action": "Otwórz",
+              "to": "kalendarz"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Awaria krytyczna?",
+      "footerText": "Zadzwoń pod wew. 199 zamiast zakładać zgłoszenie — dyżur działa całodobowo.",
+      "footerCta": "Otwórz Helpdesk",
+      "footerHref": "https://helpdesk.propertygroup.pl/#/login"
+    },
+    "pliki": {
+      "badge": "Dla pracownika",
+      "title": "Pliki i formularze",
+      "lead": "Wszystkie formularze w jednym miejscu. Wnioski złożone do 20. dnia miesiąca rozliczamy w bieżącym okresie.",
+      "blocks": [
+        {
+          "type": "list",
+          "title": "Formularze",
+          "items": [
+            {
+              "icon": "files",
+              "title": "Wniosek urlopowy",
+              "meta": "HR · akceptacja lidera zespołu",
+              "action": "Otwórz enova",
+              "href": "http://192.168.5.103:81/Login/PROPERTY_GROUP"
+            },
+            {
+              "icon": "files",
+              "title": "Wniosek o benefit",
+              "meta": "HR · MultiSport, medyczny, ubezpieczenie",
+              "action": "Otwórz Benefity",
+              "to": "benefity"
+            },
+            {
+              "icon": "files",
+              "title": "Rozliczenie delegacji",
+              "meta": "Finanse · do 14 dni po powrocie",
+              "action": "Otwórz enova",
+              "href": "http://192.168.5.103:81/Login/PROPERTY_GROUP"
+            },
+            {
+              "icon": "files",
+              "title": "Wniosek o sprzęt",
+              "meta": "IT · laptop, monitor, akcesoria",
+              "action": "Otwórz Helpdesk",
+              "href": "https://helpdesk.propertygroup.pl/#/login"
+            },
+            {
+              "icon": "files",
+              "title": "Rezerwacja parkingu",
+              "meta": "Administracja · na dzień przed",
+              "action": "Otwórz Parkus",
+              "href": "https://parkus.propertygroupvibe.pl/"
+            },
+            {
+              "icon": "files",
+              "title": "Zgłoszenie polecenia kandydata",
+              "meta": "Rekrutacja · bonus 4 000 zł",
+              "action": "Zobacz oferty",
+              "to": "oferty"
+            },
+            {
+              "icon": "shield",
+              "title": "Zgłoszenie naruszenia zasad",
+              "meta": "Kanał poufny · rzecznik etyki",
+              "action": "Napisz do HR",
+              "href": "mailto:m.siwiec@rynekpierwotny.pl?subject=Zg%C5%82oszenie%20naruszenia%20zasad%20%E2%80%94%20poufne"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Formularza nie ma na liście?",
+      "footerText": "Napisz do HR — dodamy go albo wskażemy właściwą ścieżkę.",
+      "footerCta": "Napisz do HR"
+    },
+    "prawne": {
+      "badge": "Baza procedur",
+      "title": "Dokumenty prawne i korporacyjne",
+      "lead": "Polityki, wzory umów i dane rejestrowe spółek grupy. Dokumenty ochrony danych osobowych (RODO) mają osobną stronę.",
+      "blocks": [
+        {
+          "type": "list",
+          "title": "Dokumenty",
+          "items": [
+            {
+              "icon": "files",
+              "title": "Polityka pełnomocnictw Property Group",
+              "meta": "Zasady udzielania i rejestru pełnomocnictw",
+              "action": "Otwórz PDF",
+              "href": "https://rynekpierwotny.sharepoint.com/:b:/r/sites/RP/Shared%20Documents/Polityka%20pelnomocnictw_Property%20Group.pdf?d=w0d999ed747054712b14b4fd576ee1be3&csf=1&web=1&e=oEI7sB"
+            },
+            {
+              "icon": "files",
+              "title": "NDA — wzór umowy o zachowaniu poufności",
+              "meta": "Wzór · aktualizacja 06.05.2025",
+              "action": "Otwórz DOCX",
+              "href": "https://rynekpierwotny.sharepoint.com/:w:/r/sites/RP/Shared%20Documents/NDA_wzor_06052025.docx?d=w70092f1b704b494b9e13e23832c53de3&csf=1&web=1&e=YSFe5h"
+            },
+            {
+              "icon": "files",
+              "title": "Dane korporacyjne",
+              "meta": "Zestawienie danych rejestrowych spółek grupy · XLSX",
+              "action": "Otwórz XLSX",
+              "href": "https://rynekpierwotny.sharepoint.com/:x:/r/sites/RP/_layouts/15/Doc.aspx?sourcedoc=%7B6A8804D3-2556-4460-B115-F1D7182D83AC%7D&file=Dane%20korporacyjne.xlsx&action=default&mobileredirect=true"
+            },
+            {
+              "icon": "shield",
+              "title": "Ochrona danych osobowych (RODO) — pełna lista",
+              "meta": "Umowy powierzenia, procedury, klauzule",
+              "action": "Otwórz stronę",
+              "to": "rodo"
+            }
+          ]
+        }
+      ],
+      "footerTitle": "Brakuje dokumentu?",
+      "footerText": "Napisz do HR — dodamy go albo wskażemy właściwą ścieżkę.",
+      "footerCta": "Napisz do HR"
+    }
+  },
+  "brands": [
+    {
+      "name": "RynekPierwotny.pl",
+      "desc": "Największy ogólnopolski portal z ofertami od deweloperów. Ponad 550 000 osób miesięcznie, oferty ponad 1000 deweloperów, ok. 91% rynku.",
+      "owner": "Do przypisania",
+      "url": "https://rynekpierwotny.pl",
+      "urlLabel": "rynekpierwotny.pl",
+      "channels": [
+        {
+          "label": "Facebook",
+          "href": "https://www.facebook.com/rynekpierwotnypl/"
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/rynekpierwotny/"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://pl.linkedin.com/company/rynekpierwotny-com"
+        },
+        {
+          "label": "YouTube",
+          "href": "https://www.youtube.com/@RynekpierwotnyPl"
+        },
+        {
+          "label": "YouTube — Misja Mieszkanie",
+          "href": "https://www.youtube.com/@MisjaMieszkanie"
+        },
+        {
+          "label": "X",
+          "href": "https://x.com/rynekpierwotny"
+        }
+      ]
+    },
+    {
+      "name": "GetHome.pl",
+      "desc": "Portal rynku wtórnego z realnymi adresami nieruchomości. Ponad 1800 agencji, machine learning dopasowuje ofertę do profilu w 95%.",
+      "owner": "Do przypisania",
+      "url": "https://gethome.pl",
+      "urlLabel": "gethome.pl",
+      "channels": [
+        {
+          "label": "Facebook",
+          "href": "https://www.facebook.com/gethomepl/"
+        }
+      ]
+    },
+    {
+      "name": "ESTI CRM",
+      "desc": "System dla biur nieruchomości działający od 2015 roku. Korzysta z niego ponad 1100 biur.",
+      "owner": "Do przypisania",
+      "url": "https://www.esticrm.pl/",
+      "urlLabel": "esticrm.pl",
+      "channels": [
+        {
+          "label": "Facebook",
+          "href": "https://www.facebook.com/esticrm/"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/company/esticrm"
+        },
+        {
+          "label": "YouTube",
+          "href": "https://www.youtube.com/c/EstiCRM"
+        }
+      ]
+    },
+    {
+      "name": "voxDeveloper CRM",
+      "desc": "Jeden z najpopularniejszych w Polsce systemów CRM dla deweloperów — marketing, sprzedaż, obsługa posprzedażowa i rozliczenia.",
+      "owner": "Do przypisania",
+      "url": "https://voxdeveloper.com/",
+      "urlLabel": "voxdeveloper.com",
+      "channels": [
+        {
+          "label": "LinkedIn",
+          "href": "https://pl.linkedin.com/company/voxdeveloper"
+        }
+      ]
+    },
+    {
+      "name": "Platforma Mieszkaniowa",
+      "desc": "Łączy deweloperów, pośredników i nabywców mieszkań w 7 największych miastach Polski.",
+      "owner": "Do przypisania",
+      "url": "https://www.platformamieszkaniowa.pl/",
+      "urlLabel": "platformamieszkaniowa.pl",
+      "channels": [
+        {
+          "label": "Facebook",
+          "href": "https://www.facebook.com/platformamieszkaniowa/"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://pl.linkedin.com/company/platformamieszkaniowa"
+        }
+      ]
+    },
+    {
+      "name": "BIG DATA RynekPierwotny.pl",
+      "desc": "Pierwsza ogólnopolska platforma do monitoringu i analizy rynku mieszkaniowego — dane z 90% monitorowanych nowych inwestycji.",
+      "owner": "Do przypisania",
+      "url": "https://bigdata.rynekpierwotny.pl/",
+      "urlLabel": "bigdata.rynekpierwotny.pl",
+      "channels": []
+    },
+    {
+      "name": "Akademia Real Estate",
+      "desc": "Bezpłatna platforma edukacyjna dla deweloperów i pośredników — webinary, materiały szkoleniowe i analizy.",
+      "owner": "Do przypisania",
+      "url": "https://akademia.re/",
+      "urlLabel": "akademia.re",
+      "channels": [
+        {
+          "label": "Facebook",
+          "href": "https://www.facebook.com/akademiarealestate/"
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/akademiarealestate/"
+        }
+      ]
+    },
+    {
+      "name": "GetHome Finance",
+      "desc": "Portal finansowy o kredytach hipotecznych — porównanie ofert banków i kontakt z ekspertami.",
+      "owner": "Do przypisania",
+      "url": "https://gethomefinance.pl/",
+      "urlLabel": "gethomefinance.pl",
+      "channels": []
+    }
+  ]
+}

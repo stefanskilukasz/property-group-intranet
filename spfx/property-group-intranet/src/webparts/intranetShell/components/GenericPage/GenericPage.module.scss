@@ -1,0 +1,82 @@
+@import '../../design/tokens';
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pageHeader {
+  padding: 28px 32px;
+  border-radius: $radius-hero;
+  background: $color-panel-tint;
+  border: 1px solid $color-border;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: $radius-pill;
+  background: $color-surface-tint;
+  color: $color-primary;
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.25;
+  color: $color-text-primary;
+}
+
+.lead {
+  margin: 0;
+  max-width: 760px;
+  font-family: $font-body;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: $color-text-secondary;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.blockWrap {
+  padding: 20px 24px;
+  border-radius: $radius-large;
+  background: #fff;
+  border: 1px solid $color-border;
+}
+
+.footer {
+  padding: 20px 24px;
+  border-radius: $radius-large;
+  background: $color-neutral-panel;
+  border: 1px solid $color-border;
+  text-align: center;
+}
+
+.footerTitle {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 15px;
+  color: $color-text-primary;
+  margin-bottom: 4px;
+}
+
+.footerText {
+  margin: 0;
+  font-family: $font-body;
+  font-size: 13px;
+  color: $color-text-secondary;
+}

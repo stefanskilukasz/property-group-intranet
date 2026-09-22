@@ -4,8 +4,12 @@ import type { IIntranetShellProps } from './IIntranetShellProps';
 import Sidebar from './Sidebar/Sidebar';
 import Header, { Role } from './Header/Header';
 import ContentPlaceholder from './ContentPlaceholder/ContentPlaceholder';
+import GenericPage from './GenericPage/GenericPage';
 import { ROUTE_TITLES, DEFAULT_ROUTE } from '../design/navigation';
 import { typography } from '../design/tokens';
+import { LocalPageDataService } from '../data/LocalPageDataService';
+
+const pageDataService = new LocalPageDataService();
 
 const FONTS_LINK_ID = 'pg-intranet-fonts';
 
@@ -47,6 +51,7 @@ const IntranetShell: React.FunctionComponent<IIntranetShellProps> = () => {
   };
 
   const title = ROUTE_TITLES[route] || 'Start';
+  const pageData = pageDataService.getPage(route);
 
   return (
     <div className={`${styles.shell} ${darkMode ? styles.shellDark : ''}`}>
@@ -60,7 +65,9 @@ const IntranetShell: React.FunctionComponent<IIntranetShellProps> = () => {
           onToggleDarkMode={() => setDarkMode(v => !v)}
         />
         <div className={styles.content}>
-          <ContentPlaceholder title={title} route={route} />
+          {pageData
+            ? <GenericPage page={pageData} brands={pageDataService.getBrands()} />
+            : <ContentPlaceholder title={title} route={route} />}
         </div>
       </div>
     </div>
