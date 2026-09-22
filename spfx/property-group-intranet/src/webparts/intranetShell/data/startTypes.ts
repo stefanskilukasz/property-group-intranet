@@ -34,3 +34,9 @@ export interface IShortcutDef {
   href?: string;
   to?: string;
 }
+
+export interface IKbEntry {
+  q: string;
+  a: string;
+  kw: string;
+}

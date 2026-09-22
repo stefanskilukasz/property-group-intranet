@@ -69,7 +69,12 @@ const IntranetShell: React.FunctionComponent<IIntranetShellProps> = ({ userDispl
           {route === 'start'
             ? <StartPage userDisplayName={userDisplayName} dataService={pageDataService} onNavigate={navigate} />
             : pageData
-              ? <GenericPage page={pageData} brands={pageDataService.getBrands()} />
+              ? <GenericPage
+                  page={pageData}
+                  brands={pageDataService.getBrands()}
+                  kbEntries={pageDataService.getKbEntries()}
+                  onNavigate={navigate}
+                />
               : <ContentPlaceholder title={title} route={route} />}
         </div>
       </div>

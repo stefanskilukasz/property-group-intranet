@@ -37,8 +37,9 @@ const shortcutCatalog = extractLiteral(2922, 2934, 'SHORTCUT_CATALOG') // lines 
   .map(s => (s.to === 'mapa' ? { ...s, to: 'biuro' } : s)); // mapa was folded into biuro (docs/design-handoff.md)
 const shortcutDefault = extractLiteral(2935, 2935, 'SHORTCUT_DEFAULT'); // line 2936
 const vocativeExceptions = extractLiteral(3193, 3193, 'VOC_EXC'); // line 3194
+const kbEntries = extractLiteral(1924, 1936, 'KB'); // lines 1925-1937
 
-const seed = { pages, brands, news, reactionDefs, events, shortcutCatalog, shortcutDefault, vocativeExceptions };
+const seed = { pages, brands, news, reactionDefs, events, shortcutCatalog, shortcutDefault, vocativeExceptions, kbEntries };
 
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, JSON.stringify(seed, null, 2), 'utf8');

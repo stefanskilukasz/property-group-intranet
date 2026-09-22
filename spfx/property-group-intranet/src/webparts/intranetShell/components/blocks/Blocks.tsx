@@ -3,9 +3,32 @@ import Icon from '../../design/Icon';
 import {
   IPageBlock, IStatsBlock, ITextImageBlock, IListBlock, IBrandsBlock,
   IFieldsBlock, IQuoteBlock, IValuesBlock, IBannerBlock, ICardsBlock, ITextBlock,
-  IBrand
+  IKbSearchBlock, IBrand
 } from '../../data/pageTypes';
+import { IKbEntry } from '../../data/startTypes';
+import { normalizeForSearch } from '../../utils/text';
 import styles from './Blocks.module.scss';
+
+/**
+ * A list/card action can point at an external URL (`href`) or an internal
+ * route (`to`) — renders as a real link either way instead of silently
+ * dropping the action when only `to` is set.
+ */
+const ActionLink: React.FunctionComponent<{
+  href?: string;
+  to?: string;
+  onNavigate: (route: string) => void;
+  className?: string;
+  children: React.ReactNode;
+}> = ({ href, to, onNavigate, className, children }) => {
+  if (href) {
+    return <a href={href} target="_blank" rel="noreferrer" className={className}>{children}</a>;
+  }
+  if (to) {
+    return <button type="button" className={className} onClick={() => onNavigate(to)}>{children}</button>;
+  }
+  return null;
+};
 
 const StatsBlock: React.FunctionComponent<{ block: IStatsBlock }> = ({ block }) => (
   <div className={styles.stats}>
@@ -46,7 +69,7 @@ const TextImageBlock: React.FunctionComponent<{ block: ITextImageBlock }> = ({ b
   </div>
 );
 
-const ListBlock: React.FunctionComponent<{ block: IListBlock }> = ({ block }) => (
+const ListBlock: React.FunctionComponent<{ block: IListBlock; onNavigate: (route: string) => void }> = ({ block, onNavigate }) => (
   <div className={styles.listBlock}>
     {block.title && <h3 className={styles.blockTitle}>{block.title}</h3>}
     <ul className={styles.list}>
@@ -57,11 +80,9 @@ const ListBlock: React.FunctionComponent<{ block: IListBlock }> = ({ block }) =>
             <div className={styles.listItemTitle}>{item.title}</div>
             {item.meta && <div className={styles.listItemMeta}>{item.meta}</div>}
           </div>
-          {item.href && (
-            <a href={item.href} target="_blank" rel="noreferrer" className={styles.listItemAction}>
-              {item.action || 'Otwórz'}
-            </a>
-          )}
+          <ActionLink href={item.href} to={item.to} onNavigate={onNavigate} className={styles.listItemAction}>
+            {item.action || 'Otwórz'}
+          </ActionLink>
         </li>
       ))}
     </ul>
@@ -140,24 +161,18 @@ const BannerBlock: React.FunctionComponent<{ block: IBannerBlock }> = ({ block }
   </div>
 );
 
-const CardsBlock: React.FunctionComponent<{ block: ICardsBlock }> = ({ block }) => (
+const CardsBlock: React.FunctionComponent<{ block: ICardsBlock; onNavigate: (route: string) => void }> = ({ block, onNavigate }) => (
   <div className={styles.cardsBlock}>
     {block.title && <h3 className={styles.blockTitle}>{block.title}</h3>}
     <div className={styles.cardsGrid}>
       {block.items.map((item, i) => (
-        <a
-          key={i}
-          href={item.href || undefined}
-          target={item.href ? '_blank' : undefined}
-          rel={item.href ? 'noreferrer' : undefined}
-          className={styles.card}
-        >
+        <ActionLink key={i} href={item.href} to={item.to} onNavigate={onNavigate} className={styles.card}>
           {item.ribbon && <span className={styles.cardRibbon}>{item.ribbon}</span>}
           {item.icon && <Icon name={item.icon} size={20} className={styles.cardIcon} />}
           <div className={styles.cardTitle}>{item.title}</div>
           {item.desc && <p className={styles.cardDesc}>{item.desc}</p>}
           {item.meta && <div className={styles.cardMeta}>{item.meta}</div>}
-        </a>
+        </ActionLink>
       ))}
     </div>
   </div>
@@ -170,6 +185,63 @@ const TextBlock: React.FunctionComponent<{ block: ITextBlock }> = ({ block }) =>
   </div>
 );
 
+/**
+ * KB-deflection search: type a problem, matching articles appear —
+ * preserved as the primary path before any "open a ticket" action, per
+ * docs/design-handoff.md ("preserve this order, it exists to cut ticket
+ * volume"). Shows the full KB list before the user types anything.
+ */
+const KbSearchBlock: React.FunctionComponent<{ block: IKbSearchBlock; kbEntries: IKbEntry[] }> = ({ block, kbEntries }) => {
+  const [query, setQuery] = React.useState('');
+  const [openIndex, setOpenIndex] = React.useState<number | undefined>(undefined);
+
+  const normalizedQuery = normalizeForSearch(query.trim());
+  const matches = normalizedQuery
+    ? kbEntries.filter(entry => normalizeForSearch(entry.q + ' ' + entry.kw).indexOf(normalizedQuery) >= 0)
+    : kbEntries;
+
+  return (
+    <div className={styles.kbSearch}>
+      {block.title && <h3 className={styles.blockTitle}>{block.title}</h3>}
+      <div className={styles.kbInputWrap}>
+        <Icon name="search" size={16} className={styles.kbInputIcon} />
+        <input
+          type="search"
+          value={query}
+          onChange={e => { setQuery(e.target.value); setOpenIndex(undefined); }}
+          placeholder="Opisz problem, np. „VPN nie działa”…"
+          className={styles.kbInput}
+        />
+      </div>
+
+      {matches.length === 0 && (
+        <p className={styles.kbNote}>{block.kbNoMatchNote || 'Nie znaleziono pasujących artykułów.'}</p>
+      )}
+
+      <ul className={styles.kbList}>
+        {matches.map((entry, i) => {
+          const open = openIndex === i;
+          return (
+            <li key={i} className={styles.kbItem}>
+              <button
+                type="button"
+                className={styles.kbQuestion}
+                onClick={() => setOpenIndex(open ? undefined : i)}
+                aria-expanded={open}
+              >
+                {entry.q}
+              </button>
+              {open && <p className={styles.kbAnswer}>{entry.a}</p>}
+            </li>
+          );
+        })}
+      </ul>
+
+      {block.kbFollowupNote && <p className={styles.kbFollowup}>{block.kbFollowupNote}</p>}
+    </div>
+  );
+};
+
 const UnsupportedBlock: React.FunctionComponent<{ block: IPageBlock }> = ({ block }) => (
   <div className={styles.unsupported}>
     Blok typu <code>{block.type}</code> nie został jeszcze zbudowany w wersji SPFx.
@@ -179,24 +251,27 @@ const UnsupportedBlock: React.FunctionComponent<{ block: IPageBlock }> = ({ bloc
 export interface IBlockRendererProps {
   block: IPageBlock;
   brands: IBrand[];
+  kbEntries: IKbEntry[];
+  onNavigate: (route: string) => void;
 }
 
 // Casts below are needed because IUnsupportedBlock's `type: string` overlaps
 // every literal in the union, so TS can't narrow `block` from `block.type`
 // alone in a switch. The cast is safe: each case is reached only when
 // block.type actually equals that literal.
-export const BlockRenderer: React.FunctionComponent<IBlockRendererProps> = ({ block, brands }) => {
+export const BlockRenderer: React.FunctionComponent<IBlockRendererProps> = ({ block, brands, kbEntries, onNavigate }) => {
   switch (block.type) {
     case 'stats': return <StatsBlock block={block as IStatsBlock} />;
     case 'textimage': return <TextImageBlock block={block as ITextImageBlock} />;
-    case 'list': return <ListBlock block={block as IListBlock} />;
+    case 'list': return <ListBlock block={block as IListBlock} onNavigate={onNavigate} />;
     case 'brands': return <BrandsBlock block={block as IBrandsBlock} brands={brands} />;
     case 'fields': return <FieldsBlock block={block as IFieldsBlock} />;
     case 'quote': return <QuoteBlock block={block as IQuoteBlock} />;
     case 'values': return <ValuesBlock block={block as IValuesBlock} />;
     case 'banner': return <BannerBlock block={block as IBannerBlock} />;
-    case 'cards': return <CardsBlock block={block as ICardsBlock} />;
+    case 'cards': return <CardsBlock block={block as ICardsBlock} onNavigate={onNavigate} />;
     case 'text': return <TextBlock block={block as ITextBlock} />;
+    case 'kbsearch': return <KbSearchBlock block={block as IKbSearchBlock} kbEntries={kbEntries} />;
     default: return <UnsupportedBlock block={block} />;
   }
 };

@@ -124,12 +124,16 @@
 }
 .listItemAction {
   flex: 0 0 auto;
+  border: none;
+  background: transparent;
+  padding: 0;
   font-family: $font-body;
   font-size: 12px;
   font-weight: 600;
   color: $color-accent;
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
 
   &:hover { text-decoration: underline; }
 }
@@ -308,12 +312,16 @@
 .card {
   position: relative;
   display: block;
+  width: 100%;
   padding: 16px;
   border-radius: $radius-medium;
   border: 1px solid $color-border;
   background: #fff;
   text-decoration: none;
   color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 
   &:hover {
     border-color: $color-accent-mid;
@@ -360,6 +368,93 @@
 
 .textBlock {
   min-width: 0;
+}
+
+// kbsearch
+.kbSearch {
+  min-width: 0;
+}
+
+.kbInputWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: $radius-pill;
+  background: $color-panel-tint;
+  border: 1px solid $color-border;
+  margin-bottom: 14px;
+}
+
+.kbInputIcon {
+  color: $color-text-secondary;
+  flex: 0 0 auto;
+}
+
+.kbInput {
+  flex: 1 1 auto;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: $font-body;
+  font-size: 13.5px;
+  color: $color-text-primary;
+
+  &::placeholder { color: $color-text-secondary; }
+}
+
+.kbNote {
+  margin: 0 0 12px;
+  font-family: $font-body;
+  font-size: 13px;
+  color: $color-text-secondary;
+}
+
+.kbList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kbItem {
+  border: 1px solid $color-border;
+  border-radius: $radius-medium;
+  overflow: hidden;
+}
+
+.kbQuestion {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: #fff;
+  padding: 12px 16px;
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: $color-text-primary;
+  cursor: pointer;
+
+  &:hover { background: $color-neutral-panel; }
+}
+
+.kbAnswer {
+  margin: 0;
+  padding: 0 16px 14px;
+  background: #fff;
+  font-family: $font-body;
+  font-size: 13px;
+  line-height: 1.6;
+  color: $color-text-secondary;
+}
+
+.kbFollowup {
+  margin: 14px 0 0;
+  font-family: $font-body;
+  font-size: 12.5px;
+  color: $color-text-secondary;
 }
 
 .unsupported {

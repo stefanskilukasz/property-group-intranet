@@ -114,6 +114,13 @@ export interface ITextBlock {
   paras: string[];
 }
 
+export interface IKbSearchBlock {
+  type: 'kbsearch';
+  title?: string;
+  kbFollowupNote?: string;
+  kbNoMatchNote?: string;
+}
+
 export interface IUnsupportedBlock {
   type: string;
   [key: string]: unknown;
@@ -130,6 +137,7 @@ export type IPageBlock =
   | IBannerBlock
   | ICardsBlock
   | ITextBlock
+  | IKbSearchBlock
   | IUnsupportedBlock;
 
 export interface IPageData {

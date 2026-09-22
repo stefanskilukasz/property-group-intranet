@@ -1,5 +1,5 @@
 import { IPageData, IBrand } from './pageTypes';
-import { INewsItem, IEvent, IShortcutDef, IReactionDef } from './startTypes';
+import { INewsItem, IEvent, IShortcutDef, IReactionDef, IKbEntry } from './startTypes';
 
 /**
  * Abstraction over where page content comes from. `LocalPageDataService`
@@ -16,4 +16,5 @@ export interface IPageDataService {
   getEvents(): IEvent[];
   getShortcutCatalog(): IShortcutDef[];
   getDefaultShortcutKeys(): string[];
+  getKbEntries(): IKbEntry[];
 }

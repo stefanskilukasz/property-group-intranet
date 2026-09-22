@@ -1,6 +1,6 @@
 import { IPageDataService } from './IPageDataService';
 import { IPageData, IBrand, ITextImageBlock, IBannerBlock } from './pageTypes';
-import { INewsItem, IEvent, IShortcutDef, IReactionDef } from './startTypes';
+import { INewsItem, IEvent, IShortcutDef, IReactionDef, IKbEntry } from './startTypes';
 import { resolveAssetSrc } from './assetMap';
 import seed from './pages.seed.json';
 
@@ -28,6 +28,7 @@ const reactionDefs = seed.reactionDefs as IReactionDef[];
 const events = seed.events as IEvent[];
 const shortcutCatalog = seed.shortcutCatalog as IShortcutDef[];
 const shortcutDefault = seed.shortcutDefault as string[];
+const kbEntries = seed.kbEntries as IKbEntry[];
 
 export class LocalPageDataService implements IPageDataService {
   public getPage(route: string): IPageData | undefined {
@@ -56,5 +57,9 @@ export class LocalPageDataService implements IPageDataService {
 
   public getDefaultShortcutKeys(): string[] {
     return shortcutDefault;
+  }
+
+  public getKbEntries(): IKbEntry[] {
+    return kbEntries;
   }
 }

@@ -1832,5 +1832,62 @@
     "gabriel": "Gabrielu",
     "rafał": "Rafale",
     "michal": "Michale"
-  }
+  },
+  "kbEntries": [
+    {
+      "q": "VPN nie łączy się",
+      "a": "Sprawdź, czy klucz MFA jest podłączony, i uruchom ponownie klienta VPN. Jeśli to nie pomoże, sprawdź swoje połączenie internetowe poza siecią firmową.",
+      "kw": "vpn siec polaczenie zdalne wifi"
+    },
+    {
+      "q": "Zapomniałem hasła / nie mogę się zalogować",
+      "a": "Zresetuj hasło samodzielnie na stronie logowania Microsoft 365 — link „Nie pamiętam hasła”. Wymaga zarejestrowanego numeru telefonu do MFA.",
+      "kw": "haslo reset logowanie dostep mfa konto"
+    },
+    {
+      "q": "Laptop się nie włącza lub działa wolno",
+      "a": "Sprawdź zasilacz i przytrzymaj przycisk zasilania 15 sekund. Jeśli problem się powtarza, odbierz sprzęt zastępczy w recepcji tego samego dnia.",
+      "kw": "laptop sprzet nie wlacza wolno bateria komputer"
+    },
+    {
+      "q": "Jak zainstalować nowe oprogramowanie",
+      "a": "Standardowe narzędzia instalujesz samodzielnie z Company Portal. Narzędzia spoza standardu wymagają wniosku o licencję (Pliki i formularze).",
+      "kw": "oprogramowanie instalacja licencja aplikacja program"
+    },
+    {
+      "q": "Nie mogę się połączyć z drukarką",
+      "a": "Zainstaluj sterownik z Company Portal → Drukarki biurowe. Kod dostępu do wydruku jest na plakietce przy drukarce.",
+      "kw": "drukarka wydruk drukowanie skan"
+    },
+    {
+      "q": "Teams nie działa poprawnie",
+      "a": "Wyloguj się i zaloguj ponownie, a jeśli problem nie zniknie, wyczyść pamięć podręczną aplikacji (Company Portal → Napraw Teams).",
+      "kw": "teams kamera mikrofon spotkanie czat"
+    },
+    {
+      "q": "Jak wygląda pierwszy dzień w pracy?",
+      "a": "Sprzęt i dostępy czekają od rana — konto zakłada IT na podstawie zgłoszenia lidera zespołu. Plan pierwszego tygodnia i dane osoby wprowadzającej przychodzą mailem przed startem.",
+      "kw": "onboarding pierwszy dzien nowy pracownik wdrozenie buddy"
+    },
+    {
+      "q": "Kto raportuje do kogo — gdzie jest struktura organizacji?",
+      "a": "Pełna struktura z pionami, działami i przełożonymi jest w O firmie → Struktura; konkretną osobę sprawdzisz w Departamentach i kontaktach.",
+      "kw": "struktura organizacyjna przelozony raportowanie dzial pion kto komu podlega"
+    },
+    {
+      "q": "Gdzie znajdę politykę bezpieczeństwa i ochrony danych?",
+      "a": "Polityka ochrony danych osobowych i procedura zarządzania incydentami są w sekcji „RODO i ochrona danych osobowych.",
+      "kw": "polityka bezpieczenstwa ochrona danych rodo incydent bezpieczenstwo informacji"
+    },
+    {
+      "q": "Jak zgłosić incydent bezpieczeństwa lub naruszenie danych?",
+      "a": "Zgłoś to od razu do IT (Pomoc techniczna → Dostęp i hasła) i do Inspektora Ochrony Danych — procedura krok po kroku jest w sekcji „RODO i ochrona danych osobowych” na tej stronie.",
+      "kw": "incydent naruszenie danych bezpieczenstwo zglos iod"
+    },
+    {
+      "q": "Czy mogę zapytać o to samo Copilota?",
+      "a": "To jest w przygotowaniu — planujemy połączyć bazę wiedzy z Copilotem, żeby zapytać o to samo prosto w czacie, bez szukania po intranecie.",
+      "kw": "copilot ai sztuczna inteligencja czat pytanie"
+    }
+  ]
 }
