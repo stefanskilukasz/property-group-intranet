@@ -11,6 +11,14 @@
   border-radius: $radius-large;
   overflow: hidden;
 
+  // Design tokens: signal color (#EBFF00) is reserved for search highlight
+  // and focus rings — this is the "focus rings" use, applied once here
+  // rather than per-component.
+  :global(*:focus-visible) {
+    outline: 2px solid $color-signal;
+    outline-offset: 2px;
+  }
+
   // Prototype-only dark mode: CSS-filter invert (docs/design-handoff.md notes
   // production should use a real token-swap theme instead).
   &.shellDark {
