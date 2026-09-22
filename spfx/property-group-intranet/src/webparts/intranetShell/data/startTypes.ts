@@ -4,6 +4,7 @@ export interface INewsItem {
   priority?: boolean;
   meta: string;
   readTime: string;
+  photo?: string;
   title: string;
   excerpt: string;
   quote?: string;

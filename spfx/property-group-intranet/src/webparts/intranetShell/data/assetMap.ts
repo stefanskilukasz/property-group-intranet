@@ -1,5 +1,7 @@
 import officeMeeting from '../assets/office-meeting-dextarstudio.jpg';
 import officeTeam from '../assets/office-team-silverkblack.jpg';
+import newsGolota from '../assets/news-golota.png';
+import newsVox from '../assets/news-vox.png';
 
 /**
  * pages.seed.json still has the prototype export's relative paths
@@ -10,7 +12,9 @@ import officeTeam from '../assets/office-team-silverkblack.jpg';
  */
 export const ASSET_MAP: Record<string, string> = {
   './assets/office-meeting-dextarstudio.jpg': officeMeeting,
-  './assets/office-team-silverkblack.jpg': officeTeam
+  './assets/office-team-silverkblack.jpg': officeTeam,
+  './assets/news-golota.png': newsGolota,
+  './assets/news-vox.png': newsVox
 };
 
 export function resolveAssetSrc(rawSrc: string | undefined): string | undefined {

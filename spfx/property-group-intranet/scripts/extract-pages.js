@@ -24,13 +24,10 @@ function extractLiteral(startLine, endLine, varName) {
 // prototype file changes.
 const pages = extractLiteral(1974, 2325, 'PAGES'); // lines 1975-2326
 const brands = extractLiteral(1950, 1972, 'BRANDS'); // lines 1951-1973
-const news = extractLiteral(1908, 1920, 'NEWS').map(n => { // lines 1909-1921
-  // photo uses `(window.__resources && window.__resources.xxx) || './assets/...'`
-  // at runtime; vm can't evaluate the window lookup, so just drop it —
-  // LocalPageDataService's asset map decides the real bundled path.
-  const { photo, ...rest } = n;
-  return rest;
-});
+// photo uses `(window.__resources && window.__resources.xxx) || './assets/...'`;
+// window.__resources is undefined in this vm context, so the `||` fallback
+// naturally evaluates to the real './assets/...' path — no need to strip it.
+const news = extractLiteral(1908, 1920, 'NEWS'); // lines 1909-1921
 const reactionDefs = extractLiteral(1938, 1942, 'REACTION_DEFS'); // lines 1939-1943
 const events = extractLiteral(2687, 2691, 'EVENTS'); // lines 2688-2692
 const shortcutCatalog = extractLiteral(2922, 2934, 'SHORTCUT_CATALOG') // lines 2923-2935

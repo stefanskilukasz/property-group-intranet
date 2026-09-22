@@ -57,6 +57,7 @@ const NewsCard: React.FunctionComponent<{
         <span className={styles.cat}>{item.cat}</span>
         <span className={styles.metaText}>{item.meta} · {item.readTime}</span>
       </div>
+      {item.photo && <img src={item.photo} alt="" className={hero ? styles.heroPhoto : styles.photo} />}
       <h3 className={hero ? styles.heroTitle : styles.title}>{item.title}</h3>
       <p className={styles.excerpt}>{item.excerpt}</p>
       {item.quote && (

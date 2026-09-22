@@ -2,10 +2,8 @@ import * as React from 'react';
 import Icon from '../../design/Icon';
 import { loadWeather, wxMeta, IWeather } from '../../utils/weather';
 import { nextHoliday, daysBetween } from '../../utils/holidays';
+import { WEEKDAYS, MONTHS_GENITIVE } from '../../utils/dates';
 import styles from './TodayCard.module.scss';
-
-const WEEKDAYS = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
-const MONTHS = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'];
 
 type WxState = 'loading' | 'ok' | 'error';
 
@@ -30,7 +28,7 @@ const TodayCard: React.FunctionComponent = () => {
     <div className={styles.card}>
       <div className={styles.dateRow}>
         <div className={styles.weekday}>{WEEKDAYS[now.getDay()]}</div>
-        <div className={styles.date}>{now.getDate()} {MONTHS[now.getMonth()]}</div>
+        <div className={styles.date}>{now.getDate()} {MONTHS_GENITIVE[now.getMonth()]}</div>
       </div>
 
       <div className={styles.weather}>

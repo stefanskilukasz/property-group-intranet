@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { vocative, greetingForHour } from '../../utils/greeting';
+import { formatFullDate } from '../../utils/dates';
 import { IPageDataService } from '../../data/IPageDataService';
 import TodayCard from './TodayCard';
 import MiniCalendar from './MiniCalendar';
@@ -25,6 +26,7 @@ const StartPage: React.FunctionComponent<IStartPageProps> = ({ userDisplayName, 
       <div className={styles.main}>
         <header className={styles.greeting}>
           <h1 className={styles.greetingTitle}>{greeting}{name ? ', ' + name : ''}!</h1>
+          <p className={styles.greetingDate}>{formatFullDate(now)}</p>
         </header>
 
         <ShortcutsWidget

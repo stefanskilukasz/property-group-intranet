@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Icon from '../../design/Icon';
 import { NAV, INavItem } from '../../design/navigation';
+import logoUrl from '../../assets/logo-property-group.png';
 import styles from './Sidebar.module.scss';
 
 export interface ISidebarProps {
@@ -20,7 +21,7 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = ({ activeRoute, onNaviga
   return (
     <nav className={styles.sidebar} aria-label="Nawigacja główna">
       <div className={styles.logo}>
-        <span>Property</span><span className={styles.logoAccent}>Group</span>
+        <img src={logoUrl} alt="Property Group" className={styles.logoImage} />
       </div>
       <ul className={styles.navList}>
         {NAV.map(item => {

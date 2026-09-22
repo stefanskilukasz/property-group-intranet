@@ -25,7 +25,7 @@ Object.keys(rawPages).forEach(route => {
   pages[route] = withResolvedAssets(rawPages[route]);
 });
 const brands = seed.brands as IBrand[];
-const news = seed.news as INewsItem[];
+const news = (seed.news as INewsItem[]).map(n => ({ ...n, photo: resolveAssetSrc(n.photo) }));
 const reactionDefs = seed.reactionDefs as IReactionDef[];
 const events = seed.events as IEvent[];
 const shortcutCatalog = seed.shortcutCatalog as IShortcutDef[];
