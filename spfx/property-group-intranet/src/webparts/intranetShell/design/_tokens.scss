@@ -1,0 +1,25 @@
+// SCSS partial mirroring design/tokens.ts. Import with `@import '../../design/tokens';`
+// Keep in sync with tokens.ts manually — SPFx's sass pipeline does not read .ts files.
+
+$color-primary: #4D1A63;
+$color-accent: #A01BD7;
+$color-accent-mid: #C764F0;
+$color-accent-light: #E4A3FF;
+$color-surface-tint: #F1D1FF;
+$color-panel-tint: #F9EDFF;
+$color-neutral-panel: #F5F1F8;
+$color-border: #E3DCE9;
+$color-text-secondary: #6E6178;
+$color-text-primary: #2E2136;
+$color-signal: #EBFF00;
+
+$font-heading: 'Plus Jakarta Sans', sans-serif;
+$font-body: 'DM Sans', sans-serif;
+
+$radius-small: 10px;
+$radius-medium: 14px;
+$radius-large: 18px;
+$radius-hero: 22px;
+$radius-pill: 999px;
+
+$sidebar-width: 264px;

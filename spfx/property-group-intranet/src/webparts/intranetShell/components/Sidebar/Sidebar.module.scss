@@ -1,0 +1,119 @@
+@import '../../design/tokens';
+
+.sidebar {
+  width: $sidebar-width;
+  flex: 0 0 $sidebar-width;
+  min-height: 100%;
+  background: $color-primary;
+  color: #fff;
+  padding: 20px 14px 24px;
+  box-sizing: border-box;
+  font-family: $font-body;
+}
+
+.logo {
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 18px;
+  padding: 8px 10px 24px;
+  color: #fff;
+}
+
+.logoAccent {
+  background: $color-accent-light;
+  color: $color-primary;
+  border-radius: 4px;
+  padding: 0 4px;
+  margin-left: 2px;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.navItem {
+  display: block;
+}
+
+.navButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10px 10px;
+  border-radius: $radius-medium;
+  font-family: $font-body;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  cursor: pointer;
+  text-align: left;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+.navButtonActive {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-weight: 600;
+}
+
+.navIcon {
+  flex: 0 0 auto;
+}
+
+.navLabel {
+  flex: 1 1 auto;
+}
+
+.chevron {
+  flex: 0 0 auto;
+  transition: transform 0.15s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.subList {
+  list-style: none;
+  margin: 2px 0 6px;
+  padding: 0 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.subButton {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 7px 10px;
+  border-radius: $radius-small;
+  font-family: $font-body;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+  }
+}
+
+.subButtonActive {
+  color: #fff;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+}

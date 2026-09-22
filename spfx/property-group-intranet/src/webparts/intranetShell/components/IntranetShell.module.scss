@@ -1,0 +1,37 @@
+@import '../design/tokens';
+
+.shell {
+  display: flex;
+  align-items: stretch;
+  min-height: 640px;
+  font-family: $font-body;
+  color: $color-text-primary;
+  background: #fff;
+  border: 1px solid $color-border;
+  border-radius: $radius-large;
+  overflow: hidden;
+
+  // Prototype-only dark mode: CSS-filter invert (docs/design-handoff.md notes
+  // production should use a real token-swap theme instead).
+  &.shellDark {
+    filter: invert(1) hue-rotate(180deg);
+
+    img, svg {
+      filter: invert(1) hue-rotate(180deg);
+    }
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.content {
+  flex: 1 1 auto;
+  padding: 24px;
+  background: $color-neutral-panel;
+  overflow: auto;
+}

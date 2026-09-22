@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "property-group-intranet-client-side-solution",
+    "id": "0dca1f64-39fc-430c-bed8-06a9e12cbc38",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.23.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "property-group-intranet description"
+      },
+      "longDescription": {
+        "default": "property-group-intranet description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "property-group-intranet Feature",
+        "description": "The feature that activates elements of the property-group-intranet solution.",
+        "id": "3df70f39-5ef7-4101-9c44-bf354d5e070b",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/property-group-intranet.sppkg"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "property-group-intranet",
+    "environment": "spo",
+    "packageManager": "npm",
+    "useGulp": true,
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "IntranetShell",
+    "componentDescription": "Property Group intranet shell: sidebar navigation, header, search and client-side routing",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.14.0",
+    "sdksVersions": {},
+    "version": "1.23.2",
+    "libraryName": "property-group-intranet",
+    "libraryId": "0dca1f64-39fc-430c-bed8-06a9e12cbc38",
+    "solutionShortDescription": "property-group-intranet description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

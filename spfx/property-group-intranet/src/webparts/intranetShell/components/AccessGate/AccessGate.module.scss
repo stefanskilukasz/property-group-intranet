@@ -1,0 +1,68 @@
+@import '../../design/tokens';
+
+.locked {
+  position: relative;
+  cursor: pointer;
+  border-radius: $radius-medium;
+}
+
+.content {
+  opacity: 0.45;
+  filter: grayscale(35%);
+  pointer-events: none;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: $radius-pill;
+  background: $color-neutral-panel;
+  color: $color-text-secondary;
+  font-family: $font-body;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.explanation {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  text-align: center;
+  background: rgba(249, 237, 255, 0.97);
+  border-radius: $radius-medium;
+  border: 1px solid $color-border;
+  cursor: default;
+
+  p {
+    margin: 0;
+    color: $color-text-primary;
+    font-family: $font-body;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+.dismiss {
+  border: none;
+  border-radius: $radius-pill;
+  padding: 6px 16px;
+  background: $color-primary;
+  color: #fff;
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
