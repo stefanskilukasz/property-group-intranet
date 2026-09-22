@@ -1,0 +1,77 @@
+@import '../../design/tokens';
+
+.card {
+  padding: 18px 20px;
+  border-radius: $radius-large;
+  background: $color-panel-tint;
+  border: 1px solid $color-border;
+}
+
+.dateRow {
+  margin-bottom: 12px;
+}
+
+.weekday {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 16px;
+  color: $color-text-primary;
+  text-transform: capitalize;
+}
+
+.date {
+  font-family: $font-body;
+  font-size: 12.5px;
+  color: $color-text-secondary;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid $color-border;
+}
+
+.wxIcon {
+  color: $color-accent;
+  flex: 0 0 auto;
+}
+
+.wxTemp {
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 18px;
+  color: $color-text-primary;
+}
+
+.wxLabel {
+  font-family: $font-body;
+  font-size: 11.5px;
+  color: $color-text-secondary;
+}
+
+.wxMinMax {
+  font-family: $font-body;
+  font-size: 11px;
+  color: $color-text-secondary;
+}
+
+.wxNote {
+  font-family: $font-body;
+  font-size: 12px;
+  color: $color-text-secondary;
+}
+
+.holiday {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid $color-border;
+  font-family: $font-body;
+  font-size: 12px;
+  color: $color-text-secondary;
+
+  strong {
+    color: $color-primary;
+  }
+}

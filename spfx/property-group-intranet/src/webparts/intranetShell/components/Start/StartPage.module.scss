@@ -1,0 +1,38 @@
+@import '../../design/tokens';
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.greeting {
+  padding: 4px 4px 0;
+}
+
+.greetingTitle {
+  margin: 0;
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 24px;
+  color: $color-text-primary;
+}

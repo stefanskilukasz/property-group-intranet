@@ -1,0 +1,191 @@
+@import '../../design/tokens';
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  padding: 20px 22px;
+  border-radius: $radius-large;
+  background: #fff;
+  border: 1px solid $color-border;
+}
+
+.cardHero {
+  background: $color-panel-tint;
+  border-color: $color-accent-light;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.cat {
+  padding: 2px 10px;
+  border-radius: $radius-pill;
+  background: $color-surface-tint;
+  color: $color-primary;
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metaText {
+  font-family: $font-body;
+  font-size: 11.5px;
+  color: $color-text-secondary;
+}
+
+.heroTitle {
+  margin: 0 0 8px;
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
+  color: $color-text-primary;
+}
+
+.title {
+  margin: 0 0 8px;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  color: $color-text-primary;
+}
+
+.excerpt {
+  margin: 0;
+  font-family: $font-body;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: $color-text-secondary;
+}
+
+.quote {
+  margin: 12px 0 0;
+  padding: 12px 16px;
+  border-left: 3px solid $color-accent;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0 $radius-medium $radius-medium 0;
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 14px;
+  color: $color-text-primary;
+}
+
+.quoteBy {
+  margin-top: 6px;
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 11.5px;
+  color: $color-text-secondary;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid $color-border;
+}
+
+.reactions {
+  display: flex;
+  gap: 6px;
+}
+
+.reactionButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+  padding: 5px 11px;
+  background: #fff;
+  color: $color-text-secondary;
+  font-family: $font-body;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover { border-color: $color-accent-mid; }
+}
+
+.reactionButtonActive {
+  background: $color-surface-tint;
+  border-color: $color-accent;
+  color: $color-primary;
+}
+
+.commentsToggle {
+  border: none;
+  background: transparent;
+  color: $color-text-secondary;
+  font-family: $font-body;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover { color: $color-accent; }
+}
+
+.comments {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comment {
+  display: flex;
+  gap: 6px;
+  font-family: $font-body;
+  font-size: 12.5px;
+  color: $color-text-primary;
+}
+
+.commentAuthor {
+  font-weight: 700;
+  color: $color-primary;
+}
+
+.commentForm {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.commentInput {
+  flex: 1 1 auto;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+  padding: 7px 14px;
+  font-family: $font-body;
+  font-size: 12.5px;
+  outline: none;
+
+  &:focus { border-color: $color-accent-mid; }
+}
+
+.commentSubmit {
+  border: none;
+  border-radius: $radius-pill;
+  padding: 7px 16px;
+  background: $color-primary;
+  color: #fff;
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}

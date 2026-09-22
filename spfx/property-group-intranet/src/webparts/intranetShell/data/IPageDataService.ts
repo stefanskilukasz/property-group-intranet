@@ -1,4 +1,5 @@
 import { IPageData, IBrand } from './pageTypes';
+import { INewsItem, IEvent, IShortcutDef, IReactionDef } from './startTypes';
 
 /**
  * Abstraction over where page content comes from. `LocalPageDataService`
@@ -10,4 +11,9 @@ import { IPageData, IBrand } from './pageTypes';
 export interface IPageDataService {
   getPage(route: string): IPageData | undefined;
   getBrands(): IBrand[];
+  getNews(): INewsItem[];
+  getReactionDefs(): IReactionDef[];
+  getEvents(): IEvent[];
+  getShortcutCatalog(): IShortcutDef[];
+  getDefaultShortcutKeys(): string[];
 }

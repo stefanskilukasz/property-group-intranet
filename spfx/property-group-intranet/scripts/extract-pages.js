@@ -16,7 +16,7 @@ function extractLiteral(startLine, endLine, varName) {
     .replace(new RegExp('^\\s*' + varName + '\\s*=\\s*'), '')
     .replace(/;\s*$/, '');
   const script = new vm.Script('(' + text + ')');
-  return script.runInNewContext({});
+  return script.runInNewContext({ window: {} }); // some literals reference `window.__resources...`
 }
 
 // 0-indexed line ranges (1-indexed source lines minus 1), read from the
@@ -24,9 +24,25 @@ function extractLiteral(startLine, endLine, varName) {
 // prototype file changes.
 const pages = extractLiteral(1974, 2325, 'PAGES'); // lines 1975-2326
 const brands = extractLiteral(1950, 1972, 'BRANDS'); // lines 1951-1973
+const news = extractLiteral(1908, 1920, 'NEWS').map(n => { // lines 1909-1921
+  // photo uses `(window.__resources && window.__resources.xxx) || './assets/...'`
+  // at runtime; vm can't evaluate the window lookup, so just drop it —
+  // LocalPageDataService's asset map decides the real bundled path.
+  const { photo, ...rest } = n;
+  return rest;
+});
+const reactionDefs = extractLiteral(1938, 1942, 'REACTION_DEFS'); // lines 1939-1943
+const events = extractLiteral(2687, 2691, 'EVENTS'); // lines 2688-2692
+const shortcutCatalog = extractLiteral(2922, 2934, 'SHORTCUT_CATALOG') // lines 2923-2935
+  .map(s => (s.to === 'mapa' ? { ...s, to: 'biuro' } : s)); // mapa was folded into biuro (docs/design-handoff.md)
+const shortcutDefault = extractLiteral(2935, 2935, 'SHORTCUT_DEFAULT'); // line 2936
+const vocativeExceptions = extractLiteral(3193, 3193, 'VOC_EXC'); // line 3194
 
-const seed = { pages, brands };
+const seed = { pages, brands, news, reactionDefs, events, shortcutCatalog, shortcutDefault, vocativeExceptions };
 
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, JSON.stringify(seed, null, 2), 'utf8');
-console.log('Wrote', Object.keys(pages).length, 'pages and', brands.length, 'brands to', outPath);
+console.log(
+  'Wrote', Object.keys(pages).length, 'pages,', brands.length, 'brands,',
+  news.length, 'news,', events.length, 'events,', shortcutCatalog.length, 'shortcuts to', outPath
+);

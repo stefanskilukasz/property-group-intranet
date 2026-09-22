@@ -5,6 +5,7 @@ import Sidebar from './Sidebar/Sidebar';
 import Header, { Role } from './Header/Header';
 import ContentPlaceholder from './ContentPlaceholder/ContentPlaceholder';
 import GenericPage from './GenericPage/GenericPage';
+import StartPage from './Start/StartPage';
 import { ROUTE_TITLES, DEFAULT_ROUTE } from '../design/navigation';
 import { typography } from '../design/tokens';
 import { LocalPageDataService } from '../data/LocalPageDataService';
@@ -29,7 +30,7 @@ function routeFromHistory(): string {
   return (state && state.pgRoute) || DEFAULT_ROUTE;
 }
 
-const IntranetShell: React.FunctionComponent<IIntranetShellProps> = () => {
+const IntranetShell: React.FunctionComponent<IIntranetShellProps> = ({ userDisplayName }) => {
   const [route, setRoute] = React.useState<string>(routeFromHistory);
   const [role, setRole] = React.useState<Role>('Wszyscy');
   const [darkMode, setDarkMode] = React.useState(false);
@@ -65,9 +66,11 @@ const IntranetShell: React.FunctionComponent<IIntranetShellProps> = () => {
           onToggleDarkMode={() => setDarkMode(v => !v)}
         />
         <div className={styles.content}>
-          {pageData
-            ? <GenericPage page={pageData} brands={pageDataService.getBrands()} />
-            : <ContentPlaceholder title={title} route={route} />}
+          {route === 'start'
+            ? <StartPage userDisplayName={userDisplayName} dataService={pageDataService} onNavigate={navigate} />
+            : pageData
+              ? <GenericPage page={pageData} brands={pageDataService.getBrands()} />
+              : <ContentPlaceholder title={title} route={route} />}
         </div>
       </div>
     </div>

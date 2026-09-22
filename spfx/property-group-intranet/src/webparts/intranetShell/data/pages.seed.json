@@ -1650,5 +1650,187 @@
       "urlLabel": "gethomefinance.pl",
       "channels": []
     }
-  ]
+  ],
+  "news": [
+    {
+      "id": "n4",
+      "cat": "Ludzie",
+      "priority": true,
+      "meta": "26 lipca · Zespół komunikacji",
+      "readTime": "3 min czytania",
+      "title": "Michał Gołota obejmuje stanowisko dyrektora ds. marki i komunikacji marketingowej",
+      "excerpt": "Dotąd związany z Rankomat.pl, gdzie przez cztery lata kierował strategią marki i rozwojem platform komunikacyjnych. Wcześniej współtworzył komunikację marek Era, Tak Tak, T-Mobile i Heyah. W Property Group odpowiada za strategię marki i komunikację kluczowych serwisów, rozwój wszystkich marek z portfela grupy oraz koordynację działań PR i kampanii 360.",
+      "quote": "Property Group stoi przed jednym z najbardziej ambitnych projektów transformacji na rynku e-commerce. Moim celem jest budowa spójnego ekosystemu brandowego oraz działań, które umocnią pozycję Grupy jako lidera innowacji w obszarze nieruchomości.",
+      "quoteBy": "Michał Gołota, dyrektor marki i komunikacji"
+    },
+    {
+      "id": "n5",
+      "cat": "Zarząd",
+      "priority": true,
+      "meta": "17 lipca · Zarząd",
+      "readTime": "4 min czytania",
+      "title": "Property Group przejmuje VoxCommerce — twórcę systemu voxDeveloper",
+      "excerpt": "Kupno dobrej spółki to dwa lata rozmów, kilkaset podpisów i na koniec 40-centymetrowa wieża dokumentów. Po przejęciu EstiCRM, obsługującego pośredników, to kolejny etap strategii inwestycyjnej zapowiedzianej na początku 2025 roku. Cel: One-Stop-Shop dla całej branży nieruchomości — wszystkie ważne usługi dla rynku mieszkaniowego w jednej firmie."
+    },
+    {
+      "id": "n6",
+      "cat": "Partnerstwa",
+      "meta": "9 lipca · Zespół danych",
+      "readTime": "3 min czytania",
+      "title": "JLL i RynekPierwotny.pl rozpoczynają strategiczną współpracę",
+      "excerpt": "Portal RynekPierwotny.pl oraz JLL Residential Poland, globalna firma doradcza dla branży deweloperskiej, ogłosiły strategiczne partnerstwo. Razem zbudujemy lepszą analitykę danych dla rynku nieruchomości — efektem będą wspólne raporty o rynku mieszkaniowym, integracja źródeł danych, wymiana kompetencji i nowe aplikacje analityczne."
+    }
+  ],
+  "reactionDefs": [
+    {
+      "key": "useful",
+      "label": "Przydatne",
+      "icon": "thumb"
+    },
+    {
+      "key": "like",
+      "label": "Lubię to",
+      "icon": "heart"
+    },
+    {
+      "key": "celebrate",
+      "label": "Gratulacje",
+      "icon": "spark"
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "day": "15",
+      "month": "wrz",
+      "title": "Town Hall M360",
+      "meta": "Scena Główna · godzina do potwierdzenia",
+      "start": "2026-09-15",
+      "end": "2026-09-16",
+      "location": "Scena Główna, ul. Rodziny Hiszpańskich 8, Warszawa",
+      "desc": "Spotkanie całej firmy — kierunek strategii M360, wyniki i plany."
+    }
+  ],
+  "shortcutCatalog": [
+    {
+      "key": "urlop",
+      "label": "Wniosek urlopowy",
+      "href": "http://192.168.5.103:81/Login/PROPERTY_GROUP"
+    },
+    {
+      "key": "zdalkus",
+      "label": "Zdalkus — praca zdalna",
+      "href": "https://zdalkus.sandbox.propertygroupai.pl/login"
+    },
+    {
+      "key": "enova-pg",
+      "label": "enova — Property Group",
+      "href": "http://192.168.5.103:81/Login/PROPERTY_GROUP"
+    },
+    {
+      "key": "enova-esti",
+      "label": "enova — EstiCRM",
+      "href": "http://192.168.5.103:81/Login/EstiCRM"
+    },
+    {
+      "key": "enova-pm",
+      "label": "enova — Platforma Mieszkaniowa",
+      "href": "http://192.168.5.103:81/Login/Platforma_Mieszkaniowa"
+    },
+    {
+      "key": "hr",
+      "label": "Lista kontaktów HR",
+      "to": "hr"
+    },
+    {
+      "key": "it",
+      "label": "Help Desk",
+      "to": "pomoc"
+    },
+    {
+      "key": "parkus",
+      "label": "Rezerwacja parkingu (Parkus)",
+      "href": "https://parkus.propertygroupvibe.pl/"
+    },
+    {
+      "key": "druk",
+      "label": "Drukowanie w biurze",
+      "href": "https://pg.eu.ysoft.cloud/"
+    },
+    {
+      "key": "grafika",
+      "label": "Materiały graficzne",
+      "to": "grafika"
+    },
+    {
+      "key": "mapa",
+      "label": "Mapa biura",
+      "to": "biuro"
+    }
+  ],
+  "shortcutDefault": [
+    "urlop",
+    "hr",
+    "it",
+    "parkus",
+    "grafika"
+  ],
+  "vocativeExceptions": {
+    "maria": "Mario",
+    "ala": "Alu",
+    "ola": "Olu",
+    "jadwiga": "Jadwigo",
+    "jagoda": "Jagodo",
+    "nikola": "Nikolo",
+    "michał": "Michale",
+    "paweł": "Pawle",
+    "karol": "Karolu",
+    "jakub": "Jakubie",
+    "bartek": "Bartku",
+    "marek": "Marku",
+    "tomek": "Tomku",
+    "piotrek": "Piotrku",
+    "wojtek": "Wojtku",
+    "jacek": "Jacku",
+    "darek": "Darku",
+    "olek": "Olku",
+    "antek": "Antku",
+    "witek": "Witku",
+    "kuba": "Kubo",
+    "igor": "Igorze",
+    "piotr": "Piotrze",
+    "paweł2": "Pawle",
+    "kacper": "Kacprze",
+    "wiktor": "Wiktorze",
+    "artur": "Arturze",
+    "dawid": "Dawidzie",
+    "konrad": "Konradzie",
+    "gerard": "Gerardzie",
+    "leon": "Leonie",
+    "szymon": "Szymonie",
+    "antoni": "Antoni",
+    "jerzy": "Jerzy",
+    "andrzej": "Andrzeju",
+    "maciej": "Macieju",
+    "mateusz": "Mateuszu",
+    "łukasz": "Łukaszu",
+    "tomasz": "Tomaszu",
+    "janusz": "Januszu",
+    "bartosz": "Bartoszu",
+    "miłosz": "Miłoszu",
+    "filip": "Filipie",
+    "józef": "Józefie",
+    "jan": "Janie",
+    "adam": "Adamie",
+    "damian": "Damianie",
+    "sebastian": "Sebastianie",
+    "krystian": "Krystianie",
+    "marcin": "Marcinie",
+    "kamil": "Kamilu",
+    "emil": "Emilu",
+    "daniel": "Danielu",
+    "gabriel": "Gabrielu",
+    "rafał": "Rafale",
+    "michal": "Michale"
+  }
 }
