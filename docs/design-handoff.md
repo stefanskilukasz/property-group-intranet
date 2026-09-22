@@ -1,138 +1,92 @@
 # Handoff: Property Group — Intranet (SharePoint / SPFx)
 
-## Overview
-Interactive HTML prototype of a corporate intranet for Property Group (holding: RynekPierwotny.pl, GetHome, EstiCRM, voxDeveloper, Platforma Mieszkaniowa, BIG DATA, Akademia RE, GetHome Finance). Target platform is **SharePoint Online, implemented as SPFx web parts / an SPFx-based page**. Two screens were the initial focus (Start, Benefity) and the prototype has since grown to cover the full navigation.
+## What this is
+An interactive HTML prototype of a corporate intranet for Property Group (holding: RynekPierwotny.pl, GetHome, EstiCRM, voxDeveloper, Platforma Mieszkaniowa, BIG DATA, Akademia Real Estate, GetHome Finance). Target platform: **SharePoint Online via SPFx**.
 
-## About the Design Files
-The bundled file (`Intranet Property Group.dc.html`) is a **design reference / clickable prototype**, built in a proprietary browser-only template+React runtime used only inside this design tool. **It is not production code and cannot be deployed to SharePoint as-is.** Treat it as a very detailed, interactive spec: every screen, copy string, state transition, and piece of business logic in it is real and intentional, but the markup/JS itself must be **rebuilt from scratch as SPFx web parts** (React + Fluent UI, per Microsoft's SPFx toolchain), consuming real SharePoint lists / Graph API instead of the hardcoded arrays used here.
-
-Open the HTML file directly in a browser to click through it — that's the fastest way to understand a screen before rebuilding it.
+**This file is a design reference, not deployable code.** It runs only inside the design tool's proprietary template+React runtime. Open `Intranet Property Group.dc.html` in a browser to click through every screen before rebuilding — treat it as a detailed, interactive spec: every screen, copy string, state transition and business rule in it is intentional. Rebuild as SPFx web parts (React + Fluent UI) against real SharePoint lists / Microsoft Graph, not by porting this markup.
 
 ## Fidelity
-**High-fidelity.** Colors, type, spacing, copy (Polish, verbatim where the client supplied text) and interaction states are final/intentional, not placeholders. A few items are explicitly marked TBD below (real photos, some phone numbers/links) — search the file for `image-slot` placeholders and `stub(` calls, which mark not-yet-real actions.
+High-fidelity. Colors, type, spacing, and Polish copy are final, not placeholder — except explicit TBDs: `image-slot` elements (photo/logo placeholders, drag-and-drop in the design tool) and any `stub(...)` call (shows a "not in scope" toast — a deliberately unbuilt action).
 
-## Critical business rule — do not simplify
-**Content-access gradation is the core UX pattern of this intranet and is a business decision, not a visual one.** Three access levels: **Wszyscy (All) / Menadżerowie (Managers) / Zarząd (Board)**. Content the current user's role can't access **must stay visible** — rendered as a dimmed/grayscale card with a "Brak dostępu" (No access) badge — and **must never be hidden or filtered out**. Clicking a locked card opens an explanation modal (why it's locked + who to contact), never a silent no-op. This pattern repeats on: Benefity (per-tier benefit cards), the global search results, and anywhere else role-gated content appears. Any reimplementation that hides locked items instead of dimming them is a regression, not a simplification.
+## Critical business rule — content-access gradation
+Three roles: **Wszyscy / Menadżerowie / Zarząd**. Content a role can't access **stays visible**, dimmed + "Brak dostępu" badge, never hidden. Click opens an explanation (why locked, who to ask), never a silent no-op. Applies to: Benefity cards, global search results, anywhere role-gated content appears. Do not hide locked items in the rebuild.
 
-## Screens / Views
+## Navigation (current IA)
+Fixed left sidebar (264px, brand purple `#4D1A63`) — deliberate, not a top-nav:
+- **Start** — home dashboard
+- **O firmie**: Zarząd · Struktura · Departamenty i kontakty · Spółki grupy · Biuro · Historia
+- **Misja i wartości**
+- **Dane rynkowe** (BIG DATA product/sales page)
+- **Komunikacja i marka**: Aktualności · Kalendarz · Social Media · Materiały graficzne
+- **Kluby zainteresowań**
+- **HR**: Oferty pracy · Benefity · Dokumenty i kontakt HR
+- **Pomoc techniczna i linki**: Pomoc techniczna · Baza wiedzy
+- **Ochrona danych osobowych** (RODO documents, standalone)
+- **Baza procedur**: Polityka komunikacji zewnętrznej · Dokumenty prawne i korporacyjne
+- **Pliki i formularze**
+- **Twoja przestrzeń** (private, per-user — stock watchlist)
 
-### Global shell (present on every screen)
-- **Sidebar** (fixed left, 264px, `#4D1A63` background) — logo, live search (see below), nav tree, user card (avatar initials + name + role) at the bottom. This is a fixed sidebar by deliberate decision (many sections) — never collapse it into a top-nav or dropdown.
-- **Search** — a real, indexed client-side search (not a placeholder) covering pages, benefits, news, docs, people, and office places. Must be reimplemented against real data sources (SharePoint search API / Graph). Behavior to preserve: diacritic-insensitive matching (typing "zarzad" must find "Zarząd"), keyboard nav (↑↓/Enter/Esc), `⌘K` / `/` shortcut, highlighted match substring, and locked results shown with the same "Brak dostępu" badge (not filtered out).
-- **Header** — breadcrumb, a "Podgląd jako" (Preview as) role switcher (**prototype-only** — in production the role comes from the logged-in user's real group membership, this control should not ship), notification bell (stub), dark-mode toggle (stub of a real theme, CSS-filter based here — do a real theming pass in production).
-- **Nav tree**: Start · O firmie (Zarząd, Struktura, Departamenty i kontakty, Spółki grupy, Historia) · Misja i wartości · Dane rynkowe · Komunikacja i marka (Aktualności, Kalendarz, Social Media, Komunikacja wewnętrzna, Materiały graficzne, Kluby zainteresowań) · Dla pracownika (Oferty pracy, Benefity, Mapa biura, Biuro, Dokumenty i kontakt HR) · Pomoc techniczna i linki · Pliki i formularze · Twoja przestrzeń. Groups expand/collapse; a "Zwiń menu" (collapse all) control appears once any group is open.
+## Global shell
+- **Search**: real client-side index (pages, benefits, news, docs, people, office places, KB articles) — diacritic-insensitive, `⌘K`/`/` shortcut, ↑↓/Enter/Esc, highlighted match, locked results keep the "Brak dostępu" badge instead of being filtered. Rebuild against SharePoint Search / Microsoft Search API.
+- **Header**: breadcrumb, "Podgląd jako" role switcher (**prototype-only** — drop in production, derive role from real group membership), dark-mode toggle (CSS-filter based here; do a real token-swap theme in production).
+- **Browser back/forward** navigates between visited in-app screens (history API), not just to Start.
 
-### Start (home)
-- Hero band (tinted `#F9EDFF` panel): greeting personalized to the logged-in user's first name (Graph `me` call in production), date, quick-action buttons (Wniosek urlopowy, Help Desk, …).
-- Group stats + brand strip (8 portfolio companies as logo tiles, linking to Spółki grupy).
-- Two-column body: **Aktualności** feed (left, top-3 posts; "priority" posts get a larger hero treatment with category badge + read-time; regular posts sit in a lighter feed list below) with reactions (3 fixed reaction types) + flat (non-threaded) comments; **sidebar** (right) with Nadchodzące wydarzenia (events, "Add to Outlook"/.ics), Nowi w zespole (newcomers, empty-state aware), Twoje skróty (quick links), a live weather widget, and **Twoja giełda** — a private, per-browser stock ticker watchlist (TradingView mini-widget embeds, symbols persisted to `localStorage`, not shared with other users — in production this should be a per-user preference, e.g. stored via Graph `me/insights` or a small user-settings list).
-- A "Benefity" teaser section reusing the same locked/unlocked card treatment as the Benefity page.
+## Screen notes
 
-### Benefity (the access-gradation reference screen)
-- Header explains the transparency policy in plain language (we show every tier so the growth path is visible; locked tiers stay dimmed, not hidden).
-- Tiers: **Wszyscy** and **Menadżerowie** (Board tier was removed — Property Group has no board-specific benefit package). Each tier section shows a "Masz dostęp" or "Brak dostępu" pill.
-- Benefit cards: unlocked cards are fully interactive → open a detail modal (description, funding table where relevant, step-by-step "how to use", CTA, owner contact). Locked cards: same size/grid position, `grayscale(1)` + reduced opacity (+ optional blur, toggleable), "Brak dostępu" badge, click opens an explanation modal (which tier it needs + link to HR) instead of the detail modal.
-- Real benefit data included: LUX MED (with full pricing table), MultiSport, training budget, glasses reimbursement, group insurance, lunch card, extended family medical, company car/allowance, executive coaching, conference budget — treat these as real content to preserve, not sample data.
+**Start**: personalized greeting (first name — Graph `me` in production) + date; quick actions; "Dziś" card (weekday/date, live weather via geolocation with fallback, days-to-next-public-holiday computed from a real Polish-holiday algorithm — skips weekend holidays); mini month calendar (click a day with an event → Kalendarz); "Twoje skróty" — user-editable, up to 5, persisted to `localStorage`, catalog includes enova (×3 companies), Zdalkus, Help Desk, Parkus, HR, mapa, materiały graficzne; "Marki i projekty grupy" brand strip; Aktualności feed (priority hero post + lighter list) with 3 fixed-type reactions + flat unthreaded comments; sidebar: Nadchodzące wydarzenia (auto-filtered to future events only, empty-state aware, "Dodaj do Outlooka"/.ics), Nowi w zespole (empty-state aware), Pogoda widget, "Twoja giełda" (private per-browser TradingView watchlist, `localStorage`-only — needs a real per-user store in production, e.g. Graph `me/insights`-style or a settings list).
 
-### Mapa biura (Office map)
-- Full office floor plan image (`assets/mapa-biura.png`) with click-to-zoom lightbox + download.
-- "Streets" legend (4 color-coded zones: ul. Cybernetyki, Plac Centralny, Targowa, Finansowa) matching the floor plan's own zone coloring.
-- A searchable/filterable list of ~47 real places (meeting rooms with capacity, team zones, amenities) below the map — each result deep-links from global search too.
-- **Known UX note**: the map is a static image; a follow-up improvement (raised during review) is to add clickable hotspots directly on the image and/or a lighter "find a desk/room" widget elsewhere, keeping the full zoomable map on this dedicated page.
+**Benefity**: tiers **Wszyscy** and **Menadżerowie** (no board-specific tier — confirmed with client). Real content: LUX MED (full pricing table + add-ons), MultiSport, Unum (life insurance, all-tier). Unlocked cards open a detail modal (description, funding, step-by-step, real linked source documents); locked cards same size/position, dimmed + badge, click explains + links to HR.
 
-### O firmie (Company) group
-- **Zarząd**: 5 board member cards (photo slot + name + role), click opens the org-tree modal (see below).
-- **Struktura**: department list grouped by division (Dyrektor Generalny / Sprzedaż i Marketing pions), each with head + headcount, click-through to the filtered staff directory.
-- **Departamenty i kontakty**: full staff directory, search + department filter dropdown, alphabetically sorted, click a person → org-tree modal.
-- **Spółki grupy**: the 8 portfolio brands (RynekPierwotny.pl, GetHome, EstiCRM, voxDeveloper, Platforma Mieszkaniowa, BIG DATA, Akademia RE, GetHome Finance) as detail cards.
-- **Historia**: timeline/stats of company growth 2009→2026, including office address history (culminating in the current ul. Rodziny Hiszpańskich 8 address, since May 2026).
-- **Org-tree modal** (Teams-style person card): avatar + presence dot, quick actions row (chat/org-chart/video/call/LinkedIn — all stubs pointing at Teams equivalents in production), "Przełożony" (manager) card, and an expandable breadcrumb tree Zarząd → Pion → Dział → Zespół — every chip in that tree is clickable and deep-links to the matching filtered view. Opens **pre-expanded** when reached from a manager's own card.
+**O firmie**: Zarząd = 5 board member cards (photo slot, click → org-tree modal). Struktura = department list by division, headcount, click-through to filtered directory. Departamenty i kontakty = full staff directory, search + department dropdown, grouped by department (collapsible — auto-expanded only when filtered/searched or ≤1 group), dept head listed first then alphabetical, photo slots. Spółki grupy = 8 portfolio brands as cards. Biuro = address/legal, office team (3 real people + photo slots), practical info, **and the office floor-plan/search widget (streets legend, zoomable map image, searchable list of ~47 real places)** — this used to be a separate "Mapa biura" page; it's now folded into Biuro only (don't resurrect a standalone map route). Historia = growth timeline 2009→2026 incl. real office-address history ending at ul. Rodziny Hiszpańskich 8 (current, since May 2026).
 
-### Misja i wartości
-Mission statement + the six core values (Sprawczość, Relacje, Autentyczność, Fascynacja, Zespół, Jakość) as verbatim client copy — do not rewrite this text.
+**Org-tree modal** (Teams-style person card): avatar+presence, quick-action row (chat/org-chart/video/call/LinkedIn-equivalent — stubs for real Teams integration), "Przełożony" card (real manager lookup), expandable Zarząd→Pion→Dział→Zespół breadcrumb — every chip is clickable and deep-links to the matching filtered view.
 
-### Dane rynkowe (BIG DATA)
-Marketing/product page for the BIG DATA analytics platform: stats, team photo banner, product cards (Monitoring, Raporty dedykowane, Raport kwartalny, dane surowe, Insight newsletter, cennik/FAQ), a small "latest publications" list linking to real bigdata.rynekpierwotny.pl articles, and contact cards. This is intentionally styled with a secondary/darker card treatment to visually separate it from the rest of the intranet (it's a sales-facing product, not an HR page) — a candidate for moving under "O firmie → Spółki grupy" in a future IA pass (flagged, not yet decided).
+**Dane rynkowe (BIG DATA)**: product/sales page, deliberately styled with a secondary/darker card treatment to read as "not an HR page." Stats, team photo, varied-accent product cards, real linked publications, contact people, awards. A candidate for relocating under O firmie → Spółki grupy in a future IA pass (flagged, not decided).
 
-### Komunikacja i marka group
-- **Aktualności**: full news list (same card as the Start feed, with priority/feed split, reactions + comments).
-- **Kalendarz**: company events list + an Outlook "my calendar" preview block (**intentionally not wired to real data** in the prototype — in production, use Microsoft Graph `Calendars.Read` and the Graph Toolkit `mgt-agenda` component to show the logged-in user's real upcoming events without a custom backend).
-- **Social Media**: portfolio brand social links + a real YouTube channel embed (latest video + 3 previous, thumbnails).
-- **Komunikacja wewnętrzna**: the internal comms-approval policy (materials going external require Brand/DMiK approval via the Brand Approval Tool) — verbatim policy text, do not rewrite.
-- **Materiały graficzne**: brand assets/downloads (logos, templates, brand book).
-- **Kluby zainteresowań**: employee interest groups (climbing, football, running, book club, board games) — each "Dołącz na Teams" button is a stub for a real Teams deep link.
+**Komunikacja i marka**: Aktualności (full feed); Kalendarz (month-grid calgrid component + "Twój kalendarz" Outlook-preview block — **intentionally unwired**, no fake data; production should use Graph `Calendars.Read` + Graph Toolkit `mgt-agenda`); Social Media (8 brand cards w/ owner-contact org-tree links, channel icons, real YouTube embed — latest + 3 previous); Materiały graficzne (asset list + real Teams channel link for anything not yet catalogued).
 
-### Dla pracownika group
-- **Oferty pracy**: real open roles sourced from propertygroup.pl/pracuj-z-nami (dated, with a referral-bonus callout).
-- **Benefity**: see above.
-- **Mapa biura**: see above.
-- **Biuro**: office address/legal details, office team (Head of Office + 2 staff, with photo slots), practical info list (reception/guest cards, bike storage, etc.).
-- **Dokumenty i kontakt HR**: enova self-service portal links (3 separate logins — one per legal entity: Property Group, EstiCRM, Platforma Mieszkaniowa), HR forms, GDPR/legal document library grouped by topic.
+**Kluby zainteresowań**: informal Teams-channel groups; only real channel links are linked — clubs without a confirmed link show plain unlinked text ("start your own Teams group"), never a placeholder button.
 
-### Pomoc techniczna i linki (Help Desk)
-- Self-service KB deflection: a search box over an "IT ticket" flow — typing a problem (e.g. "nie działa VPN") surfaces matching knowledge-base articles inline; only after no article helps does the flow point at filing a ticket. **Preserve this deflection-first order** — it exists specifically to reduce ticket volume, per stakeholder request.
-- Ticket categories are organized by **user intent**, not by department: "Potrzebuję sprzętu", "Zgłaszam awarię", "Sprawy kadrowe i urlopy" (which correctly redirects to HR/Benefity pages rather than opening an IT ticket).
-- enova portal links (again, 3 per-company logins) and a general "useful links" list (Brand Approval Tool, map, BIG DATA, calendar).
+**HR**: enova portal links (3 logins — Property Group / EstiCRM / Platforma Mieszkaniowa), "Cele i premie" (goals/appraisal/bonus access) shown as a dashed **"coming November 2026"** placeholder — no fake preview data, HR content not yet supplied, real team contacts.
 
-### Pliki i formularze
-Flat list of common forms (leave request, benefit request, expense report, equipment request, etc.) plus two grouped document libraries: **RODO i ochrona danych osobowych** (7 real legal/GDPR documents) and a second compliance group — these link out to real SharePoint document URLs supplied by the client; preserve the URLs and groupings exactly.
+**Pomoc techniczna**: KB-deflection search (type a problem → matching articles appear before any ticket option) — preserve this order, it exists to cut ticket volume. Ticket categories organized by user intent, not department.
 
-### Twoja przestrzeń (Your space)
-A private, per-user utility page — currently hosts the "Twoja giełda" stock-watchlist widget (see Start page notes). Everything here is scoped to the individual, never shared/visible to other employees.
+**Ochrona danych osobowych**: 7 real GDPR/legal documents with real SharePoint URLs, standalone from Pliki i formularze.
 
-## Interactions & Behavior
-- **Role switching** ("Podgląd jako") instantly re-evaluates every locked/unlocked card and search result across the whole app — this is the mechanism to test the access-gradation pattern; remove this control in production and drive role from real group membership instead.
-- **Modals**: benefit detail, access-denied explanation, org-tree, office-map zoom — all share the same overlay/close pattern (click backdrop or × to close, `Esc` closes whichever is open).
-- **Reactions**: exactly 3 fixed types (Przydatne / Lubię to / Gratulacje), one active reaction per user per post, toggled by re-click. Deliberately not an open emoji picker (kept cheap to build/moderate).
-- **Comments**: flat list, no threading, no @mentions, no notification fan-out — deliberately minimal to keep SPFx implementation cost low. If SharePoint list comments or Viva Engage are available in the target tenant, prefer wiring to those over building custom storage.
-- **Browser back/forward**: in-app navigation pushes history state so back/forward moves between visited screens rather than always returning to Start.
-- **Dark mode**: prototype approximates it with a CSS filter on the main content only (sidebar stays brand purple) — implement as a real color-token theme swap in production, not a filter.
-- **Weather widget**: geolocation-based, degrades to a fixed-city fallback with a visible error state if location/network fails.
+**Baza procedur**: Polityka komunikacji zewnętrznej (DMiK-001/2026 — real external-comms approval policy, verbatim, real contacts, Brand Approval Tool link); Dokumenty prawne i korporacyjne (NDA, power-of-attorney policy, corporate data — real URLs).
 
-## State Management
-State that needs a real backing store in production (all currently in-memory/localStorage in the prototype):
-- Current user identity, role/group membership, display name (drives greeting + role gating) → Graph `me` + SharePoint group membership.
-- News reactions + comments, per post → SharePoint list (or Viva Engage if available).
-- "Welcomed" newcomers, read/unread state → SharePoint list or Graph.
-- Personal stock watchlist symbols → per-user storage (Graph `me/insights`-style, or a small "user settings" list), **not** shared across users.
-- Search index → SharePoint Search / Microsoft Search API rather than a hardcoded in-memory array.
-- Outlook "my calendar" block → Graph `Calendars.Read` (see Kalendarz notes above).
+**Twoja przestrzeń**: private per-user utility page (currently the stock watchlist) — nothing here is shared across users.
 
-## Design Tokens
+## Interaction rules to preserve
+- Role switch re-evaluates every locked/unlocked card + search result live. Remove in production; derive role from real group membership.
+- All empty-link/dead-button issues found in review were fixed by either linking to a real destination or removing the affectation of interactivity (plain text/badge, no button chrome) — do not reintroduce fake CTAs. If a real destination doesn't exist yet, prefer an honest "not available yet" state over a stub toast.
+- Meeting-room "reserve" actions: Ratusz & Biblioteka route to a real mailto (no booking system exists for those); all other rooms show plain (non-interactive) text pointing to Outlook room-resource booking — never a button with no real destination.
+- Reactions: exactly 3 fixed types, one per user per post, re-click toggles.
+- Comments: flat, no threads/mentions — prefer wiring to SharePoint list comments or Viva Engage if available over custom storage.
 
-**Color** — B2B-toned palette; **Dark Violet is primary, not Main Violet** (a deliberate choice, keep this hierarchy):
+## Design tokens
 | Token | Hex | Use |
 |---|---|---|
-| Primary / Dark Violet | `#4D1A63` | sidebar, headings, primary buttons, dark card fills |
-| Accent / Main Violet | `#A01BD7` | links, secondary CTAs, active states — never the dominant color |
-| Accent tint (mid) | `#C764F0` | small accents, hover borders on locked cards |
-| Accent tint (light) | `#E4A3FF` | avatars, decorative fills |
-| Surface tint | `#F1D1FF` | icon chip backgrounds |
-| Panel tint | `#F9EDFF` | section/hero panel backgrounds |
+| Primary / Dark Violet | `#4D1A63` | sidebar, headings, primary buttons |
+| Accent / Main Violet | `#A01BD7` | links, secondary CTAs — never dominant |
+| Accent mid | `#C764F0` | small accents |
+| Accent light | `#E4A3FF` | avatars, decorative fills |
+| Surface tint | `#F1D1FF` | icon chips |
+| Panel tint | `#F9EDFF` | hero/section panels |
 | Neutral panel | `#F5F1F8` | comment bubbles, muted chips |
-| Border | `#E3DCE9` | all hairline borders |
-| Text secondary | `#6E6178` | secondary/meta text — replaces a former `gray-400` that failed WCAG AA (2.58:1); this token is ~5.6:1 on white. **Do not reintroduce a lighter gray for any text or link.** |
-| Text primary | `#2E2136` | body text, toast background |
-| Signal / highlight | `#EBFF00` | search match highlight, focus rings, numbered-step badges — used sparingly |
-| Background | `#FFFFFF` | page background |
+| Border | `#E3DCE9` | hairlines |
+| Text secondary | `#6E6178` | ~5.6:1 on white — do not reintroduce a lighter gray |
+| Text primary | `#2E2136` | body copy |
+| Signal | `#EBFF00` | search highlight, focus rings — sparingly |
 
-**Typography**: `Plus Jakarta Sans` (weights 500–800) for headings, nav, labels, buttons; `DM Sans` (400–700) for body copy. Load both via Google Fonts in production or self-host per IT's SharePoint font policy.
-
-**Radii**: 10–12px small controls/chips, 16–18px cards, 22px hero panels, full pill (`999px`) for badges/tabs.
-
-**Shadows**: soft, colored-tint shadows on hover (`rgba(77,26,99, .08–.16)`), not neutral black shadows — keep this brand-tinted shadow approach.
-
-**Spacing**: 8px base rhythm (gaps of 8/10/12/16/18/20px), page content max-width 1200–1260px, sidebar fixed at 264px.
+Typography: `Plus Jakarta Sans` (500–800, headings/UI), `DM Sans` (400–700, body). Radii 10–18px (22px hero, pill badges). Soft brand-tinted shadows on hover, not neutral black.
 
 ## Assets
-- `assets/logo-property-group.png` — sidebar logo (real asset).
-- `assets/mapa-biura.png` — real office floor plan, client-supplied.
-- `assets/news-golota.png`, `assets/news-vox.png` — real photos cropped from client-supplied press material.
-- All other imagery in the prototype is an **`image-slot` placeholder** (drag-and-drop target in the design tool) — these are marked clearly in the source and must be replaced with real photography (team photos, board portraits, office/reception photo, brand banner) before ship.
-- Icons are hand-drawn inline SVG (no icon font/library dependency) — fine to keep or swap for Fluent UI icons for SPFx consistency.
+`assets/` — real: `logo-property-group.png`, `mapa-biura.png` (real floor plan), `news-golota.png`, `news-vox.png`, plus stock office photography (`office-*.jpg`) used as hero/banner imagery. Everything else in the prototype is an empty `image-slot` placeholder (team photos, portraits) — replace before ship.
 
 ## Files
-- `Intranet Property Group.dc.html` — the full interactive prototype (all screens, all logic, all copy described above). Open directly in a browser to click through it.
-- `assets/` — the real image assets listed above.
+- `Intranet Property Group.dc.html` — full prototype, open directly in a browser.
+- `assets/` — real assets above.
+- `image-slot.js` — the placeholder-image web component the prototype loads (reference only, not needed in the SPFx rebuild).
 
-This README is meant to be self-sufficient: a developer who wasn't part of the original design conversation should be able to plan and build the SPFx implementation from this document plus the linked prototype file, without needing further context.
+This README should be sufficient on its own, alongside the prototype file, for a developer with no prior context to plan and build the SPFx implementation.

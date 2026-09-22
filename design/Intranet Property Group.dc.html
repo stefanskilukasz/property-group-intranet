@@ -115,7 +115,7 @@
         <sc-if value="{{ row.isTop }}">
           <button onClick="{{ row.onClick }}" style="position:relative; display:flex; align-items:center; gap:11px; width:100%; text-align:left; border:0; background:transparent; padding:9px 12px; border-radius:10px; cursor:pointer; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:13.8px; color:rgba(255,255,255,.88)" style-hover="background:rgba(255,255,255,.09)">
             <sc-if value="{{ row.active }}">
-              <span style="position:absolute; inset:0; background:rgba(255,255,255,.15); border-radius:10px"></span>
+              <span style="position:absolute; inset:0; background:rgba(255,255,255,.15); border:1.5px solid #EBFF00; border-radius:10px"></span>
               <span style="position:absolute; left:-6px; top:9px; bottom:9px; width:3px; border-radius:3px; background:#EBFF00"></span>
             </sc-if>
             <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="position:relative; flex:0 0 auto; opacity:.92"><path d="{{ row.icon }}"></path></svg>
@@ -131,7 +131,7 @@
         <sc-if value="{{ row.isChild }}">
           <button onClick="{{ row.onClick }}" style="position:relative; display:flex; align-items:center; gap:10px; width:100%; text-align:left; border:0; background:transparent; padding:7px 12px 7px 40px; border-radius:10px; cursor:pointer; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:13.2px; color:rgba(255,255,255,.82)" style-hover="background:rgba(255,255,255,.09)">
             <sc-if value="{{ row.active }}">
-              <span style="position:absolute; inset:0; background:rgba(255,255,255,.15); border-radius:10px"></span>
+              <span style="position:absolute; inset:0; background:rgba(255,255,255,.15); border:1.5px solid #EBFF00; border-radius:10px"></span>
               <span style="position:absolute; left:-6px; top:7px; bottom:7px; width:3px; border-radius:3px; background:#EBFF00"></span>
             </sc-if>
             <span style="position:absolute; left:24px; top:50%; width:5px; height:5px; border-radius:50%; background:#C764F0; transform:translateY(-50%)"></span>
@@ -190,7 +190,14 @@
           </div>
 
           <div ref="{{ heroCopyRef }}" style="position:relative; z-index:1; will-change:transform">
-            <span style="display:inline-flex; align-items:center; gap:8px; background:#FFFFFF; border:1px solid #E3DCE9; border-radius:999px; padding:5px 13px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:12px; color:#6E6178; white-space:nowrap; animation:pgRise .6s cubic-bezier(.2,.8,.2,1) both">{{ dateLabel }}</span>
+            <span style="display:inline-flex; align-items:center; gap:8px; background:#FFFFFF; border:1px solid #E3DCE9; border-radius:999px; padding:5px 13px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:12px; color:#6E6178; white-space:nowrap; animation:pgRise .6s cubic-bezier(.2,.8,.2,1) both">
+              {{ dateLabel }}
+              <sc-if value="{{ wxOk }}">
+                <span style="width:1px; height:12px; background:#E3DCE9"></span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#4D1A63" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="{{ wx.icon }}"></path></svg>
+                {{ wx.tempLabel }}
+              </sc-if>
+            </span>
             <h1 style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:40px; line-height:1.08; letter-spacing:-.01em; color:#4D1A63; margin:16px 0 0; animation:pgRise .62s .07s cubic-bezier(.2,.8,.2,1) both">{{ hello }}</h1>
             <span style="display:block; width:72px; height:7px; border-radius:4px; background:#EBFF00; margin:11px 0 13px; transform-origin:left center; animation:pgSwipe .5s .42s cubic-bezier(.2,.8,.2,1) both"></span>
             <p style="margin:0 0 24px; font-size:16px; line-height:1.62; color:#6E6178; max-width:54ch; text-wrap:pretty; animation:pgRise .62s .15s cubic-bezier(.2,.8,.2,1) both">{{ heroEventLine }} Czegoś szukasz? Wyszukiwarka po lewej działa — spróbuj wpisać <strong style="color:#2E2136">urlop</strong> albo <strong style="color:#2E2136">multisport</strong>.</p>
@@ -211,9 +218,9 @@
           </div>
         </section>
 
-        <section style="margin-top:22px; border:1px solid #E3DCE9; border-radius:18px; padding:20px 22px">
+        <section style="margin-top:22px; border:1px solid #E3DCE9; border-left:4px solid #A01BD7; border-radius:18px; padding:20px 22px">
           <div style="display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:14px">
-            <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:16px; color:#4D1A63; margin:0">Twoje skróty — szybki dostęp</h3>
+            <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:17px; color:#4D1A63; margin:0">Twoje skróty — szybki dostęp</h3>
             <button onClick="{{ toggleShortcutEdit }}" style="border:0; background:transparent; padding:0; cursor:pointer; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:12.5px; color:#A01BD7" style-hover="color:#4D1A63">{{ shortcutEditLabel }}</button>
           </div>
 
@@ -328,7 +335,7 @@
           </section>
 
           <aside style="display:flex; flex-direction:column; gap:20px">
-            <section style="border:1px solid #E3DCE9; border-radius:18px; padding:18px">
+            <section style="border:1px solid #E3DCE9; border-top:3px solid #C764F0; border-radius:18px; padding:18px">
               <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px">
                 <span style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:14px; color:#4D1A63">{{ miniCalTitle }}</span>
                 <button onClick="{{ goKalendarz }}" style="border:0; background:transparent; padding:0; cursor:pointer; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:12px; color:#A01BD7" style-hover="color:#4D1A63">Otwórz →</button>
@@ -354,8 +361,13 @@
               </div>
             </section>
 
-            <section style="border:1px solid #E3DCE9; border-radius:18px; padding:20px">
+            <section style="border:1px solid #E3DCE9; border-top:3px solid #4D1A63; border-radius:18px; padding:20px">
               <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:16px; color:#4D1A63; margin:0 0 14px">Nadchodzące wydarzenia</h3>
+              <sc-if value="{{ eventsEmpty }}">
+                <div style="border:1px dashed #E3DCE9; border-radius:14px; padding:18px; text-align:center">
+                  <div style="font-size:13.5px; line-height:1.5; color:#6E6178; text-wrap:pretty">Na razie brak zaplanowanych wydarzeń firmowych.</div>
+                </div>
+              </sc-if>
               <div style="display:flex; flex-direction:column; gap:13px">
                 <sc-for list="{{ events }}" as="e" hint-placeholder-count="3">
                   <div style="display:flex; flex-direction:column; gap:11px">
@@ -381,7 +393,7 @@
               </div>
             </section>
 
-            <section style="border:1px solid #E3DCE9; border-radius:18px; padding:20px">
+            <section style="border:1px solid #E3DCE9; border-top:3px solid #E4A3FF; border-radius:18px; padding:20px">
               <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:16px; color:#4D1A63; margin:0 0 14px">Nowi w zespole</h3>
               <sc-if value="{{ newcomersEmpty }}">
                 <div style="border:1px dashed #E3DCE9; border-radius:14px; padding:18px; text-align:center">
@@ -817,6 +829,38 @@
             <div style="text-align:center; padding:16px 6px; font-size:12.5px; color:#6E6178">Dodaj pierwszą spółkę, żeby zobaczyć wykres.</div>
           </sc-if>
         </section>
+
+        <section style="margin-top:20px; border:1px solid #E3DCE9; border-radius:18px; padding:22px">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:4px">
+            <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:16px; color:#4D1A63; margin:0">Ulubione portale</h3>
+            <span style="display:inline-flex; align-items:center; gap:5px; font-size:11px; color:#6E6178">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="10.5" width="13" height="9.5" rx="2"></rect><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7"></path></svg>
+              tylko Ty
+            </span>
+          </div>
+          <p style="margin:0 0 14px; font-size:12.5px; line-height:1.5; color:#6E6178">Zapisz linki do stron, które odwiedzasz najczęściej w pracy — prywatna lista, bez pokazywania jej innym.</p>
+
+          <div style="display:flex; gap:8px; margin-bottom:14px">
+            <input type="text" value="{{ portalLabelInput }}" onChange="{{ onPortalLabelInput }}" placeholder="Nazwa, np. RynekPierwotny.pl" aria-label="Nazwa portalu" style="flex:1; min-width:0; padding:9px 12px; border-radius:10px; border:1px solid #E3DCE9; background:#FFFFFF; font-family:'DM Sans',sans-serif; font-size:13px; color:#2E2136; outline:none" style-focus="border-color:#A01BD7">
+            <input type="text" value="{{ portalUrlInput }}" onChange="{{ onPortalUrlInput }}" onKeyDown="{{ onPortalKey }}" placeholder="Adres URL" aria-label="Adres URL portalu" style="flex:1; min-width:0; padding:9px 12px; border-radius:10px; border:1px solid #E3DCE9; background:#FFFFFF; font-family:'DM Sans',sans-serif; font-size:13px; color:#2E2136; outline:none" style-focus="border-color:#A01BD7">
+            <button onClick="{{ onPortalAdd }}" style="flex:0 0 auto; border:0; background:#4D1A63; color:#FFFFFF; border-radius:10px; padding:9px 14px; cursor:pointer; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:12.5px" style-hover="background:#A01BD7">Dodaj</button>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px">
+            <sc-for list="{{ favPortals }}" as="fp" hint-placeholder-count="0">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; border:1px solid #E3DCE9; border-radius:12px; padding:10px 12px">
+                <a href="{{ fp.url }}" target="_blank" rel="noopener" style="min-width:0; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:13px; color:#4D1A63; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap" style-hover="color:#A01BD7">{{ fp.label }}</a>
+                <button onClick="{{ fp.onRemove }}" aria-label="Usuń" style="flex:0 0 auto; border:0; background:transparent; color:#6E6178; cursor:pointer; padding:2px; display:flex" style-hover="color:#4D1A63">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+                </button>
+              </div>
+            </sc-for>
+          </div>
+
+          <sc-if value="{{ favPortalsEmpty }}">
+            <div style="text-align:center; padding:16px 6px; font-size:12.5px; color:#6E6178">Dodaj pierwszy portal, żeby zobaczyć go tutaj.</div>
+          </sc-if>
+        </section>
       </div>
     </sc-if>
 
@@ -972,6 +1016,18 @@
               </div>
             </sc-if>
 
+            <sc-if value="{{ bl.isGoals }}">
+              <div style="border:1px dashed #E3DCE9; border-radius:20px; padding:22px; display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap; background:#F9EDFF">
+                <div style="flex:0 0 auto; width:46px; height:46px; border-radius:13px; background:#F1D1FF; color:#4D1A63; display:flex; align-items:center; justify-content:center">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"></circle><circle cx="12" cy="12" r="4.5"></circle><circle cx="12" cy="12" r="0.8"></circle></svg>
+                </div>
+                <div style="flex:1; min-width:240px">
+                  <div style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:16px; color:#4D1A63; margin-bottom:8px">Twoje cele, ocena i premia</div>
+                  <div style="font-size:14px; line-height:1.6; color:#2E2136">Ta sekcja jest w przygotowaniu wraz z zespołem HR. Dostęp do celów, oceny pracowniczej i premii — widoczny tylko po Twoim zalogowaniu — pojawi się tutaj od listopada 2026.</div>
+                </div>
+              </div>
+            </sc-if>
+
             <sc-if value="{{ bl.isOfficemap }}">
               <div style="display:flex; flex-direction:column; gap:22px">
                 <div style="display:flex; gap:10px; flex-wrap:wrap">
@@ -1021,6 +1077,23 @@
 
                 <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(276px,1fr)); gap:16px">
                   <sc-for list="{{ mapPlaces }}" as="pl" hint-placeholder-count="6">
+                    <sc-if value="{{ pl.isPlain }}">
+                      <div style="text-align:left; border:1px solid #E3DCE9; border-radius:16px; padding:17px; background:#FFFFFF; display:flex; flex-direction:column; gap:9px; height:100%">
+                        <span style="display:flex; align-items:center; justify-content:space-between; gap:10px">
+                          <span style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:15.5px; color:#4D1A63; line-height:1.28; text-wrap:pretty">{{ pl.name }}</span>
+                          <sc-if value="{{ pl.isSala }}">
+                            <span style="flex:0 0 auto; background:#F1D1FF; color:#4D1A63; border-radius:8px; padding:4px 9px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:10.5px; white-space:nowrap; transform:rotate(-2deg)">{{ pl.badge }}</span>
+                          </sc-if>
+                        </span>
+                        <span style="display:block; font-size:13.2px; line-height:1.5; color:#6E6178; text-wrap:pretty">{{ pl.meta }}</span>
+                        <span style="flex:1"></span>
+                        <span style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:3px">
+                          <span style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:11.5px; color:#6E6178">{{ pl.street }}</span>
+                          <span style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:12.5px; color:#6E6178; white-space:nowrap">{{ pl.action }}</span>
+                        </span>
+                      </div>
+                    </sc-if>
+                    <sc-if value="{{ pl.isClickable }}">
                     <button onClick="{{ pl.onClick }}" style="text-align:left; border:1px solid #E3DCE9; border-radius:16px; padding:17px; background:#FFFFFF; cursor:pointer; display:flex; flex-direction:column; gap:9px; height:100%; transition:transform .16s ease, border-color .16s ease, box-shadow .16s ease" style-hover="border-color:#A01BD7; transform:translateY(-3px); box-shadow:0 12px 26px rgba(77,26,99,.12)">
                       <span style="display:flex; align-items:center; justify-content:space-between; gap:10px">
                         <span style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:15.5px; color:#4D1A63; line-height:1.28; text-wrap:pretty">{{ pl.name }}</span>
@@ -1351,7 +1424,7 @@
                     <div style="font-size:13.2px; color:#6E6178">{{ br.desc }}</div>
                     <div style="display:flex; align-items:center; gap:6px; font-size:12px; color:#6E6178">
                       <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.2" r="3.2"></circle><path d="M5.5 19.5a6.5 6.5 0 0 1 13 0"></path></svg>
-                      Osoba odpowiedzialna za treść: <strong style="color:#4D1A63; font-weight:700">{{ br.owner }}</strong>
+                      Osoba odpowiedzialna za treść: <a href="{{ br.ownerHref }}" onClick="{{ br.onOwnerClick }}" style="font-weight:700; color:#4D1A63">{{ br.owner }}</a><sc-if value="{{ br.hasOwnerNote }}"> · {{ br.ownerNote }}</sc-if>
                     </div>
                     <a href="{{ br.url }}" target="_blank" rel="noopener" style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:13.5px">{{ br.urlLabel }} ↗</a>
                     <div style="display:flex; gap:8px; flex-wrap:wrap">
@@ -1448,6 +1521,7 @@
           </section>
         </sc-for>
 
+        <sc-if value="{{ page.hasFooter }}">
         <section style="border:1px solid #E3DCE9; border-radius:20px; padding:22px 24px; display:flex; align-items:center; gap:18px; flex-wrap:wrap">
           <div style="flex:1; min-width:240px">
             <div style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:15.5px; color:#4D1A63">{{ page.footerTitle }}</div>
@@ -1457,6 +1531,7 @@
             <button onClick="{{ page.footerAction }}" style="border:0; background:#4D1A63; color:#FFFFFF; border-radius:12px; padding:12px 20px; cursor:pointer; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:13.5px" style-hover="background:#A01BD7">{{ page.footerCta }}</button>
           </sc-if>
         </section>
+        </sc-if>
       </div>
     </sc-if>
   </main>
@@ -1892,7 +1967,7 @@ class Component extends DCLogic {
         { label: 'Warianty kart i cennik' }
       ],
       contact: 'k.paziewska@rynekpierwotny.pl', owner: 'HR — Karolina Paziewska', cta: 'Wypełnij formularz' },
-    { id: 'unum', tier: 'manager', icon: 'shield', title: 'Unum — ubezpieczenie na życie', kw: 'polisa zycie ochrona ubezpieczenie rodzina vip',
+    { id: 'unum', tier: 'all', icon: 'shield', title: 'Unum — ubezpieczenie na życie', kw: 'polisa zycie ochrona ubezpieczenie rodzina vip',
       short: 'Firma zapewnia Wariant 1 w pakiecie podstawowym (64 zł) plus nakładkę VIP (100 zł) — pracownik pokrywa 1% wartości.',
       chips: ['Firma: 64 zł + VIP 100 zł', 'Pracownik pokrywa 1%', 'Deklaracja do końca miesiąca'],
       desc: 'Trzy warianty ubezpieczenia z opcjami dodatkowymi, które można dopasować do swoich potrzeb. Przy wyborze opcji takich jak Chroni Życie czy Chroni Dziecko pracownik pokrywa różnicę między pakietem podstawowym a premium. Ubezpieczeniem można objąć członków rodziny — te dodatki pracownik opłaca we własnym zakresie.',
@@ -1907,15 +1982,15 @@ class Component extends DCLogic {
   ];
 
   NEWS = [
-    { id: 'n4', cat: 'Ludzie', priority: true, meta: '26 lipca · Zespół komunikacji', readTime: '3 min czytania', photo: (window.__resources && window.__resources.newsGolota) || './assets/news-golota.png',
+    { id: 'n4', cat: 'Ludzie', priority: true, meta: '12 lutego 2026 · Zespół komunikacji', readTime: '3 min czytania', photo: (window.__resources && window.__resources.newsGolota) || './assets/news-golota.png',
       title: 'Michał Gołota obejmuje stanowisko dyrektora ds. marki i komunikacji marketingowej',
       excerpt: 'Dotąd związany z Rankomat.pl, gdzie przez cztery lata kierował strategią marki i rozwojem platform komunikacyjnych. Wcześniej współtworzył komunikację marek Era, Tak Tak, T-Mobile i Heyah. W Property Group odpowiada za strategię marki i komunikację kluczowych serwisów, rozwój wszystkich marek z portfela grupy oraz koordynację działań PR i kampanii 360.',
       quote: 'Property Group stoi przed jednym z najbardziej ambitnych projektów transformacji na rynku e-commerce. Moim celem jest budowa spójnego ekosystemu brandowego oraz działań, które umocnią pozycję Grupy jako lidera innowacji w obszarze nieruchomości.',
       quoteBy: 'Michał Gołota, dyrektor marki i komunikacji' },
-    { id: 'n5', cat: 'Zarząd', priority: true, meta: '17 lipca · Zarząd', readTime: '4 min czytania', photo: (window.__resources && window.__resources.newsVox) || './assets/news-vox.png',
+    { id: 'n5', cat: 'Zarząd', priority: true, meta: '24 października 2025 · Zarząd', readTime: '4 min czytania', photo: (window.__resources && window.__resources.newsVox) || './assets/news-vox.png',
       title: 'Property Group przejmuje VoxCommerce — twórcę systemu voxDeveloper',
       excerpt: 'Kupno dobrej spółki to dwa lata rozmów, kilkaset podpisów i na koniec 40-centymetrowa wieża dokumentów. Po przejęciu EstiCRM, obsługującego pośredników, to kolejny etap strategii inwestycyjnej zapowiedzianej na początku 2025 roku. Cel: One-Stop-Shop dla całej branży nieruchomości — wszystkie ważne usługi dla rynku mieszkaniowego w jednej firmie.' },
-    { id: 'n6', cat: 'Partnerstwa', meta: '9 lipca · Zespół danych', readTime: '3 min czytania',
+    { id: 'n6', cat: 'Partnerstwa', priority: true, meta: '9 lipca · Zespół danych', readTime: '3 min czytania', sourceHref: 'https://propertygroup.pl/z-zycia-portalu/rynekpierwotny-pl-oraz-jll-globalna-firma-doradcza-dla-branzy-deweloperskiej-nawiazaly-strategiczna-wieloletnia-wspolprace/',
       title: 'JLL i RynekPierwotny.pl rozpoczynają strategiczną współpracę',
       excerpt: 'Portal RynekPierwotny.pl oraz JLL Residential Poland, globalna firma doradcza dla branży deweloperskiej, ogłosiły strategiczne partnerstwo. Razem zbudujemy lepszą analitykę danych dla rynku nieruchomości — efektem będą wspólne raporty o rynku mieszkaniowym, integracja źródeł danych, wymiana kompetencji i nowe aplikacje analityczne.' }
   ];
@@ -1949,27 +2024,27 @@ class Component extends DCLogic {
   };
 
   BRANDS = [
-    { name: 'RynekPierwotny.pl', desc: 'Największy ogólnopolski portal z ofertami od deweloperów. Ponad 550 000 osób miesięcznie, oferty ponad 1000 deweloperów, ok. 91% rynku.', owner: 'Do przypisania', url: 'https://rynekpierwotny.pl', urlLabel: 'rynekpierwotny.pl', channels: [
+    { name: 'RynekPierwotny.pl', desc: 'Największy ogólnopolski portal z ofertami od deweloperów. Ponad 550 000 osób miesięcznie, oferty ponad 1000 deweloperów, ok. 91% rynku.', owner: 'Anna Koziara-Wróblewska', ownerNote: 'kanał Misja Mieszkanie: Arkadiusz Słodkowski, Łukasz Stefański', url: 'https://rynekpierwotny.pl', urlLabel: 'rynekpierwotny.pl', channels: [
       { label: 'Facebook', href: 'https://www.facebook.com/rynekpierwotnypl/' }, { label: 'Instagram', href: 'https://www.instagram.com/rynekpierwotny/' },
       { label: 'LinkedIn', href: 'https://pl.linkedin.com/company/rynekpierwotny-com' }, { label: 'YouTube', href: 'https://www.youtube.com/@RynekpierwotnyPl' }, { label: 'YouTube — Misja Mieszkanie', href: 'https://www.youtube.com/@MisjaMieszkanie' }, { label: 'X', href: 'https://x.com/rynekpierwotny' }
     ] },
-    { name: 'GetHome.pl', desc: 'Portal rynku wtórnego z realnymi adresami nieruchomości. Ponad 1800 agencji, machine learning dopasowuje ofertę do profilu w 95%.', owner: 'Do przypisania', url: 'https://gethome.pl', urlLabel: 'gethome.pl', channels: [
+    { name: 'GetHome.pl', desc: 'Portal rynku wtórnego z realnymi adresami nieruchomości. Ponad 1800 agencji, machine learning dopasowuje ofertę do profilu w 95%.', owner: 'Anna Koziara-Wróblewska', url: 'https://gethome.pl', urlLabel: 'gethome.pl', channels: [
       { label: 'Facebook', href: 'https://www.facebook.com/gethomepl/' }
     ] },
-    { name: 'ESTI CRM', desc: 'System dla biur nieruchomości działający od 2015 roku. Korzysta z niego ponad 1100 biur.', owner: 'Do przypisania', url: 'https://www.esticrm.pl/', urlLabel: 'esticrm.pl', channels: [
+    { name: 'ESTI CRM', desc: 'System dla biur nieruchomości działający od 2015 roku. Korzysta z niego ponad 1100 biur.', owner: 'Anna Koziara-Wróblewska', url: 'https://www.esticrm.pl/', urlLabel: 'esticrm.pl', channels: [
       { label: 'Facebook', href: 'https://www.facebook.com/esticrm/' }, { label: 'LinkedIn', href: 'https://www.linkedin.com/company/esticrm' }, { label: 'YouTube', href: 'https://www.youtube.com/c/EstiCRM' }
     ] },
-    { name: 'voxDeveloper CRM', desc: 'Jeden z najpopularniejszych w Polsce systemów CRM dla deweloperów — marketing, sprzedaż, obsługa posprzedażowa i rozliczenia.', owner: 'Do przypisania', url: 'https://voxdeveloper.com/', urlLabel: 'voxdeveloper.com', channels: [
+    { name: 'voxDeveloper CRM', desc: 'Jeden z najpopularniejszych w Polsce systemów CRM dla deweloperów — marketing, sprzedaż, obsługa posprzedażowa i rozliczenia.', owner: 'Anna Koziara-Wróblewska', url: 'https://voxdeveloper.com/', urlLabel: 'voxdeveloper.com', channels: [
       { label: 'LinkedIn', href: 'https://pl.linkedin.com/company/voxdeveloper' }
     ] },
-    { name: 'Platforma Mieszkaniowa', desc: 'Łączy deweloperów, pośredników i nabywców mieszkań w 7 największych miastach Polski.', owner: 'Do przypisania', url: 'https://www.platformamieszkaniowa.pl/', urlLabel: 'platformamieszkaniowa.pl', channels: [
+    { name: 'Platforma Mieszkaniowa', desc: 'Łączy deweloperów, pośredników i nabywców mieszkań w 7 największych miastach Polski.', owner: 'Anna Koziara-Wróblewska', url: 'https://www.platformamieszkaniowa.pl/', urlLabel: 'platformamieszkaniowa.pl', channels: [
       { label: 'Facebook', href: 'https://www.facebook.com/platformamieszkaniowa/' }, { label: 'LinkedIn', href: 'https://pl.linkedin.com/company/platformamieszkaniowa' }
     ] },
-    { name: 'BIG DATA RynekPierwotny.pl', desc: 'Pierwsza ogólnopolska platforma do monitoringu i analizy rynku mieszkaniowego — dane z 90% monitorowanych nowych inwestycji.', owner: 'Do przypisania', url: 'https://bigdata.rynekpierwotny.pl/', urlLabel: 'bigdata.rynekpierwotny.pl', channels: [] },
-    { name: 'Akademia Real Estate', desc: 'Bezpłatna platforma edukacyjna dla deweloperów i pośredników — webinary, materiały szkoleniowe i analizy.', owner: 'Do przypisania', url: 'https://akademia.re/', urlLabel: 'akademia.re', channels: [
+    { name: 'BIG DATA RynekPierwotny.pl', desc: 'Pierwsza ogólnopolska platforma do monitoringu i analizy rynku mieszkaniowego — dane z 90% monitorowanych nowych inwestycji.', owner: 'Anna Koziara-Wróblewska', url: 'https://bigdata.rynekpierwotny.pl/', urlLabel: 'bigdata.rynekpierwotny.pl', channels: [] },
+    { name: 'Akademia Real Estate', desc: 'Bezpłatna platforma edukacyjna dla deweloperów i pośredników — webinary, materiały szkoleniowe i analizy.', owner: 'Anna Koziara-Wróblewska', url: 'https://akademia.re/', urlLabel: 'akademia.re', channels: [
       { label: 'Facebook', href: 'https://www.facebook.com/akademiarealestate/' }, { label: 'Instagram', href: 'https://www.instagram.com/akademiarealestate/' }
     ] },
-    { name: 'GetHome Finance', desc: 'Portal finansowy o kredytach hipotecznych — porównanie ofert banków i kontakt z ekspertami.', owner: 'Do przypisania', url: 'https://gethomefinance.pl/', urlLabel: 'gethomefinance.pl', channels: [] }
+    { name: 'GetHome Finance', desc: 'Portal finansowy o kredytach hipotecznych — porównanie ofert banków i kontakt z ekspertami.', owner: 'Anna Koziara-Wróblewska', url: 'https://gethomefinance.pl/', urlLabel: 'gethomefinance.pl', channels: [] }
   ];
 
   PAGES = {
@@ -2071,7 +2146,8 @@ class Component extends DCLogic {
         ] },
         { type: 'people', title: 'Kontakt', items: [
           { name: 'Jan Dziekoński', role: 'Główny Ekonomista, szef zespołu Research — komentarze kwartalne i analizy rynku', href: 'https://bigdata.rynekpierwotny.pl/newshub/informacje-rynkowe/' },
-          { name: 'Aleksandra Boratyńska', role: 'Doradca klienta BIG DATA · a.boratynska@rynekpierwotny.pl · +48 532 758 886', href: 'mailto:a.boratynska@rynekpierwotny.pl' }
+          { name: 'Aleksandra Boratyńska', role: 'Doradca klienta BIG DATA', href: 'mailto:a.boratynska@rynekpierwotny.pl' },
+          { name: 'Gabriela Prygiel', role: 'Junior Analyst', href: 'mailto:g.prygiel@rynekpierwotny.pl' }
         ] },
         { type: 'banner', slotId: 'pg-bigdata-team', slotLabel: 'Zdjęcie zespołu BIG DATA', slotSrc: './assets/office-team-silverkblack.jpg', caption: 'Siedmioosobowy zespół BIG DATA — analitycy i deweloperzy danych, którzy każdego dnia aktualizują monitoring rynku mieszkaniowego.' },
         { type: 'list', title: 'Ostatnie publikacje ekspertów', note: 'Link otwiera pełny artykuł na bigdata.rynekpierwotny.pl', hasMedia: true, slotId: 'pg-bigdata-press', items: [
@@ -2108,9 +2184,9 @@ class Component extends DCLogic {
     aktualnosci: { badge: 'Komunikacja', title: 'Aktualności', lead: 'Ogłoszenia HR, wyniki i zmiany produktowe — publikowane przez zespół komunikacji.',
       blocks: [
         { type: 'text', title: 'Kim jesteśmy', paras: [
-          'Dział Marki i Komunikacji (DMiK) odpowiada za komunikację zewnętrzną (PR, media, social media, marketing) i wewnętrzną (ogłoszenia, aktualności) wszystkich marek Property Group. Każdy materiał wychodzący na zewnątrz firmy wymaga naszej akceptacji przed publikacją — zasady i kontakty są w Komunikacji wewnętrznej.'
+          'Dział Marki i Komunikacji (DMiK) odpowiada za komunikację zewnętrzną (PR, media, social media, marketing) i wewnętrzną (ogłoszenia, aktualności) wszystkich marek Property Group. Jesteśmy odpowiedzialni za to, jak marki grupy mówią na zewnątrz — i wsparciem dla każdego zespołu, który tworzy komunikację. Każdy materiał wychodzący na zewnątrz firmy przechodzi przez naszą akceptację przed publikacją; zasady i kontakty są w Komunikacji wewnętrznej.'
         ] },
-        { type: 'list', title: 'Zgłaszasz materiał do akceptacji?', items: [
+        { type: 'list', title: 'Masz gotowy materiał lub potrzebujesz go stworzyć?', note: 'Obie ścieżki przechodzą przez DMiK — zasady poniżej.', items: [
           { icon: 'shield', title: 'Zasady obiegu i akceptacji materiałów', meta: 'DMiK-001/2026 · pełna polityka i kontakty', action: 'Zobacz', to: 'komwew' },
           { icon: 'spark', title: 'Brand Approval Tool', meta: 'Zgłoszenie materiału do DMiK', action: 'Otwórz BAT', href: 'https://property.youtrack.cloud/form/c1ebe45f-4f70-4e11-b00c-1cc23556611b' }
         ] },
@@ -2162,20 +2238,12 @@ class Component extends DCLogic {
           { icon: 'spark', title: 'Specjalista / Specjalistka ds. marketingu', meta: 'Dział E-commerce · SEM, mailing, performance, marketing automation', action: 'Zobacz ofertę', href: 'https://propertygroup.pl/rekrutacje/specjalista-specjalistka-ds-marketingu/' },
           { icon: 'heart', title: 'Ekspert / Ekspertka ds. Kredytów Hipotecznych', meta: 'Pośrednictwo Finansowe · min. 3 lata w sektorze bankowym', action: 'Zobacz ofertę', href: 'https://propertygroup.pl/rekrutacje/specjalista-agent-ds-kredytow-hipotecznych/' }
         ] },
-        { type: 'cards', title: 'Co oferujemy kandydatom', note: 'Ta sama lista, którą widzą osoby z zewnątrz — warto ją znać, polecając znajomych', items: [
-          { icon: 'stethoscope', title: 'System benefitów', desc: 'Prywatna opieka medyczna LUX MED, ubezpieczenie na życie Unum, karta MultiSport i szkolenia.', meta: 'Benefity', to: 'benefity' },
-          { icon: 'trophy', title: 'Nagrody roczne i jubileuszowe', desc: 'Konkurencyjne wynagrodzenie, premie oraz nagrody za staż w grupie.', meta: 'Wynagrodzenie' },
-          { icon: 'calendar', title: 'Skrócone piątki', desc: 'Krótszy piątek, żeby weekend zaczynał się wcześniej.', meta: 'Czas pracy' },
-          { icon: 'door', title: 'Praca hybrydowa i elastyczne godziny', desc: 'Część stanowisk z pracą zdalną do 6 dni w miesiącu, godziny startu w oknie 7:30–9:30.', meta: 'Organizacja pracy' },
-          { icon: 'plus', title: 'Program rekomendacji', desc: 'Polecasz sprawdzoną osobę i dostajesz bonus po jej zatrudnieniu.', meta: 'Polecenia' },
-          { icon: 'compass', title: 'Biuro przy ul. Rodziny Hiszpańskich 8', desc: 'Zaopatrzona kuchnia, świeże owoce, chillout room i strefa rozrywki. Klik otwiera lokalizację w Google Maps.', meta: 'Biuro', href: 'https://www.google.com/maps/search/?api=1&query=ul.+Rodziny+Hiszpa%C5%84skich+8%2C+02-685+Warszawa' }
-        ] }
       ], footerTitle: 'Chcesz polecić kogoś na jedną z tych rekrutacji?', footerText: 'Prześlij kontakt do HR albo skorzystaj z formularza rekrutacyjnego przy konkretnym ogłoszeniu. Wszystkie oferty prowadzi dział HR.', footerCta: 'Zobacz wszystkie rekrutacje', footerHref: 'https://propertygroup.pl/pracuj-z-nami/#oferty-pracy' },
 
     grafika: { badge: 'Brand i komunikacja', title: 'Materiały graficzne', lead: 'Logotypy, szablony i zasoby marek grupy. Materiał przeznaczony do dystrybucji zewnętrznej wymaga akceptacji Departamentu Marki i Komunikacji (DMiK) przed publikacją — zasady poniżej.',
       blocks: [
         { type: 'list', title: 'Szukasz logotypu, szablonu lub grafiki?', items: [
-          { icon: 'share', title: 'Kanał „Brand i materiały” na Teams', meta: 'Aktualne logotypy, szablony i grafiki — pytaj zespół kreatywny', action: 'Otwórz Teams', href: 'https://teams.microsoft.com/l/chat/19:0fed083616f145bbb6930cd6ca45b27f@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D' }
+          { icon: 'share', title: 'Kanał „Marka i Komunikacja” na Teams', meta: 'Aktualne logotypy, szablony i grafiki — pytaj zespół kreatywny', action: 'Otwórz Teams', href: 'https://teams.microsoft.com/l/channel/19%3Ae546706f1bcd46b797aff8d3f4bc2057%40thread.skype/Strefa%20Marki?groupId=ec7893cf-d437-4ff1-b1db-2b1125eeff03&tenantId=554e9ed4-9dd6-41a4-ba87-554edf2d039b' }
         ] }
       ], footerTitle: 'Potrzebujesz materiału na zewnątrz?', footerText: 'Zlecenie i samodzielny materiał do akceptacji zgłaszasz w tym samym miejscu — Brand Approval Tool. DMiK odpowiada do 3 dni roboczych.', footerCta: 'Otwórz Brand Approval Tool', footerHref: 'https://property.youtrack.cloud/form/c1ebe45f-4f70-4e11-b00c-1cc23556611b' },
 
@@ -2186,6 +2254,7 @@ class Component extends DCLogic {
           { title: 'ESTI CRM', href: 'http://192.168.5.103:81/Login/EstiCRM' },
           { title: 'Platforma Mieszkaniowa', href: 'http://192.168.5.103:81/Login/Platforma_Mieszkaniowa' }
         ] },
+        { type: 'goals' },
         { type: 'list', title: 'Najczęstsze sprawy', items: [
           { icon: 'files', title: 'Zaświadczenie o zatrudnieniu', meta: 'Generowane automatycznie · do 24 h', action: 'Otwórz enova', href: 'http://192.168.5.103:81/Login/PROPERTY_GROUP' },
           { icon: 'files', title: 'Zmiana danych osobowych', meta: 'Adres, konto bankowe, dane kontaktowe', action: 'Otwórz enova', href: 'http://192.168.5.103:81/Login/PROPERTY_GROUP' },
@@ -2195,7 +2264,8 @@ class Component extends DCLogic {
         { type: 'people', title: 'Zespół HR', note: 'Odpowiadamy zwykle w 1 dzień roboczy', items: [
           { name: 'Małgorzata Siwiec', role: 'Dyrektor HR' },
           { name: 'Karolina Paziewska', role: 'HR Specialist · benefity, umowy' },
-          { name: 'Filip Kościółek', role: 'HR Specialist' }
+          { name: 'Filip Kościółek', role: 'HR Specialist' },
+          { name: 'Magdalena Brylska', role: 'HR Specialist' }
         ] }
       ], footerTitle: 'Sprawa nie z tej listy?', footerText: 'Napisz na hr@propertygroup.pl albo zarezerwuj 15 minut w kalendarzu HR.', footerCta: 'Napisz do HR' },
 
@@ -2222,9 +2292,9 @@ class Component extends DCLogic {
           { icon: 'help', title: 'Pytania ogólne o politykę', meta: 'Michał Gołota, Dyrektor Marki i Komunikacji · m.golota@rynekpierwotny.pl', action: 'Napisz', href: 'mailto:m.golota@rynekpierwotny.pl' }
         ] },
         { type: 'list', title: 'Dokumenty i instrukcje', items: [
-          { icon: 'files', title: 'Zasady obiegu i akceptacji materiałów komunikacyjnych (DMiK-001/2026)', meta: 'Pełny dokument polityki — Strefa Marki na Teams', action: 'Otwórz Teams', href: 'https://teams.microsoft.com/l/chat/19:0fed083616f145bbb6930cd6ca45b27f@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D' },
-          { icon: 'files', title: 'Rejestr materiałów wymagających akceptacji', meta: 'DMiK · pełny wykaz materiałów objętych polityką, wg działu i kanału', action: 'Otwórz Teams', href: 'https://teams.microsoft.com/l/chat/19:0fed083616f145bbb6930cd6ca45b27f@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D' },
-          { icon: 'files', title: 'Brief komunikacyjny (formularz)', meta: 'Wzór dostępny w Strefie Marki na Teams', action: 'Otwórz Teams', href: 'https://teams.microsoft.com/l/chat/19:0fed083616f145bbb6930cd6ca45b27f@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D' }
+          { icon: 'files', title: 'Zasady obiegu i akceptacji materiałów komunikacyjnych (DMiK-001/2026)', meta: 'Pełny dokument polityki — Strefa Marki na Teams', action: 'Otwórz Teams', href: 'https://teams.microsoft.com/l/channel/19%3Ae546706f1bcd46b797aff8d3f4bc2057%40thread.skype/Strefa%20Marki?groupId=ec7893cf-d437-4ff1-b1db-2b1125eeff03&tenantId=554e9ed4-9dd6-41a4-ba87-554edf2d039b' },
+          { icon: 'files', title: 'Rejestr materiałów wymagających akceptacji', meta: 'DMiK · pełny wykaz materiałów objętych polityką, wg działu i kanału', action: 'Otwórz dokument', href: 'https://komunikacjapropertygroup.user.com/emails/c/gzjGqRjmjof02Qe5EBV/?to=https%3A%2F%2Frynekpierwotny.sharepoint.com%2F%3Ab%3A%2Fr%2Fsites%2Fgeneral%2FShared%2520Documents%2FStrefa%2520Marki%2FPolityka%2520obiegu%2520materia%25C5%2582%25C3%25B3w%2520komunikacyjnych%2FDMiK_Rejestr%2520Materia%25C5%2582%25C3%25B3w%2520wymagaj%25C4%2585cych%2520akceptacji.pdf%3Fcsf%3D1%26web%3D1%26e%3DHGfDA3%26utm_source%3Dmailing%26utm_medium%3Dpg%26utm_campaign%3Dzarzad' },
+          { icon: 'files', title: 'Instrukcja korzystania z Brand Approval Tool', meta: 'Krótki film instruktażowy', action: 'Zobacz instrukcję', href: 'https://komunikacjapropertygroup.user.com/emails/c/X2Ln9W8BNxFDdQrBZ31/?to=https%3A%2F%2Fyoutube.com%2Fshorts%2FlZ7yFxwA5kY%3Ffeature%3Dshare%26utm_source%3Dmailing%26utm_medium%3Dpg%26utm_campaign%3Dzarzad' }
         ] }
       ], footerTitle: 'Masz temat na komunikat?', footerText: 'Publikacją zajmuje się zespół komunikacji — zgłoszenia przyjmujemy przez Brand Approval Tool.', footerCta: 'Otwórz Brand Approval Tool', footerHref: 'https://property.youtrack.cloud/form/c1ebe45f-4f70-4e11-b00c-1cc23556611b' },
 
@@ -2337,7 +2407,7 @@ class Component extends DCLogic {
     ['Małgorzata Siwiec', 'Dyrektor HR', 'HR', 'HR', 'DG'],
     ['Karolina Paziewska', 'HR Specialist', 'HR', 'HR', 'DG'],
     ['Filip Kościółek', 'HR Specialist', 'HR', 'HR', 'DG'],
-    ['Magdalena Brylska', 'HR Business Partner', 'HR', 'HR', 'DG'],
+    ['Magdalena Brylska', 'HR Specialist', 'HR', 'HR', 'DG'],
     ['Katarzyna Saniewska', 'Head of Office', 'HR', 'Administracja', 'DG'],
     ['Aleksandra Just', 'Specjalista ds. Administracji', 'HR', 'Administracja', 'DG'],
     ['Maja Jaworska', 'Asystentka Biura', 'HR', 'Administracja', 'DG'],
@@ -2795,7 +2865,7 @@ class Component extends DCLogic {
         isCards: b.type === 'cards', isList: b.type === 'list', isPeople: b.type === 'people', isOfficemap: b.type === 'officemap',
         isTimeline: b.type === 'timeline', isBrands: b.type === 'brands', isPosts: b.type === 'posts',
         isKbsearch: b.type === 'kbsearch', isCopilot: b.type === 'copilot',
-        isValues: b.type === 'values', isQuote: b.type === 'quote', isFields: b.type === 'fields', isDepts: b.type === 'depts', isGmap: b.type === 'gmap', isEnova: b.type === 'enova', isBanner: b.type === 'banner', isVideo: b.type === 'video', isOutlook: b.type === 'outlook', isCalgrid: b.type === 'calgrid',
+        isValues: b.type === 'values', isQuote: b.type === 'quote', isFields: b.type === 'fields', isDepts: b.type === 'depts', isGmap: b.type === 'gmap', isEnova: b.type === 'enova', isBanner: b.type === 'banner', isVideo: b.type === 'video', isOutlook: b.type === 'outlook', isGoals: b.type === 'goals', isCalgrid: b.type === 'calgrid',
         embed: b.embed || '', mapsHref: b.mapsHref || '', routeHref: b.routeHref || '', addr: b.addr || '',
         videoTitle: b.videoTitle || '', videoNote: b.videoNote || '', videoHref: b.videoHref || '',
         featured: (b.videos || [])[0] ? Object.assign({ embed: 'https://www.youtube.com/embed/' + b.videos[0].id }, b.videos[0]) : null,
@@ -2865,6 +2935,10 @@ class Component extends DCLogic {
             return { key: ch.label, label: ch.label, icon: this.I[chIcon[plat]] || this.I.yt, bg: chBg[plat] || '#FF0000', onClick: () => window.open(ch.href, '_blank', 'noopener') };
           });
           base.logoSlot = 'pg-brandlogo-' + this.fold(it.name).replace(/[^a-z]+/g, '-');
+          base.hasOwnerNote = !!it.ownerNote;
+          const ownerPerson = this.people().find(x => x.name === it.owner);
+          base.ownerHref = ownerPerson ? '#' : (it.ownerHref || '#');
+          base.onOwnerClick = ownerPerson ? (e) => { e.preventDefault(); this.openOrg(ownerPerson.id); } : (e) => {};
         }
         return base;
       });
@@ -2884,7 +2958,7 @@ class Component extends DCLogic {
       label: src.title, badge: src.badge, title: src.title, lead: src.lead, blocks,
       heroSlotId: 'pg-hero-' + id,
       jumpLinks: jump, hasJump: jump.length > 1,
-      footerTitle: src.footerTitle, footerText: src.footerText, footerCta: src.footerCta, hasFooterCta: !!src.footerCta,
+      footerTitle: src.footerTitle, footerText: src.footerText, footerCta: src.footerCta, hasFooterCta: !!src.footerCta, hasFooter: !!src.footerTitle,
       footerAction: src.footerHref ? () => window.open(src.footerHref, '_blank', 'noopener') : this.stub(src.footerCta)
     };
   }
@@ -2895,7 +2969,7 @@ class Component extends DCLogic {
     detail: null, lockedInfo: null,
     reactions: {}, comments: null, openC: {}, drafts: {}, welcomed: {}, toast: null,
     mapQ: '', mapFilter: 'all', mapZoom: false, wx: null, wxState: 'loading',
-    dirQ: '', dirDept: 'all', orgPerson: null, orgTreeOpen: false, dark: false, tickers: [], tickerInput: '', helpQuery: '', copilotIdx: 0, shortcutKeys: null, shortcutEditOpen: false, dirOpenDepts: {}, calOffset: 0
+    dirQ: '', dirDept: 'all', orgPerson: null, orgTreeOpen: false, dark: false, tickers: [], tickerInput: '', helpQuery: '', copilotIdx: 0, shortcutKeys: null, shortcutEditOpen: false, dirOpenDepts: {}, calOffset: 0, favPortals: [], portalLabelInput: '', portalUrlInput: ''
   };
 
   onHelpQuery = (e) => this.setState({ helpQuery: e.target.value });
@@ -2981,6 +3055,29 @@ class Component extends DCLogic {
     this.setState({ tickers: list });
   };
 
+  PORTALS_KEY = 'pg_intranet_fav_portals';
+  savePortals(list) { try { localStorage.setItem(this.PORTALS_KEY, JSON.stringify(list)); } catch (e) {} }
+  loadPortals() {
+    try { const raw = JSON.parse(localStorage.getItem(this.PORTALS_KEY) || '[]'); return Array.isArray(raw) ? raw : []; } catch (e) { return []; }
+  }
+  onPortalLabelInput = (e) => this.setState({ portalLabelInput: e.target.value });
+  onPortalUrlInput = (e) => this.setState({ portalUrlInput: e.target.value });
+  onPortalKey = (e) => { if (e.key === 'Enter') { e.preventDefault(); this.addPortal(); } };
+  addPortal = () => {
+    const label = this.state.portalLabelInput.trim();
+    let url = this.state.portalUrlInput.trim();
+    if (!label || !url) return;
+    if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+    const list = this.state.favPortals.concat([{ label, url }]);
+    this.savePortals(list);
+    this.setState({ favPortals: list, portalLabelInput: '', portalUrlInput: '' });
+  };
+  removePortal = (idx) => {
+    const list = this.state.favPortals.filter((_, i) => i !== idx);
+    this.savePortals(list);
+    this.setState({ favPortals: list });
+  };
+
   mapVals() {
     const s = this.state;
     const TYPE = { sala: 'Sale i fokus', zespol: 'Zespoły', udog: 'Udogodnienia' };
@@ -2991,8 +3088,12 @@ class Component extends DCLogic {
       key: 'pl' + i, name: p.n, meta: p.m, street: p.s,
       badge: p.c ? (p.c === '1' ? '1 osoba' : 'do ' + p.c + ' osób') : TYPE[p.t],
       isSala: p.t === 'sala', isZespol: p.t === 'zespol', isUdog: p.t === 'udog',
-      action: p.t === 'sala' ? 'Rezerwuj' : (p.t === 'zespol' ? 'Zobacz zespół' : 'Pokaż na mapie'),
-      onClick: this.stub(p.n)
+      action: p.t === 'sala' ? (p.n === 'Ratusz' || p.n === 'Biblioteka' ? 'Zarezerwuj mailem' : 'Rezerwacja w Outlooku') : (p.t === 'zespol' ? 'Zobacz zespół' : 'Pokaż na mapie'),
+      isPlain: p.t === 'sala' && p.n !== 'Ratusz' && p.n !== 'Biblioteka',
+      isClickable: !(p.t === 'sala' && p.n !== 'Ratusz' && p.n !== 'Biblioteka'),
+      onClick: p.t === 'zespol' ? () => { this.go('zespol'); this.setState({ dirQ: p.n, dirDept: 'all' }); }
+        : (p.t === 'sala' ? () => window.open('mailto:a.just@rynekpierwotny.pl?cc=m.jaworska@rynekpierwotny.pl&subject=' + encodeURIComponent('Rezerwacja: ' + p.n), '_blank', 'noopener')
+        : () => { this.setState({ mapQ: p.n, mapFilter: 'all' }); this.jumpTo('biuro-2'); })
     }));
     const count = (t) => this.PLACES.filter(p => t === 'all' || p.t === t).length;
     return {
@@ -3054,6 +3155,7 @@ class Component extends DCLogic {
     }
     this.loadWeather(); this.applyPhotos(); this.applyFont();
     { const t = this.loadTickers(); if (t.length) this.setState({ tickers: t }); }
+    { const p = this.loadPortals(); if (p.length) this.setState({ favPortals: p }); }
     this.setState({ shortcutKeys: this.loadShortcuts() });
     if (!history.state || !history.state.pgRoute) history.replaceState({ pgRoute: this.state.route }, '');
     window.addEventListener('popstate', this.onPopState);
@@ -3629,6 +3731,10 @@ class Component extends DCLogic {
       toggleDark: this.toggleDark, darkToggleLabel: s.dark ? 'Włącz jasny motyw' : 'Włącz ciemny motyw',
       tickerInput: s.tickerInput, onTickerInput: this.onTickerInput, onTickerKey: this.onTickerKey, onTickerAdd: this.addTicker,
       tickersEmpty: s.tickers.length === 0,
+      portalLabelInput: s.portalLabelInput, onPortalLabelInput: this.onPortalLabelInput,
+      portalUrlInput: s.portalUrlInput, onPortalUrlInput: this.onPortalUrlInput, onPortalKey: this.onPortalKey, onPortalAdd: this.addPortal,
+      favPortalsEmpty: s.favPortals.length === 0,
+      favPortals: s.favPortals.map((p, i) => ({ key: 'fp' + i, label: p.label, url: p.url, onRemove: () => this.removePortal(i) })),
       tickers: s.tickers.map(sym => ({
         key: sym, symbol: sym, onRemove: () => this.removeTicker(sym),
         embed: 'https://s.tradingview.com/embed-widget/mini-symbol-overview/#' + encodeURIComponent(JSON.stringify({
@@ -3709,10 +3815,11 @@ class Component extends DCLogic {
         });
       }),
       onAllNews: () => this.go('aktualnosci'),
-      events: this.EVENTS.map(e => ({
+      events: this.EVENTS.filter(e => new Date(e.end + 'T23:59:59') >= this.now).map(e => ({
         key: e.id, day: e.day, month: e.month, title: e.title, meta: e.meta,
         owaHref: this.owaLink(e), onIcs: () => this.downloadIcs(e)
       })),
+      eventsEmpty: this.EVENTS.filter(e => new Date(e.end + 'T23:59:59') >= this.now).length === 0,
       newcomers: [],
       newcomersEmpty: true,
       shortcuts: (s.shortcutKeys || this.SHORTCUT_DEFAULT).map(key => this.SHORTCUT_CATALOG.find(c => c.key === key)).filter(Boolean).map(c => ({
@@ -3744,7 +3851,7 @@ class Component extends DCLogic {
       closeModal: () => this.setState({ detail: null, lockedInfo: null }),
       stopProp: (e) => e.stopPropagation(),
       onApply: () => { const t = s.detail ? s.detail.cta : 'Wniosek'; this.setState({ detail: null }); this.toast('„' + t + '” — wniosek przekazany do HR (demo).'); },
-      onHR: () => { this.setState({ lockedInfo: null }); window.location.href = 'mailto:k.paziewska@rynekpierwotny.pl?subject=' + encodeURIComponent('Pytanie do HR — z intranetu'); },
+      onHR: () => { this.setState({ lockedInfo: null }); window.open('mailto:k.paziewska@rynekpierwotny.pl?subject=' + encodeURIComponent('Pytanie do HR — z intranetu'), '_blank', 'noopener'); },
       onMapReport: this.stub('Zgłoszenie zmiany w planie biura')
     };
   }
