@@ -38,8 +38,15 @@ const shortcutCatalog = extractLiteral(2922, 2934, 'SHORTCUT_CATALOG') // lines 
 const shortcutDefault = extractLiteral(2935, 2935, 'SHORTCUT_DEFAULT'); // line 2936
 const vocativeExceptions = extractLiteral(3193, 3193, 'VOC_EXC'); // line 3194
 const kbEntries = extractLiteral(1924, 1936, 'KB'); // lines 1925-1937
+const benefits = extractLiteral(1850, 1906, 'BENEFITS'); // lines 1851-1907
+const staffRows = extractLiteral(2329, 2524, 'STAFF'); // lines 2330-2525 (array of [name, role, dept, team, pion] tuples)
+const streets = extractLiteral(2728, 2733, 'STREETS'); // lines 2729-2734
+const places = extractLiteral(2735, 2785, 'PLACES'); // lines 2736-2786
 
-const seed = { pages, brands, news, reactionDefs, events, shortcutCatalog, shortcutDefault, vocativeExceptions, kbEntries };
+const seed = {
+  pages, brands, news, reactionDefs, events, shortcutCatalog, shortcutDefault,
+  vocativeExceptions, kbEntries, benefits, staffRows, streets, places
+};
 
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, JSON.stringify(seed, null, 2), 'utf8');

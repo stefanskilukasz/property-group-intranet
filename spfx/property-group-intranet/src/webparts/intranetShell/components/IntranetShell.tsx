@@ -6,6 +6,9 @@ import Header, { Role } from './Header/Header';
 import ContentPlaceholder from './ContentPlaceholder/ContentPlaceholder';
 import GenericPage from './GenericPage/GenericPage';
 import StartPage from './Start/StartPage';
+import BenefitsPage from './Benefits/BenefitsPage';
+import StaffDirectoryPage from './Directory/StaffDirectoryPage';
+import MyspacePage from './Myspace/MyspacePage';
 import { ROUTE_TITLES, DEFAULT_ROUTE } from '../design/navigation';
 import { typography } from '../design/tokens';
 import { LocalPageDataService } from '../data/LocalPageDataService';
@@ -66,17 +69,15 @@ const IntranetShell: React.FunctionComponent<IIntranetShellProps> = ({ userDispl
           onToggleDarkMode={() => setDarkMode(v => !v)}
         />
         <div className={styles.content}>
-          {route === 'start'
-            ? <StartPage userDisplayName={userDisplayName} dataService={pageDataService} onNavigate={navigate} />
-            : pageData
-              ? <GenericPage
-                  page={pageData}
-                  brands={pageDataService.getBrands()}
-                  kbEntries={pageDataService.getKbEntries()}
-                  events={pageDataService.getEvents()}
-                  onNavigate={navigate}
-                />
-              : <ContentPlaceholder title={title} route={route} />}
+          {route === 'start' && <StartPage userDisplayName={userDisplayName} dataService={pageDataService} onNavigate={navigate} />}
+          {route === 'benefity' && <BenefitsPage benefits={pageDataService.getBenefits()} role={role} />}
+          {route === 'zespol' && <StaffDirectoryPage />}
+          {route === 'moja' && <MyspacePage />}
+          {route !== 'start' && route !== 'benefity' && route !== 'zespol' && route !== 'moja' && (
+            pageData
+              ? <GenericPage page={pageData} dataService={pageDataService} onNavigate={navigate} />
+              : <ContentPlaceholder title={title} route={route} />
+          )}
         </div>
       </div>
     </div>

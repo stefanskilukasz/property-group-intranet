@@ -3,11 +3,15 @@ import Icon from '../../design/Icon';
 import {
   IPageBlock, IStatsBlock, ITextImageBlock, IListBlock, IBrandsBlock,
   IFieldsBlock, IQuoteBlock, IValuesBlock, IBannerBlock, ICardsBlock, ITextBlock,
-  IKbSearchBlock, ICalGridBlock, IOutlookBlock, IBrand
+  IKbSearchBlock, ICalGridBlock, IOutlookBlock, ITimelineBlock, IPostsBlock, IVideoBlock,
+  IEnovaBlock, IGmapBlock, IOfficeMapBlock, IPeopleBlock, IDeptsBlock, ICopilotBlock, IBrand
 } from '../../data/pageTypes';
-import { IKbEntry, IEvent } from '../../data/startTypes';
+import { IKbEntry, IEvent, INewsItem, IReactionDef } from '../../data/startTypes';
+import { IPlace, IStreet } from '../../data/directoryTypes';
 import { normalizeForSearch } from '../../utils/text';
 import { CalGridBlock, OutlookBlock } from './CalendarBlocks';
+import { TimelineBlock, PostsBlock, VideoBlock, EnovaBlock, GmapBlock, PeopleBlock, CopilotBlock } from './MoreBlocks';
+import { DeptsBlock, OfficeMapBlock } from './DirectoryBlocks';
 import styles from './Blocks.module.scss';
 
 /**
@@ -73,6 +77,7 @@ const TextImageBlock: React.FunctionComponent<{ block: ITextImageBlock }> = ({ b
 const ListBlock: React.FunctionComponent<{ block: IListBlock; onNavigate: (route: string) => void }> = ({ block, onNavigate }) => (
   <div className={styles.listBlock}>
     {block.title && <h3 className={styles.blockTitle}>{block.title}</h3>}
+    {block.note && <p className={styles.blockNote}>{block.note}</p>}
     <ul className={styles.list}>
       {block.items.map((item, i) => (
         <li key={i} className={styles.listItem}>
@@ -165,6 +170,7 @@ const BannerBlock: React.FunctionComponent<{ block: IBannerBlock }> = ({ block }
 const CardsBlock: React.FunctionComponent<{ block: ICardsBlock; onNavigate: (route: string) => void }> = ({ block, onNavigate }) => (
   <div className={styles.cardsBlock}>
     {block.title && <h3 className={styles.blockTitle}>{block.title}</h3>}
+    {block.note && <p className={styles.blockNote}>{block.note}</p>}
     <div className={styles.cardsGrid}>
       {block.items.map((item, i) => (
         <ActionLink key={i} href={item.href} to={item.to} onNavigate={onNavigate} className={styles.card}>
@@ -254,6 +260,10 @@ export interface IBlockRendererProps {
   brands: IBrand[];
   kbEntries: IKbEntry[];
   events: IEvent[];
+  news: INewsItem[];
+  reactionDefs: IReactionDef[];
+  places: IPlace[];
+  streets: IStreet[];
   onNavigate: (route: string) => void;
 }
 
@@ -261,7 +271,9 @@ export interface IBlockRendererProps {
 // every literal in the union, so TS can't narrow `block` from `block.type`
 // alone in a switch. The cast is safe: each case is reached only when
 // block.type actually equals that literal.
-export const BlockRenderer: React.FunctionComponent<IBlockRendererProps> = ({ block, brands, kbEntries, events, onNavigate }) => {
+export const BlockRenderer: React.FunctionComponent<IBlockRendererProps> = ({
+  block, brands, kbEntries, events, news, reactionDefs, places, streets, onNavigate
+}) => {
   switch (block.type) {
     case 'stats': return <StatsBlock block={block as IStatsBlock} />;
     case 'textimage': return <TextImageBlock block={block as ITextImageBlock} />;
@@ -276,6 +288,15 @@ export const BlockRenderer: React.FunctionComponent<IBlockRendererProps> = ({ bl
     case 'kbsearch': return <KbSearchBlock block={block as IKbSearchBlock} kbEntries={kbEntries} />;
     case 'calgrid': return <CalGridBlock block={block as ICalGridBlock} events={events} />;
     case 'outlook': return <OutlookBlock block={block as IOutlookBlock} />;
+    case 'timeline': return <TimelineBlock block={block as ITimelineBlock} />;
+    case 'posts': return <PostsBlock block={block as IPostsBlock} news={news} reactionDefs={reactionDefs} />;
+    case 'video': return <VideoBlock block={block as IVideoBlock} />;
+    case 'enova': return <EnovaBlock block={block as IEnovaBlock} />;
+    case 'gmap': return <GmapBlock block={block as IGmapBlock} />;
+    case 'officemap': return <OfficeMapBlock block={block as IOfficeMapBlock} places={places} streets={streets} onNavigate={onNavigate} />;
+    case 'people': return <PeopleBlock block={block as IPeopleBlock} />;
+    case 'depts': return <DeptsBlock block={block as IDeptsBlock} onNavigate={onNavigate} />;
+    case 'copilot': return <CopilotBlock block={block as ICopilotBlock} />;
     default: return <UnsupportedBlock block={block} />;
   }
 };

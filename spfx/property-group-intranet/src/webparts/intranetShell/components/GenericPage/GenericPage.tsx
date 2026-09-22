@@ -1,18 +1,16 @@
 import * as React from 'react';
-import { IPageData, IBrand } from '../../data/pageTypes';
-import { IKbEntry, IEvent } from '../../data/startTypes';
+import { IPageData } from '../../data/pageTypes';
+import { IPageDataService } from '../../data/IPageDataService';
 import { BlockRenderer } from '../blocks/Blocks';
 import styles from './GenericPage.module.scss';
 
 export interface IGenericPageProps {
   page: IPageData;
-  brands: IBrand[];
-  kbEntries: IKbEntry[];
-  events: IEvent[];
+  dataService: IPageDataService;
   onNavigate: (route: string) => void;
 }
 
-const GenericPage: React.FunctionComponent<IGenericPageProps> = ({ page, brands, kbEntries, events, onNavigate }) => (
+const GenericPage: React.FunctionComponent<IGenericPageProps> = ({ page, dataService, onNavigate }) => (
   <div className={styles.page}>
     <header className={styles.pageHeader}>
       {page.badge && <span className={styles.badge}>{page.badge}</span>}
@@ -23,7 +21,17 @@ const GenericPage: React.FunctionComponent<IGenericPageProps> = ({ page, brands,
     <div className={styles.blocks}>
       {page.blocks.map((block, i) => (
         <section key={i} className={styles.blockWrap}>
-          <BlockRenderer block={block} brands={brands} kbEntries={kbEntries} events={events} onNavigate={onNavigate} />
+          <BlockRenderer
+            block={block}
+            brands={dataService.getBrands()}
+            kbEntries={dataService.getKbEntries()}
+            events={dataService.getEvents()}
+            news={dataService.getNews()}
+            reactionDefs={dataService.getReactionDefs()}
+            places={dataService.getPlaces()}
+            streets={dataService.getStreets()}
+            onNavigate={onNavigate}
+          />
         </section>
       ))}
     </div>

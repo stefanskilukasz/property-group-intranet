@@ -1,6 +1,8 @@
 import { IPageDataService } from './IPageDataService';
 import { IPageData, IBrand, ITextImageBlock, IBannerBlock } from './pageTypes';
 import { INewsItem, IEvent, IShortcutDef, IReactionDef, IKbEntry } from './startTypes';
+import { IBenefit } from './benefitsTypes';
+import { IPlace, IStreet } from './directoryTypes';
 import { resolveAssetSrc } from './assetMap';
 import seed from './pages.seed.json';
 
@@ -29,6 +31,9 @@ const events = seed.events as IEvent[];
 const shortcutCatalog = seed.shortcutCatalog as IShortcutDef[];
 const shortcutDefault = seed.shortcutDefault as string[];
 const kbEntries = seed.kbEntries as IKbEntry[];
+const benefits = seed.benefits as IBenefit[];
+const places = seed.places as IPlace[];
+const streets = seed.streets as IStreet[];
 
 export class LocalPageDataService implements IPageDataService {
   public getPage(route: string): IPageData | undefined {
@@ -61,5 +66,17 @@ export class LocalPageDataService implements IPageDataService {
 
   public getKbEntries(): IKbEntry[] {
     return kbEntries;
+  }
+
+  public getBenefits(): IBenefit[] {
+    return benefits;
+  }
+
+  public getPlaces(): IPlace[] {
+    return places;
+  }
+
+  public getStreets(): IStreet[] {
+    return streets;
   }
 }

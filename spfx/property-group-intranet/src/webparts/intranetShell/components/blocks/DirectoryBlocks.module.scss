@@ -1,0 +1,246 @@
+@import '../../design/tokens';
+
+.blockTitle {
+  margin: 0 0 8px;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 18px;
+  color: $color-text-primary;
+}
+
+// depts
+.deptsBlock {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pionGroup {
+  min-width: 0;
+}
+
+.pionHeader {
+  margin-bottom: 10px;
+}
+
+.pionName {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 15px;
+  color: $color-primary;
+}
+
+.pionHead {
+  font-family: $font-body;
+  font-size: 12px;
+  color: $color-text-secondary;
+  margin-top: 2px;
+}
+
+.deptGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.deptCard {
+  text-align: left;
+  border: 1px solid $color-border;
+  border-radius: $radius-medium;
+  padding: 14px;
+  background: #fff;
+  cursor: pointer;
+  font: inherit;
+
+  &:hover { border-color: $color-accent-mid; }
+}
+
+.deptName {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: $color-text-primary;
+}
+
+.deptHead {
+  font-family: $font-body;
+  font-size: 11.5px;
+  color: $color-text-secondary;
+  margin: 4px 0 6px;
+}
+
+.deptMeta {
+  font-family: $font-body;
+  font-size: 11px;
+  color: $color-accent;
+  font-weight: 600;
+}
+
+// officemap
+.officeMap {
+  min-width: 0;
+}
+
+.officeMapNote {
+  margin: 0 0 14px;
+  font-family: $font-body;
+  font-size: 12px;
+  color: $color-text-secondary;
+}
+
+.mapImageWrap {
+  border-radius: $radius-medium;
+  overflow: hidden;
+  border: 1px solid $color-border;
+  margin-bottom: 16px;
+}
+
+.mapImage {
+  width: 100%;
+  display: block;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.legendItem {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.legendSwatch {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-top: 3px;
+}
+
+.legendName {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 12px;
+  color: $color-text-primary;
+}
+
+.legendDesc {
+  font-family: $font-body;
+  font-size: 11px;
+  color: $color-text-secondary;
+}
+
+.searchRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.searchInput {
+  flex: 1 1 220px;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+  padding: 8px 16px;
+  font-family: $font-body;
+  font-size: 13px;
+  outline: none;
+
+  &:focus { border-color: $color-accent-mid; }
+}
+
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+  padding: 6px 14px;
+  background: #fff;
+  color: $color-text-secondary;
+  font-family: $font-body;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover { border-color: $color-accent-mid; }
+}
+
+.chipActive {
+  background: $color-primary;
+  border-color: $color-primary;
+  color: #fff;
+}
+
+.placeList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.placeItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: $radius-medium;
+  border: 1px solid $color-border;
+  background: #fff;
+}
+
+.placeSwatch {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.placeBody {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.placeName {
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 13px;
+  color: $color-text-primary;
+}
+
+.placeMeta {
+  font-family: $font-body;
+  font-size: 11.5px;
+  color: $color-text-secondary;
+}
+
+.placeAction {
+  flex: 0 0 auto;
+  border: none;
+  background: transparent;
+  color: $color-accent;
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 11.5px;
+  cursor: pointer;
+
+  &:hover { text-decoration: underline; }
+}
+
+.empty {
+  margin: 0;
+  font-family: $font-body;
+  font-size: 12.5px;
+  color: $color-text-secondary;
+}

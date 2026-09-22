@@ -1889,5 +1889,1797 @@
       "a": "To jest w przygotowaniu — planujemy połączyć bazę wiedzy z Copilotem, żeby zapytać o to samo prosto w czacie, bez szukania po intranecie.",
       "kw": "copilot ai sztuczna inteligencja czat pytanie"
     }
+  ],
+  "benefits": [
+    {
+      "id": "luxmed",
+      "tier": "all",
+      "icon": "stethoscope",
+      "title": "LUX MED — opieka medyczna",
+      "kw": "zdrowie lekarz medycyna prywatna szpital premium kompleksowy e-deklaracja",
+      "short": "Firma pokrywa w 100% pakiet do wysokości Kompleksowego (212 zł). Menadżerowie mają wyższe finansowanie — patrz szczegóły.",
+      "chips": [
+        "Pracownik: 100% do 212 zł",
+        "Kod rejestracji: SKWQ2174",
+        "E-deklaracja do 20. dnia miesiąca"
+      ],
+      "desc": "Property Group finansuje pakiet medyczny do wysokości ceny pakietu indywidualnego. Dla pracowników oznacza to 100% pokrycia do pakietu Kompleksowego (212 zł) — nadwyżka do Premium oraz dodatki (ortopedia, Szpital Pełna Opieka) są płatne we własnym zakresie. Menadżerowie mają wyższy poziom finansowania: pakiet Premium oraz Szpital Pełna Opieka są w 100% opłacane przez firmę.",
+      "funding": [
+        {
+          "role": "Pracownik",
+          "amount": "do 212 zł",
+          "note": "pakiet Kompleksowy — pokrywany w 100% przez firmę; nadwyżka do Premium (153 zł) oraz wszystkie dodatki płatne przez pracownika"
+        },
+        {
+          "role": "Menadżer",
+          "amount": "do 606 zł",
+          "note": "pakiet Premium (365 zł) + Szpital Pełna Opieka (241 zł) — obie kwoty w 100% finansowane przez firmę"
+        }
+      ],
+      "table": {
+        "note": "Ceny miesięczne. Pakiet partnerski i rodzinny to dopłata do ceny pakietu indywidualnego.",
+        "cols": [
+          "Standardowy",
+          "Rozszerzony",
+          "Kompleksowy",
+          "Premium"
+        ],
+        "rows": [
+          {
+            "label": "Pakiet indywidualny",
+            "sub": "",
+            "cells": [
+              "83,00 zł",
+              "124,00 zł",
+              "212,00 zł",
+              "365,00 zł"
+            ]
+          },
+          {
+            "label": "Pakiet partnerski",
+            "sub": "współmałżonek / partner / dziecko do 26 r.ż.",
+            "cells": [
+              "169,00 zł",
+              "257,00 zł",
+              "427,00 zł",
+              "725,00 zł"
+            ]
+          },
+          {
+            "label": "Pakiet rodzinny",
+            "sub": "współmałżonek / partner i wszystkie dzieci do 26 r.ż.",
+            "cells": [
+              "304,00 zł",
+              "440,00 zł",
+              "715,00 zł",
+              "1 140,00 zł"
+            ]
+          }
+        ]
+      },
+      "addons": [
+        {
+          "name": "Szpital Pełna Opieka",
+          "parts": [
+            "pracownik +241 zł",
+            "partner +241 zł",
+            "dziecko niepełnoletnie +111 zł",
+            "dziecko pełnoletnie +226 zł"
+          ]
+        },
+        {
+          "name": "Opieka ortopedyczna",
+          "parts": [
+            "pracownik +34 zł",
+            "partner +34 zł",
+            "dziecko niepełnoletnie +20 zł",
+            "dziecko pełnoletnie +39 zł"
+          ]
+        },
+        {
+          "name": "Opieka ortopedyczna PLUS",
+          "parts": [
+            "pracownik +112 zł",
+            "partner +105 zł",
+            "dziecko niepełnoletnie +87 zł",
+            "dziecko pełnoletnie +153 zł"
+          ]
+        }
+      ],
+      "steps": [
+        "Zapoznaj się z opisem pakietów, dodatków i broszurami (materiały poniżej).",
+        "Wypełnij e-Deklarację na platformie LUX MED Ubezpieczenia — kod rejestracyjny SKWQ2174.",
+        "Zgłoś się do HR, jeśli chcesz objąć ochroną partnera lub dzieci."
+      ],
+      "docs": [
+        {
+          "label": "Pakiety LUX MED — opis i zakres",
+          "href": "https://rynekpierwotny.sharepoint.com/:f:/r/sites/general/Shared%20Documents/General/Benefity/LUX%20MED/Rodzaj%20i%20zakres%20pakiet%C3%B3w?csf=1&web=1&e=djTXr9"
+        },
+        {
+          "label": "Dodatki do pakietów",
+          "href": "https://rynekpierwotny.sharepoint.com/:f:/r/sites/general/Shared%20Documents/General/Benefity/LUX%20MED/Dodatki%20do%20pakiet%C3%B3w?csf=1&web=1&e=Ha0lK1"
+        },
+        {
+          "label": "Informacje dodatkowe do pakietów i dodatków",
+          "href": "https://rynekpierwotny.sharepoint.com/:f:/r/sites/general/Shared%20Documents/General/Benefity/LUX%20MED/Informacje%20dodatkowe%20do%20pakiet%C3%B3w%20i%20dodatk%C3%B3w?csf=1&web=1&e=1MkdQy"
+        },
+        {
+          "label": "Broszury informacyjne",
+          "href": "https://rynekpierwotny.sharepoint.com/:f:/r/sites/general/Shared%20Documents/General/Benefity/LUX%20MED/Broszury%20informacyjne?csf=1&web=1&e=lfXH8T"
+        },
+        {
+          "label": "Instrukcja wypełniania e-Deklaracji",
+          "href": "https://rynekpierwotny.sharepoint.com/:b:/r/sites/general/Shared%20Documents/General/Benefity/LUX%20MED/Broszury%20informacyjne/Instrukcja%20wypelniania%20eDeklaracji-samozglaszanie.pdf?csf=1&web=1&e=KuBvKB"
+        },
+        {
+          "label": "Strona logowania LUX MED (e-Deklaracje)",
+          "href": "https://edeklaracje.ubezpieczenia-luxmed.pl/client/code"
+        },
+        {
+          "label": "Przewodnik Ubezpieczonego — ambulatorium",
+          "href": "https://rynekpierwotny.sharepoint.com/:b:/r/sites/general/Shared%20Documents/General/Benefity/LUX%20MED/Broszury%20informacyjne/Przewodnik%20Ubezpieczonego%20-%20ambulatorium.pdf?csf=1&web=1&e=IrckVR"
+        }
+      ],
+      "contact": "k.paziewska@rynekpierwotny.pl",
+      "owner": "HR — Karolina Paziewska",
+      "cta": "Wypełnij e-Deklarację"
+    },
+    {
+      "id": "multisport",
+      "tier": "all",
+      "icon": "dumbbell",
+      "title": "MultiSport — karta sportowa",
+      "kw": "sport silownia basen fitness karta multisport",
+      "short": "Zgłoszenia przez formularz do 20. dnia miesiąca, aktywacja od kolejnego miesiąca.",
+      "chips": [
+        "Zgłoszenia do 20. dnia miesiąca",
+        "Aktywacja od kolejnego miesiąca",
+        "Dodatkowe karty w całości płatne przez pracownika"
+      ],
+      "desc": "Karty dodatkowe dla osoby towarzyszącej oraz dzieci i seniorów (osobne warianty) można dokupić — ich koszt pokrywa w całości pracownik.",
+      "steps": [
+        "Wypełnij formularz zgłoszeniowy (link poniżej) albo napisz na k.paziewska@rynekpierwotny.pl.",
+        "Podaj imię, nazwisko i wybrany wariant — dla dzieci i seniorów także miesiąc i rok urodzenia.",
+        "Zgłoszenie do 20. dnia miesiąca; karta aktywuje się od kolejnego miesiąca."
+      ],
+      "docs": [
+        {
+          "label": "Formularz zgłoszeniowy MultiSport",
+          "href": "https://forms.office.com/e/abQXdMuz51"
+        },
+        {
+          "label": "Warianty kart i cennik"
+        }
+      ],
+      "contact": "k.paziewska@rynekpierwotny.pl",
+      "owner": "HR — Karolina Paziewska",
+      "cta": "Wypełnij formularz"
+    },
+    {
+      "id": "unum",
+      "tier": "manager",
+      "icon": "shield",
+      "title": "Unum — ubezpieczenie na życie",
+      "kw": "polisa zycie ochrona ubezpieczenie rodzina vip",
+      "short": "Firma zapewnia Wariant 1 w pakiecie podstawowym (64 zł) plus nakładkę VIP (100 zł) — pracownik pokrywa 1% wartości.",
+      "chips": [
+        "Firma: 64 zł + VIP 100 zł",
+        "Pracownik pokrywa 1%",
+        "Deklaracja do końca miesiąca"
+      ],
+      "desc": "Trzy warianty ubezpieczenia z opcjami dodatkowymi, które można dopasować do swoich potrzeb. Przy wyborze opcji takich jak Chroni Życie czy Chroni Dziecko pracownik pokrywa różnicę między pakietem podstawowym a premium. Ubezpieczeniem można objąć członków rodziny — te dodatki pracownik opłaca we własnym zakresie.",
+      "steps": [
+        "Zapoznaj się z materiałami informacyjnymi Unum.",
+        "Obejrzyj krótkie wideo — instrukcję przystąpienia on-line.",
+        "Złóż e-deklarację do ostatniego dnia miesiąca; ochrona rusza od kolejnego miesiąca."
+      ],
+      "docs": [
+        {
+          "label": "Materiały informacyjne Unum",
+          "href": "https://rynekpierwotny.sharepoint.com/:f:/r/sites/general/Shared%20Documents/General/Benefity/Unum%20ubezpieczenia%20na%20%C5%BCycie?csf=1&web=1&e=VxSFuV"
+        },
+        {
+          "label": "Strona do składania deklaracji (link personalizowany — sprawdź w mailu od HR)"
+        },
+        {
+          "label": "Instrukcja przystąpienia on-line (wideo)",
+          "href": "https://vimeo.com/752915301/098e29c122"
+        }
+      ],
+      "owner": "HR — Karolina Paziewska",
+      "cta": "Złóż deklarację"
+    }
+  ],
+  "staffRows": [
+    [
+      "Grzegorz Kurowski",
+      "Prezes Zarządu",
+      "Zarząd",
+      "Zarząd",
+      "Z"
+    ],
+    [
+      "Paweł Moszczyński",
+      "Wiceprezes Zarządu",
+      "Zarząd",
+      "Zarząd",
+      "Z"
+    ],
+    [
+      "Piotr Wetmański",
+      "Dyrektor Generalny",
+      "Zarząd",
+      "Zarząd",
+      "Z"
+    ],
+    [
+      "Jerzy Michalski",
+      "Członek Zarządu ds. Marketingu i Sprzedaży",
+      "Zarząd",
+      "Zarząd",
+      "Z"
+    ],
+    [
+      "Maciej Fijałkowski",
+      "Członek Zarządu, CFO",
+      "Zarząd",
+      "Zarząd",
+      "Z"
+    ],
+    [
+      "Małgorzata Siwiec",
+      "Dyrektor HR",
+      "HR",
+      "HR",
+      "DG"
+    ],
+    [
+      "Karolina Paziewska",
+      "HR Specialist",
+      "HR",
+      "HR",
+      "DG"
+    ],
+    [
+      "Filip Kościółek",
+      "HR Specialist",
+      "HR",
+      "HR",
+      "DG"
+    ],
+    [
+      "Magdalena Brylska",
+      "HR Business Partner",
+      "HR",
+      "HR",
+      "DG"
+    ],
+    [
+      "Katarzyna Saniewska",
+      "Head of Office",
+      "HR",
+      "Administracja",
+      "DG"
+    ],
+    [
+      "Aleksandra Just",
+      "Specjalista ds. Administracji",
+      "HR",
+      "Administracja",
+      "DG"
+    ],
+    [
+      "Maja Jaworska",
+      "Asystentka Biura",
+      "HR",
+      "Administracja",
+      "DG"
+    ],
+    [
+      "Agnieszka Witkowska",
+      "Główna Księgowa",
+      "Finanse",
+      "Księgowość",
+      "DG"
+    ],
+    [
+      "Roksana Nidecka",
+      "Samodzielna Księgowa",
+      "Finanse",
+      "Księgowość",
+      "DG"
+    ],
+    [
+      "Martyna Wultańska",
+      "Specjalista ds. Windykacji i Rozliczeń",
+      "Finanse",
+      "Księgowość",
+      "DG"
+    ],
+    [
+      "Monika Sienkiewicz-Kopka",
+      "Specjalista ds. Rozliczeń i Windykacji",
+      "Finanse",
+      "Księgowość",
+      "DG"
+    ],
+    [
+      "Paulina Soczyńska",
+      "Specjalista ds. Rozliczeń",
+      "Finanse",
+      "Księgowość",
+      "DG"
+    ],
+    [
+      "Karolina Zawadzka",
+      "Finance Coordinator",
+      "Finanse",
+      "Controlling",
+      "DG"
+    ],
+    [
+      "Kamil Kobylarz",
+      "Analityk Finansowy",
+      "Finanse",
+      "M&A",
+      "DG"
+    ],
+    [
+      "Marta Jaroszuk",
+      "Analityk Finansowy",
+      "Finanse",
+      "M&A",
+      "DG"
+    ],
+    [
+      "Mateusz Bieniek",
+      "Data Science & AI Director",
+      "Data Science & Analytics",
+      "Data Science & Analytics",
+      "DG"
+    ],
+    [
+      "Bartłomiej Kanabus",
+      "Senior Data Scientist",
+      "Data Science & Analytics",
+      "Data Science",
+      "DG"
+    ],
+    [
+      "Katarzyna Kopeć",
+      "Data Scientist",
+      "Data Science & Analytics",
+      "Analytics",
+      "DG"
+    ],
+    [
+      "Rafał Kuśmierz",
+      "Data Engineer",
+      "Data Science & Analytics",
+      "Data Science",
+      "DG"
+    ],
+    [
+      "Aleksander Kozłowski",
+      "LLM Engineer",
+      "Data Science & Analytics",
+      "Data Science",
+      "DG"
+    ],
+    [
+      "Hanna Dołbeń",
+      "Data Science Solution Engineer",
+      "Data Science & Analytics",
+      "Data Science",
+      "DG"
+    ],
+    [
+      "Klaudia Zardzewiała",
+      "Data Analyst",
+      "Data Science & Analytics",
+      "Analytics",
+      "DG"
+    ],
+    [
+      "Mateusz Dziemidzionek",
+      "Product Data Analyst",
+      "Data Science & Analytics",
+      "Analytics",
+      "DG"
+    ],
+    [
+      "Anna Gawron",
+      "Analytics Lead",
+      "Data Science & Analytics",
+      "Analytics",
+      "DG"
+    ],
+    [
+      "Tomasz Radziewicz",
+      "Web Analyst",
+      "Data Science & Analytics",
+      "Analytics",
+      "DG"
+    ],
+    [
+      "Tomasz Dróżdż",
+      "Strategy Manager",
+      "Strategia",
+      "Strategia",
+      "DG"
+    ],
+    [
+      "Kacper Dziatczak",
+      "Strategy Associate",
+      "Strategia",
+      "Strategia",
+      "DG"
+    ],
+    [
+      "Michał Gołota",
+      "Dyrektor Marki i Komunikacji",
+      "Marka i Komunikacja",
+      "Marka i Komunikacja",
+      "DG"
+    ],
+    [
+      "Arkadiusz Durka",
+      "Brand Manager",
+      "Marka i Komunikacja",
+      "Marka i Komunikacja",
+      "DG"
+    ],
+    [
+      "Kuba Pozowski",
+      "Grafik — Team Lead",
+      "Marka i Komunikacja",
+      "Marka i Komunikacja",
+      "DG"
+    ],
+    [
+      "Anna Janek",
+      "Grafik",
+      "Marka i Komunikacja",
+      "Marka i Komunikacja",
+      "DG"
+    ],
+    [
+      "Łukasz Stefański",
+      "Brand Manager",
+      "Marka i Komunikacja",
+      "Marka i Komunikacja",
+      "DG"
+    ],
+    [
+      "Konrad Grzejszczak",
+      "Video Content Creator / Montażysta",
+      "Marka i Komunikacja",
+      "Marka i Komunikacja",
+      "DG"
+    ],
+    [
+      "Arkadiusz Słodkowski",
+      "Head of PR",
+      "Marka i Komunikacja",
+      "PR i Komunikacja Wewnętrzna",
+      "DG"
+    ],
+    [
+      "Jarosław Jędrzyński",
+      "Analityk Rynku Nieruchomości",
+      "Marka i Komunikacja",
+      "PR i Komunikacja Wewnętrzna",
+      "DG"
+    ],
+    [
+      "Marek Wielgo",
+      "Analityk Rynku Nieruchomości",
+      "Marka i Komunikacja",
+      "PR i Komunikacja Wewnętrzna",
+      "DG"
+    ],
+    [
+      "Anna Koziara-Wróblewska",
+      "Senior Social Media Specialist",
+      "Marka i Komunikacja",
+      "PR i Komunikacja Wewnętrzna",
+      "DG"
+    ],
+    [
+      "Michał Skoczylas",
+      "CTO",
+      "IT",
+      "IT",
+      "DG"
+    ],
+    [
+      "Ewa Przetakiewicz",
+      "Manager Danych",
+      "IT",
+      "Governance",
+      "DG"
+    ],
+    [
+      "Karol Klatt",
+      "IT Infrastructure Manager",
+      "IT",
+      "Infrastructure & Operations",
+      "DG"
+    ],
+    [
+      "Kamil Kubiak",
+      "Administrator IT",
+      "IT",
+      "Infrastructure & Operations",
+      "DG"
+    ],
+    [
+      "Michał Anczewski",
+      "Administrator IT",
+      "IT",
+      "Infrastructure & Operations",
+      "DG"
+    ],
+    [
+      "Piotr Mrówka",
+      "Back-end Developer",
+      "IT",
+      "Infrastructure & Operations",
+      "DG"
+    ],
+    [
+      "Łukasz Amróz",
+      "Tech Lead",
+      "IT",
+      "Infrastructure & Operations",
+      "DG"
+    ],
+    [
+      "Adam Bartniak",
+      "QA Manager",
+      "IT",
+      "Quality Assurance",
+      "DG"
+    ],
+    [
+      "Adam Pszczółkowski",
+      "QA Tester",
+      "IT",
+      "Quality Assurance",
+      "DG"
+    ],
+    [
+      "Andrzej Suchowoj",
+      "QA Tester",
+      "IT",
+      "Quality Assurance",
+      "DG"
+    ],
+    [
+      "Bogdan Arct",
+      "IT Development Manager",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Dawid Gryglicki",
+      "Senior Back-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Michał Rożyński",
+      "Senior Back-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Damian Gołojuch",
+      "Front-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Marek Bareła",
+      "Front-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Grzegorz Muśko",
+      "Front-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Adam Łapacz",
+      "Front-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Łukasz Smolnicki",
+      "Front-end Developer (Mid)",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Agnieszka Krawczenko",
+      "Front-end Developer (Mid)",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Michał Kopeć",
+      "Front-end Developer (Junior)",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Maciej Styś",
+      "Back-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Maciej Kuźma",
+      "Back-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Daniel Cichowski",
+      "Back-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Jakub Budzik",
+      "Back-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Grzegorz Nowacki",
+      "Back-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Mateusz Janik",
+      "Back-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Michał Jarończyk",
+      "Back-end Developer",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Jarosław Nowicki",
+      "Back-end Developer (PHP)",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Janusz Jurczyk",
+      "Back-end Developer (PHP)",
+      "IT",
+      "Development",
+      "DG"
+    ],
+    [
+      "Jan Dziekoński",
+      "Główny Ekonomista",
+      "Research",
+      "Research",
+      "DG"
+    ],
+    [
+      "Gabriela Prygiel",
+      "Junior Analyst",
+      "Research",
+      "Analityka",
+      "DG"
+    ],
+    [
+      "Dorota Wachnicka",
+      "Data Quality Coordinator",
+      "Research",
+      "Zespół danych rynkowych",
+      "DG"
+    ],
+    [
+      "Taida Mościcka",
+      "Koordynator Automatyzacji Procesów i Aktualizacji Danych",
+      "Research",
+      "Zespół danych rynkowych",
+      "DG"
+    ],
+    [
+      "Marta Dolecka-Bystrek",
+      "Specjalista ds. Wsparcia Sprzedaży",
+      "Research",
+      "Zespół danych rynkowych",
+      "DG"
+    ],
+    [
+      "Gabriela Wacewicz",
+      "Specjalista ds. Aktualizacji Danych",
+      "Research",
+      "Zespół danych rynkowych",
+      "DG"
+    ],
+    [
+      "Anna Król",
+      "Specjalista ds. Aktualizacji Danych",
+      "Research",
+      "Zespół danych rynkowych",
+      "DG"
+    ],
+    [
+      "Janina Skórkowska",
+      "Specjalista ds. Aktualizacji Danych",
+      "Research",
+      "Zespół danych rynkowych",
+      "DG"
+    ],
+    [
+      "Patrycja Urakczyńcow",
+      "Specjalista ds. Aktualizacji Danych",
+      "Research",
+      "Zespół danych rynkowych",
+      "DG"
+    ],
+    [
+      "Julia Biszczuk",
+      "Młodszy Specjalista ds. Aktualizacji Danych",
+      "Research",
+      "Zespół danych rynkowych",
+      "DG"
+    ],
+    [
+      "Aleksandra Kubisz",
+      "Młodszy Specjalista ds. Aktualizacji Danych",
+      "Research",
+      "Zespół danych rynkowych",
+      "DG"
+    ],
+    [
+      "Zofia Kwitek",
+      "Młodszy Specjalista ds. Aktualizacji Danych",
+      "Research",
+      "Zespół danych rynkowych",
+      "DG"
+    ],
+    [
+      "Aleksandra Boratyńska",
+      "Doradca Klienta BIG DATA",
+      "Research",
+      "Sprzedaż BIG DATA",
+      "DG"
+    ],
+    [
+      "Marcin Zaremba",
+      "Head of Product",
+      "Product",
+      "Product",
+      "DG"
+    ],
+    [
+      "Michał Gołębiowski",
+      "Product Design Lead",
+      "Product",
+      "Product",
+      "DG"
+    ],
+    [
+      "Karolina Waśkowiak",
+      "Senior Product Designer",
+      "Product",
+      "Product",
+      "DG"
+    ],
+    [
+      "Stanisław Wanatowicz",
+      "Product Designer",
+      "Product",
+      "Product",
+      "DG"
+    ],
+    [
+      "Aleksandra Warecka",
+      "UX Designer",
+      "Product",
+      "Product",
+      "DG"
+    ],
+    [
+      "Michał Klimorowski",
+      "Product Owner",
+      "Product",
+      "Product",
+      "DG"
+    ],
+    [
+      "Jan Woźniak",
+      "Product Owner",
+      "Product",
+      "Product",
+      "DG"
+    ],
+    [
+      "Kacper Zieliński",
+      "Product Manager",
+      "Product",
+      "Product",
+      "DG"
+    ],
+    [
+      "Stanisław Świątkowski",
+      "Product Manager",
+      "Product",
+      "Product",
+      "DG"
+    ],
+    [
+      "Michał Kruchelski",
+      "Product Manager",
+      "Product",
+      "Product",
+      "DG"
+    ],
+    [
+      "Marlena Gałek",
+      "Product Marketing Manager",
+      "Product",
+      "Product",
+      "SM"
+    ],
+    [
+      "Andrzej Fluderski",
+      "Head of Credit Intermediation",
+      "Pośrednictwo Finansowe",
+      "Pośrednictwo Finansowe",
+      "DG"
+    ],
+    [
+      "Monika Ostolska",
+      "Operations Officer",
+      "Pośrednictwo Finansowe",
+      "Pośrednictwo Finansowe",
+      "DG"
+    ],
+    [
+      "Andrzej Kurek",
+      "Ekspert Kredytowy",
+      "Pośrednictwo Finansowe",
+      "Pośrednictwo Finansowe",
+      "DG"
+    ],
+    [
+      "Michał Pacuszka",
+      "Ekspert Kredytowy",
+      "Pośrednictwo Finansowe",
+      "Pośrednictwo Finansowe",
+      "DG"
+    ],
+    [
+      "Andrzej Cygan",
+      "Ekspert Kredytowy",
+      "Pośrednictwo Finansowe",
+      "Pośrednictwo Finansowe",
+      "DG"
+    ],
+    [
+      "Aneta Kajak",
+      "Ekspert Kredytowy",
+      "Pośrednictwo Finansowe",
+      "Pośrednictwo Finansowe",
+      "DG"
+    ],
+    [
+      "Magdalena Jankowska",
+      "Ekspert Kredytowy",
+      "Pośrednictwo Finansowe",
+      "Pośrednictwo Finansowe",
+      "DG"
+    ],
+    [
+      "Joanna Głąbicka",
+      "Ekspert Kredytowy (Wrocław)",
+      "Pośrednictwo Finansowe",
+      "Pośrednictwo Finansowe",
+      "DG"
+    ],
+    [
+      "Mirosław Stankiewicz",
+      "Dyrektor Sprzedaży",
+      "Sprzedaż",
+      "Sprzedaż",
+      "SM"
+    ],
+    [
+      "Mikołaj Małecki",
+      "Team Leader",
+      "Sprzedaż",
+      "Region A",
+      "SM"
+    ],
+    [
+      "Tomasz Borowski",
+      "Sales and Business Development Specialist",
+      "Sprzedaż",
+      "Region A",
+      "SM"
+    ],
+    [
+      "Katarzyna Trześniewska",
+      "Opiekun Klientów Kluczowych",
+      "Sprzedaż",
+      "Region A",
+      "SM"
+    ],
+    [
+      "Michał Kapturowski",
+      "Doradca Klienta",
+      "Sprzedaż",
+      "Region A",
+      "SM"
+    ],
+    [
+      "Mateusz Zimmermann",
+      "Specjalista ds. Obsługi Klienta",
+      "Sprzedaż",
+      "Region A",
+      "SM"
+    ],
+    [
+      "Mateusz Czarnecki",
+      "Team Leader",
+      "Sprzedaż",
+      "Region B",
+      "SM"
+    ],
+    [
+      "Łukasz Ostrowski",
+      "Opiekun Klientów Kluczowych",
+      "Sprzedaż",
+      "Region B",
+      "SM"
+    ],
+    [
+      "Tomasz Kryński",
+      "Opiekun Klientów Kluczowych",
+      "Sprzedaż",
+      "Region B",
+      "SM"
+    ],
+    [
+      "Agata Sulej",
+      "Doradca Klienta",
+      "Sprzedaż",
+      "Region B",
+      "SM"
+    ],
+    [
+      "Jakub Żywar",
+      "Doradca Klienta",
+      "Sprzedaż",
+      "Region B",
+      "SM"
+    ],
+    [
+      "Martyna Zabielska",
+      "Team Leader",
+      "Sprzedaż",
+      "Region C",
+      "SM"
+    ],
+    [
+      "Mariusz Czarnecki",
+      "Opiekun Klientów Kluczowych",
+      "Sprzedaż",
+      "Region C",
+      "SM"
+    ],
+    [
+      "Katarzyna Zyśko",
+      "Opiekun Klientów Kluczowych",
+      "Sprzedaż",
+      "Region C",
+      "SM"
+    ],
+    [
+      "Łukasz Bąk",
+      "Doradca Klienta",
+      "Sprzedaż",
+      "Region C",
+      "SM"
+    ],
+    [
+      "Sebastian Kubicki",
+      "Doradca Klienta",
+      "Sprzedaż",
+      "Region C",
+      "SM"
+    ],
+    [
+      "Mateusz Gołębiewski",
+      "Specjalista ds. Obsługi Klienta",
+      "Sprzedaż",
+      "Region C",
+      "SM"
+    ],
+    [
+      "Barbara Lengas",
+      "Specjalista ds. Obsługi Klienta",
+      "Sprzedaż",
+      "Region C",
+      "SM"
+    ],
+    [
+      "Agnieszka Lachowska",
+      "Head of Client Operations",
+      "Wsparcie i Relacje z Klientem",
+      "Wsparcie i Relacje z Klientem",
+      "SM"
+    ],
+    [
+      "Aleksandra Szulkowska",
+      "Lider Zespołu Relacji z Deweloperami",
+      "Wsparcie i Relacje z Klientem",
+      "Relacje z Deweloperami",
+      "SM"
+    ],
+    [
+      "Agnieszka Stańczyk",
+      "Senior Sales Operations Specialist",
+      "Wsparcie i Relacje z Klientem",
+      "Relacje z Deweloperami",
+      "SM"
+    ],
+    [
+      "Aleksandra Furga",
+      "Senior Client Success Specialist",
+      "Wsparcie i Relacje z Klientem",
+      "Relacje z Deweloperami",
+      "SM"
+    ],
+    [
+      "Karolina Wietecha",
+      "Młodszy Specjalista ds. Wsparcia i Relacji z Klientem",
+      "Wsparcie i Relacje z Klientem",
+      "Relacje z Deweloperami",
+      "SM"
+    ],
+    [
+      "Dorota Trzaska",
+      "Lider Zespołu Obsługi Agencji",
+      "Wsparcie i Relacje z Klientem",
+      "Obsługa Agencji",
+      "SM"
+    ],
+    [
+      "Ewelina Żymiełko-Liszewska",
+      "Customer Support Specialist",
+      "Wsparcie i Relacje z Klientem",
+      "Obsługa Agencji",
+      "SM"
+    ],
+    [
+      "Emilia Zawadzka",
+      "Customer Support Specialist",
+      "Wsparcie i Relacje z Klientem",
+      "Obsługa Agencji",
+      "SM"
+    ],
+    [
+      "Paulina Rosińska",
+      "Customer Support Specialist",
+      "Wsparcie i Relacje z Klientem",
+      "Obsługa Agencji",
+      "SM"
+    ],
+    [
+      "Aleksandra Prokopczyk",
+      "Doradca Klienta",
+      "Wsparcie i Relacje z Klientem",
+      "ESTI",
+      "SM"
+    ],
+    [
+      "Jakub Ziętala",
+      "Doradca Klienta",
+      "Wsparcie i Relacje z Klientem",
+      "ESTI",
+      "SM"
+    ],
+    [
+      "Marcin Wysocki",
+      "Head of E-commerce",
+      "E-commerce",
+      "E-commerce",
+      "SM"
+    ],
+    [
+      "Alicja Łapka",
+      "Performance Marketing Specialist",
+      "E-commerce",
+      "Performance Marketing",
+      "SM"
+    ],
+    [
+      "Piotr Pawłowski",
+      "Performance Marketing Specialist",
+      "E-commerce",
+      "Performance Marketing",
+      "SM"
+    ],
+    [
+      "Damian Ładak",
+      "Marketing Automation Specialist",
+      "E-commerce",
+      "Marketing Automation",
+      "SM"
+    ],
+    [
+      "Magdalena Godlewska",
+      "Junior Growth Marketing Specialist",
+      "E-commerce",
+      "Affiliate Marketing",
+      "SM"
+    ],
+    [
+      "Konrad Izdebski",
+      "Head of SEO",
+      "E-commerce",
+      "SEO",
+      "SM"
+    ],
+    [
+      "Barbara Kralska",
+      "Starszy Specjalista SEO (p.o. Head of SEO)",
+      "E-commerce",
+      "SEO",
+      "SM"
+    ],
+    [
+      "Aleksandra Miniak",
+      "Mid Content Specialist",
+      "E-commerce",
+      "SEO",
+      "SM"
+    ],
+    [
+      "Marcin Wierzbicki",
+      "Head of Contact Center",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Milena Rozwadowska",
+      "Koordynator ds. Operacji",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Wiktoria Mosciszko",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Róża Parzyszek",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Bartosz Grajper",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Dorota Łukasiewicz",
+      "Contact Center Specialist (Platforma Mieszkaniowa)",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Sylwia Czauderna",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Beata Kazimierska",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Martyna Kontek",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Jolanta Ciborek",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Monika Mołdawa",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Magdalena Mołdawa",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Daniel Reinert",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Karolina Pośpiech",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Patrycja Wieczorek",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Dominika Kaźmierczak",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Julia Silnicka",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Marcin Tomala",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Magdalena Kaszuba",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Mariusz Łazarczyk",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Borys Tsakardis",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Szymon Skorupa",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Katarzyna Pakulska",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Wiktoria Motykiewicz",
+      "Contact Center Specialist",
+      "Contact Center",
+      "Contact Center",
+      "SM"
+    ],
+    [
+      "Jan Pijewski",
+      "Dyrektor Komercyjny",
+      "Platforma Mieszkaniowa",
+      "Zarząd PM",
+      "SM"
+    ],
+    [
+      "Marcin Sobieszek",
+      "Dyrektor Sprzedaży (Warszawa)",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Joanna Banach",
+      "Manager ds. Rynku Pierwotnego",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Natalia Michaluk",
+      "Manager Sprzedaży Sieci Własnej",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Magdalena Maliszewska",
+      "Kierownik Agencji",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Klaudia Cieślak",
+      "Project Manager (Warszawa)",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Krzysztof Kurdziałek",
+      "Project Manager (Warszawa)",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Sandra Adler",
+      "Project Manager (Wrocław)",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Marta Gad",
+      "Project Manager (Wrocław)",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Grzegorz Chłopek",
+      "Project Manager ds. Szkoleń i Rozwoju",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Łukasz Kajak",
+      "Hunter (Łódź)",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Piotr Sosnowski",
+      "Hunter (Trójmiasto)",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Mateusz Mikołajczak",
+      "Hunter (Poznań)",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Dawid Czopór",
+      "Specjalista ds. Sprzedaży i Obsługi Klienta (Łódź)",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Bartosz Buksiński",
+      "Specjalista ds. Sprzedaży",
+      "Platforma Mieszkaniowa",
+      "Sprzedaż PM",
+      "SM"
+    ],
+    [
+      "Monika Olszewska",
+      "Młodszy Specjalista ds. Administracji",
+      "Platforma Mieszkaniowa",
+      "Administracja PM",
+      "SM"
+    ]
+  ],
+  "streets": [
+    {
+      "id": "cybernetyki",
+      "name": "ul. Cybernetyki",
+      "color": "#D9457F",
+      "desc": "Zachodnia oś biura — Contact Center, IT, Product, Data Science"
+    },
+    {
+      "id": "plac",
+      "name": "ul. Plac Centralny",
+      "color": "#6FA83C",
+      "desc": "Główne wejście, recepcja, Scena Główna i Biblioteka"
+    },
+    {
+      "id": "targowa",
+      "name": "ul. Targowa",
+      "color": "#1E7FC4",
+      "desc": "Wschodnia oś — sprzedaż, wsparcie i budki telefoniczne"
+    },
+    {
+      "id": "finansowa",
+      "name": "ul. Finansowa",
+      "color": "#5B3A8E",
+      "desc": "Południowa oś — HR, finanse, e-commerce i marka"
+    }
+  ],
+  "places": [
+    {
+      "n": "Zarząd",
+      "t": "zespol",
+      "s": "ul. Cybernetyki",
+      "m": "Gabinety, północno-zachodni narożnik"
+    },
+    {
+      "n": "Administracja",
+      "t": "zespol",
+      "s": "ul. Plac Centralny",
+      "m": "Przy wejściu głównym, obok recepcji"
+    },
+    {
+      "n": "Contact Center, GHF, Strategia",
+      "t": "zespol",
+      "s": "ul. Cybernetyki",
+      "m": "Otwarta przestrzeń pracy"
+    },
+    {
+      "n": "Help Desk",
+      "t": "zespol",
+      "s": "ul. Cybernetyki",
+      "m": "Wsparcie sprzętowe — wejdź bez zapowiedzi"
+    },
+    {
+      "n": "IT",
+      "t": "zespol",
+      "s": "ul. Cybernetyki",
+      "m": "Otwarta przestrzeń pracy"
+    },
+    {
+      "n": "Product",
+      "t": "zespol",
+      "s": "ul. Cybernetyki",
+      "m": "Otwarta przestrzeń pracy"
+    },
+    {
+      "n": "Data Science",
+      "t": "zespol",
+      "s": "ul. Cybernetyki",
+      "m": "Południowo-zachodnia część piętra"
+    },
+    {
+      "n": "Creative Lab",
+      "t": "zespol",
+      "s": "ul. Finansowa",
+      "m": "Narożnik południowo-zachodni, strefa kreatywna"
+    },
+    {
+      "n": "HR",
+      "t": "zespol",
+      "s": "ul. Finansowa",
+      "m": "Pas południowy, obok Finansów"
+    },
+    {
+      "n": "Finanse",
+      "t": "zespol",
+      "s": "ul. Finansowa",
+      "m": "Pas południowy"
+    },
+    {
+      "n": "E-commerce, SEO",
+      "t": "zespol",
+      "s": "ul. Finansowa",
+      "m": "Pas południowy"
+    },
+    {
+      "n": "Marka i komunikacja, PR",
+      "t": "zespol",
+      "s": "ul. Finansowa",
+      "m": "Narożnik południowo-wschodni"
+    },
+    {
+      "n": "VOX",
+      "t": "zespol",
+      "s": "ul. Targowa",
+      "m": "Wschodnia przestrzeń pracy"
+    },
+    {
+      "n": "Sprzedaż",
+      "t": "zespol",
+      "s": "ul. Targowa",
+      "m": "Wschodnia przestrzeń pracy"
+    },
+    {
+      "n": "Wsparcie i relacje",
+      "t": "zespol",
+      "s": "ul. Targowa",
+      "m": "Wschodnia przestrzeń pracy"
+    },
+    {
+      "n": "Research",
+      "t": "zespol",
+      "s": "ul. Targowa",
+      "m": "Południowo-wschodnia część piętra"
+    },
+    {
+      "n": "Dyrektor sprzedaży",
+      "t": "zespol",
+      "s": "ul. Targowa",
+      "m": "Gabinet"
+    },
+    {
+      "n": "Dyrektor komercyjny",
+      "t": "zespol",
+      "s": "ul. Targowa",
+      "m": "Gabinet"
+    },
+    {
+      "n": "Scena Główna",
+      "t": "sala",
+      "s": "ul. Plac Centralny",
+      "m": "Przestrzeń eventowa · all-hands, demo day",
+      "c": "60+"
+    },
+    {
+      "n": "Biblioteka",
+      "t": "sala",
+      "s": "ul. Plac Centralny",
+      "m": "Sala spotkań, strefa cicha",
+      "c": "6+"
+    },
+    {
+      "n": "Ratusz",
+      "t": "sala",
+      "s": "ul. Cybernetyki",
+      "m": "Największa sala po stronie zachodniej",
+      "c": "6+"
+    },
+    {
+      "n": "Cybernetyki 9",
+      "t": "sala",
+      "s": "ul. Cybernetyki",
+      "m": "Sala spotkań z ekranem",
+      "c": "6+"
+    },
+    {
+      "n": "Rowerowa 10",
+      "t": "sala",
+      "s": "ul. Rowerowa",
+      "m": "Sala spotkań, część centralna",
+      "c": "6+"
+    },
+    {
+      "n": "Get Home Finance",
+      "t": "sala",
+      "s": "ul. Plac Centralny",
+      "m": "Sala spotkań",
+      "c": "4–5"
+    },
+    {
+      "n": "Cybernetyki 4",
+      "t": "sala",
+      "s": "ul. Cybernetyki",
+      "m": "Sala spotkań",
+      "c": "4–5"
+    },
+    {
+      "n": "Finansowa 5",
+      "t": "sala",
+      "s": "ul. Finansowa",
+      "m": "Sala spotkań",
+      "c": "4–5"
+    },
+    {
+      "n": "Targowa 4",
+      "t": "sala",
+      "s": "ul. Targowa",
+      "m": "Sala spotkań",
+      "c": "4–5"
+    },
+    {
+      "n": "Finansowa 3",
+      "t": "sala",
+      "s": "ul. Finansowa",
+      "m": "Mała sala spotkań",
+      "c": "2–3"
+    },
+    {
+      "n": "Innovation Hub",
+      "t": "sala",
+      "s": "ul. Cybernetyki",
+      "m": "Sala kreatywna — warsztaty i burze mózgów",
+      "c": "8–12"
+    },
+    {
+      "n": "Studio",
+      "t": "sala",
+      "s": "ul. Rowerowa",
+      "m": "Nagrania wideo i podcasty · rezerwacja z wyprzedzeniem",
+      "c": "2–4"
+    },
+    {
+      "n": "Plac Centralny 1A",
+      "t": "sala",
+      "s": "ul. Plac Centralny",
+      "m": "Pokój fokus — praca w skupieniu",
+      "c": "1"
+    },
+    {
+      "n": "Plac Centralny 1B",
+      "t": "sala",
+      "s": "ul. Plac Centralny",
+      "m": "Pokój fokus",
+      "c": "1"
+    },
+    {
+      "n": "Cybernetyki 11",
+      "t": "sala",
+      "s": "ul. Cybernetyki",
+      "m": "Pokój fokus",
+      "c": "1"
+    },
+    {
+      "n": "Finansowa 1",
+      "t": "sala",
+      "s": "ul. Finansowa",
+      "m": "Pokój fokus",
+      "c": "1"
+    },
+    {
+      "n": "Targowa 1A",
+      "t": "sala",
+      "s": "ul. Targowa",
+      "m": "Pokój fokus",
+      "c": "1"
+    },
+    {
+      "n": "Targowa 1B",
+      "t": "sala",
+      "s": "ul. Targowa",
+      "m": "Pokój fokus",
+      "c": "1"
+    },
+    {
+      "n": "Budki telefoniczne (4)",
+      "t": "sala",
+      "s": "ul. Targowa",
+      "m": "Bez rezerwacji — zasada „kto pierwszy”",
+      "c": "1"
+    },
+    {
+      "n": "Recepcja",
+      "t": "udog",
+      "s": "ul. Plac Centralny",
+      "m": "Karty gości, przesyłki, wew. 100"
+    },
+    {
+      "n": "Kafeteria",
+      "t": "udog",
+      "s": "ul. Plac Centralny",
+      "m": "Ekspresy i punkt z wodą, część centralna"
+    },
+    {
+      "n": "Kuchnia",
+      "t": "udog",
+      "s": "ul. Targowa",
+      "m": "Lodówki czyszczone w piątki"
+    },
+    {
+      "n": "Toalety",
+      "t": "udog",
+      "s": "centrum",
+      "m": "Przy windach, po obu stronach rdzenia"
+    },
+    {
+      "n": "Windy i schody",
+      "t": "udog",
+      "s": "centrum",
+      "m": "Dwa zespoły wind, klatki po stronie wschodniej i zachodniej"
+    },
+    {
+      "n": "Ksero",
+      "t": "udog",
+      "s": "ul. Targowa",
+      "m": "Także przy ul. Cybernetyki i ul. Finansowej"
+    },
+    {
+      "n": "Chillout / pokój rodzica",
+      "t": "udog",
+      "s": "ul. Rowerowa",
+      "m": "Strefa wyciszenia, dostęp bez rezerwacji"
+    },
+    {
+      "n": "Szatnie dla rowerzystów",
+      "t": "udog",
+      "s": "ul. Rowerowa",
+      "m": "Prysznice i stojaki, wejście od parkingu"
+    },
+    {
+      "n": "Garderoba",
+      "t": "udog",
+      "s": "ul. Finansowa",
+      "m": "Wieszaki przy strefie rowerowej"
+    },
+    {
+      "n": "Magazyn",
+      "t": "udog",
+      "s": "ul. Cybernetyki",
+      "m": "Materiały biurowe — klucz w recepcji"
+    }
   ]
 }

@@ -40,6 +40,7 @@ export interface IListItem {
 export interface IListBlock {
   type: 'list';
   title?: string;
+  note?: string;
   items: IListItem[];
 }
 
@@ -104,6 +105,7 @@ export interface ICardItem {
 export interface ICardsBlock {
   type: 'cards';
   title?: string;
+  note?: string;
   varied?: boolean;
   items: ICardItem[];
 }
@@ -132,6 +134,88 @@ export interface IOutlookBlock {
   note?: string;
 }
 
+export interface ITimelineItem {
+  year: string;
+  title: string;
+  text: string;
+}
+export interface ITimelineBlock {
+  type: 'timeline';
+  title?: string;
+  items: ITimelineItem[];
+}
+
+export interface IPostsBlock {
+  type: 'posts';
+  title?: string;
+}
+
+export interface IVideoItem {
+  id: string;
+  title: string;
+  date: string;
+}
+export interface IVideoBlock {
+  type: 'video';
+  videoTitle?: string;
+  videoNote?: string;
+  videoHref?: string;
+  videos: IVideoItem[];
+}
+
+export interface IEnovaItem {
+  title: string;
+  href: string;
+}
+export interface IEnovaBlock {
+  type: 'enova';
+  title?: string;
+  note?: string;
+  items: IEnovaItem[];
+}
+
+export interface IGmapBlock {
+  type: 'gmap';
+  title?: string;
+  addr?: string;
+  embed?: string;
+  mapsHref?: string;
+  routeHref?: string;
+}
+
+export interface IOfficeMapBlock {
+  type: 'officemap';
+  title?: string;
+  note?: string;
+}
+
+export interface IPersonItem {
+  name: string;
+  role: string;
+  href?: string;
+}
+export interface IPeopleBlock {
+  type: 'people';
+  title?: string;
+  note?: string;
+  items: IPersonItem[];
+}
+
+export interface IDeptsBlock {
+  type: 'depts';
+}
+
+export interface ICopilotPrompt {
+  q: string;
+  a: string;
+}
+export interface ICopilotBlock {
+  type: 'copilot';
+  title?: string;
+  intro?: string;
+  prompts: ICopilotPrompt[];
+}
+
 export interface IUnsupportedBlock {
   type: string;
   [key: string]: unknown;
@@ -151,6 +235,15 @@ export type IPageBlock =
   | IKbSearchBlock
   | ICalGridBlock
   | IOutlookBlock
+  | ITimelineBlock
+  | IPostsBlock
+  | IVideoBlock
+  | IEnovaBlock
+  | IGmapBlock
+  | IOfficeMapBlock
+  | IPeopleBlock
+  | IDeptsBlock
+  | ICopilotBlock
   | IUnsupportedBlock;
 
 export interface IPageData {
