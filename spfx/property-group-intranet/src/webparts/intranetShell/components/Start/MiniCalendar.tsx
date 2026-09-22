@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { IEvent } from '../../data/startTypes';
+import { isoDate } from '../../utils/events';
 import styles from './MiniCalendar.module.scss';
 
 const MONTH_NAMES = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'];
@@ -8,17 +9,6 @@ const WEEKDAY_LETTERS = ['Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'So', 'Nd'];
 export interface IMiniCalendarProps {
   events: IEvent[];
   onOpenCalendar: () => void;
-}
-
-/**
- * Local-calendar-date ISO string (YYYY-MM-DD). Deliberately not
- * `d.toISOString()`, which converts to UTC first and can shift the date by
- * one day for any timezone ahead of UTC (e.g. Poland) — that bug made
- * event markers land on the wrong day.
- */
-function isoDate(d: Date): string {
-  const pad = (n: number): string => String(n).padStart(2, '0');
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
 const MiniCalendar: React.FunctionComponent<IMiniCalendarProps> = ({ events, onOpenCalendar }) => {

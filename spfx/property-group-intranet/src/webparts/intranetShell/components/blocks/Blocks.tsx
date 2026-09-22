@@ -3,10 +3,11 @@ import Icon from '../../design/Icon';
 import {
   IPageBlock, IStatsBlock, ITextImageBlock, IListBlock, IBrandsBlock,
   IFieldsBlock, IQuoteBlock, IValuesBlock, IBannerBlock, ICardsBlock, ITextBlock,
-  IKbSearchBlock, IBrand
+  IKbSearchBlock, ICalGridBlock, IOutlookBlock, IBrand
 } from '../../data/pageTypes';
-import { IKbEntry } from '../../data/startTypes';
+import { IKbEntry, IEvent } from '../../data/startTypes';
 import { normalizeForSearch } from '../../utils/text';
+import { CalGridBlock, OutlookBlock } from './CalendarBlocks';
 import styles from './Blocks.module.scss';
 
 /**
@@ -252,6 +253,7 @@ export interface IBlockRendererProps {
   block: IPageBlock;
   brands: IBrand[];
   kbEntries: IKbEntry[];
+  events: IEvent[];
   onNavigate: (route: string) => void;
 }
 
@@ -259,7 +261,7 @@ export interface IBlockRendererProps {
 // every literal in the union, so TS can't narrow `block` from `block.type`
 // alone in a switch. The cast is safe: each case is reached only when
 // block.type actually equals that literal.
-export const BlockRenderer: React.FunctionComponent<IBlockRendererProps> = ({ block, brands, kbEntries, onNavigate }) => {
+export const BlockRenderer: React.FunctionComponent<IBlockRendererProps> = ({ block, brands, kbEntries, events, onNavigate }) => {
   switch (block.type) {
     case 'stats': return <StatsBlock block={block as IStatsBlock} />;
     case 'textimage': return <TextImageBlock block={block as ITextImageBlock} />;
@@ -272,6 +274,8 @@ export const BlockRenderer: React.FunctionComponent<IBlockRendererProps> = ({ bl
     case 'cards': return <CardsBlock block={block as ICardsBlock} onNavigate={onNavigate} />;
     case 'text': return <TextBlock block={block as ITextBlock} />;
     case 'kbsearch': return <KbSearchBlock block={block as IKbSearchBlock} kbEntries={kbEntries} />;
+    case 'calgrid': return <CalGridBlock block={block as ICalGridBlock} events={events} />;
+    case 'outlook': return <OutlookBlock block={block as IOutlookBlock} />;
     default: return <UnsupportedBlock block={block} />;
   }
 };

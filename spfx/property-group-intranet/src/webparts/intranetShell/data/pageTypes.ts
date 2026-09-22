@@ -121,6 +121,17 @@ export interface IKbSearchBlock {
   kbNoMatchNote?: string;
 }
 
+export interface ICalGridBlock {
+  type: 'calgrid';
+  title?: string;
+}
+
+export interface IOutlookBlock {
+  type: 'outlook';
+  title?: string;
+  note?: string;
+}
+
 export interface IUnsupportedBlock {
   type: string;
   [key: string]: unknown;
@@ -138,6 +149,8 @@ export type IPageBlock =
   | ICardsBlock
   | ITextBlock
   | IKbSearchBlock
+  | ICalGridBlock
+  | IOutlookBlock
   | IUnsupportedBlock;
 
 export interface IPageData {
